@@ -1,0 +1,9 @@
+<chapter>
+  <!--
+  <sequential url_name="Welcome"/>
+  <sequential url_name="edx_introduction"/>
+  <vertical url_name="Lab0_Using_the_tools"/>
+  <problem url_name="Circuit_Sandbox"/>
+  -->
+  <video url_name="intro"/>
+</chapter>

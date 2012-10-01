@@ -1,4 +1,5 @@
-<course>                                                                                                                                                                                             
-    <chapter url_name="Overview"/>
+<course>                                                                                <chapter url_name="Overview"/>
+  <chapter url_name="Week_1"/>
+  <chapter url_name="Week_2"/>
 </course>
 
