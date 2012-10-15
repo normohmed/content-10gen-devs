@@ -1,1 +1,48 @@
-<course url_name="2012_Fall" org="10gen" course="M101"/>
+<course url_name='2012_Fall' org='10gen' course='M101'><chapter display_name='Week 1'><sequential display_name='Combing Cats'><vertical><video youtube=''/></vertical><problem><text><p>dfdsfdsds</p><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'>sdfaaaaa</choice><choice location='bottom' correct='true'>sdffdsfdsfds</choice><choice location='bottom' correct='false'>sdfbbbb</choice></choicegroup></multiplechoiceresponse></text></problem><vertical><video youtube=''/></vertical></sequential><sequential display_name='BarkoDog'><vertical><video youtube=''/></vertical><problem><p>What is barko?</p><customresponse><textbox rows='4' cols='50' correct_answer="To bark with cheerios in your mouth.jfkdsljfkldsjfldksjfdkslfsdlfjdsfkdsjflkdsjfsldkfjsdlkfjdslkfjsdlkfjdsflkjdsflkdsjflkdsjflkdsjlkdsjflkds&lt;br&gt;&#10;Then talk to a dog.&lt;br&gt;&#10;And do homework.&lt;br&gt;&#10;I need more lines. &lt;br&gt;&#10;Don't you lose it &lt;br&gt;&#10;now listen to us &lt;br&gt;&#10;everything is going to be all right &lt;br&gt;&#10;Don't you lose it &lt;br&gt;&#10;remember to take &lt;br&gt;&#10;TIME OUT FOR FUN &lt;br&gt;&#10;"/><answer type='loncapa/python'><![CDATA[
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+if not(r == 'To bark with cheerios in your mouth.jfkdsljfkldsjfldksjfdkslfsdlfjdsfkdsjflkdsjfsldkfjsdlkfjdslkfjsdlkfjdsflkjdsflkdsjflkdsjflkdsjlkdsjflkds<br>
+Then talk to a dog.<br>
+And do homework.<br>
+I need more lines. <br>
+Don\'t you lose it <br>
+now listen to us <br>
+everything is going to be all right <br>
+Don\'t you lose it <br>
+remember to take <br>
+TIME OUT FOR FUN <br>
+'):
+  correct[0] = 'incorrect'
+]]></answer></customresponse></problem><vertical><video youtube=''/></vertical></sequential><sequential display_name='Tasting Bears'><vertical><video youtube=''/></vertical><problem><text><p>What do bears taste like?</p><choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>sweat<endouttext/></choice><choice correct='true'><startouttext/>musk<endouttext/></choice><choice correct='true'><startouttext/>hair<endouttext/></choice><choice correct='false'><startouttext/>candy<endouttext/></choice><choice correct='false'><startouttext/>spice<endouttext/></choice></checkboxgroup></choiceresponse></text></problem><vertical><video youtube=''/></vertical></sequential></chapter><chapter display_name='Test'><sequential display_name='Test PreFormat'><vertical><video youtube=''/></vertical><problem><text><p>This is a test of preformatted lists:
+<ul>
+<li>Here is a bullet point.</li>
+<li>And another.</li>
+</ul>
+
+Is the spacing preserved?</p><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'></choicegroup></multiplechoiceresponse></text></problem><vertical><video youtube=''/></vertical></sequential><sequential display_name='Test Long Line'><vertical><video youtube=''/></vertical><problem><p>This is a test of long answers in text boxes.</p><customresponse><textbox rows='4' cols='50' correct_answer="{&quot;bob&quot;: &quot;cat&quot;, &quot;dog&quot;: &quot;ham&quot;, &quot;pig&quot;: &quot;water&quot;, &quot;dolphin&quot; : &quot;hippo&quot;, &quot;crab&quot;: &quot;claw&quot;, &quot;pliars&quot;: &quot;cable&quot;, &quot;ethernet&quot;: &quot;computer&quot;, &quot;games&quot;: &quot;StarCraft&quot;, &quot;stars&quot;: &quot;Earth&quot;} &#10;&#10;&lt;pre&gt;&#10;colors = {'sky': 'blue', 'sea': 'blue', 'earth': 'brown'}&#10;&lt;/pew&gt;"/><answer type='loncapa/python'><![CDATA[
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+if not(r == '{"bob": "cat", "dog": "ham", "pig": "water", "dolphin" : "hippo", "crab": "claw", "pliars": "cable", "ethernet": "computer", "games": "StarCraft", "stars": "Earth"} 
+
+<pre>
+colors = {\'sky\': \'blue\', \'sea\': \'blue\', \'earth\': \'brown\'}
+</pew>'):
+  correct[0] = 'incorrect'
+]]></answer></customresponse></problem><vertical><video youtube=''/></vertical></sequential><sequential display_name='Test Text Answer Type'><vertical><video youtube=''/></vertical><problem><p>Enter the word "{bobcat: 'car'}"</p><customresponse><textbox rows='4' cols='50' correct_answer="{bobcat: 'car'}"/><answer type='loncapa/python'><![CDATA[
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+if not(r == '{bobcat: \'car\'}'):
+  correct[0] = 'incorrect'
+]]></answer></customresponse></problem><vertical><video youtube=''/></vertical></sequential></chapter></course>
