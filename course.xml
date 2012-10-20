@@ -1,48 +1,429 @@
-<course url_name='2012_Fall' org='10gen' course='M101'><chapter display_name='Week 1'><sequential display_name='Combing Cats'><vertical><video youtube=''/></vertical><problem><text><p>dfdsfdsds</p><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'>sdfaaaaa</choice><choice location='bottom' correct='true'>sdffdsfdsfds</choice><choice location='bottom' correct='false'>sdfbbbb</choice></choicegroup></multiplechoiceresponse></text></problem><vertical><video youtube=''/></vertical></sequential><sequential display_name='BarkoDog'><vertical><video youtube=''/></vertical><problem><p>What is barko?</p><customresponse><textbox rows='4' cols='50' correct_answer="To bark with cheerios in your mouth.jfkdsljfkldsjfldksjfdkslfsdlfjdsfkdsjflkdsjfsldkfjsdlkfjdslkfjsdlkfjdsflkjdsflkdsjflkdsjflkdsjlkdsjflkds&lt;br&gt;&#10;Then talk to a dog.&lt;br&gt;&#10;And do homework.&lt;br&gt;&#10;I need more lines. &lt;br&gt;&#10;Don't you lose it &lt;br&gt;&#10;now listen to us &lt;br&gt;&#10;everything is going to be all right &lt;br&gt;&#10;Don't you lose it &lt;br&gt;&#10;remember to take &lt;br&gt;&#10;TIME OUT FOR FUN &lt;br&gt;&#10;"/><answer type='loncapa/python'><![CDATA[
+<course url_name='2012_Fall' org='10gen' course='M101' display_name='MongoDB for Developers'><chapter display_name='Week 1'><sequential display_name='Welcome to M101'><vertical><video display_name='Lecture' youtube='1.0:179MiZSibco'/></vertical><problem display_name='Quiz'>What counts toward your final grade in the class?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>Quizzes<endouttext/></choice><choice correct='true'><startouttext/>Homeworks<endouttext/></choice><choice correct='true'><startouttext/>Final Exam<endouttext/></choice><choice correct='false'><startouttext/>Class Participation<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential display_name='What is MongoDB?'><vertical><video display_name='Lecture' youtube='1.0:Lfl8hdQOi6Y'/></vertical><problem display_name='Quiz'>Which of the following statements are true about MongoDB?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>MongoDB is document oriented.<endouttext/></choice><choice correct='false'><startouttext/>MongoDB supports Joins.<endouttext/></choice><choice correct='true'><startouttext/>MongoDB is schemaless<endouttext/></choice><choice correct='false'><startouttext/>MongoDB supports SQL.<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:h80NwJJZM-g'/></vertical></sequential><sequential display_name='Mongo Relative to Relational'><vertical><video display_name='Lecture' youtube='1.0:-KIC1LXxcGM'/></vertical><problem display_name='Quiz'>Which features did MongoDB omit in order to retain scalability?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>Joins<endouttext/></choice><choice correct='false'><startouttext/>Indexes<endouttext/></choice><choice correct='false'><startouttext/>Secondary Indexes<endouttext/></choice><choice correct='true'><startouttext/>Transactions across multiple collections<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:IAvnMgvHuLw'/></vertical></sequential><sequential display_name='Overview of Building an app with Mongo'><vertical><video display_name='Lecture' youtube='1.0:_e0J06elxb8'/></vertical></sequential><sequential display_name='Quick Introduction to the Mongo Shell'><vertical><video display_name='Lecture' youtube='1.0:f-lyGAMnNY4'/></vertical><problem display_name='Quiz'>Which of the following expressions are valid JSON documents?
+<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>{a:1, b:2, c:3}<endouttext/></choice><choice correct='false'><startouttext/>{a,1; b,4, c,6}<endouttext/></choice><choice correct='false'><startouttext/>{a:1; b:1; c:4}<endouttext/></choice><choice correct='false'><startouttext/>(A,1; b:2; c,4}<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:YQTqdLe3W4M'/></vertical></sequential><sequential display_name='JSON introduced'><vertical><video display_name='Lecture' youtube='1.0:2jsJeH8q6YM'/></vertical><problem display_name='Quiz'>Create a JSON document that has a single key, address, whose value is a document with keys of street_address, city, state, zipcode, with the following values: street_address is "23 Elm Drive", city is "Palo Alto", state is "California", Country is "United States", zipcode is "94305"<customresponse><textbox rows='4' cols='50' correct_answer="{'address': {'street_address':'23 Elm Drive', city:&quot;Palo Alto&quot;, state: &quot;California&quot;, country: &quot;United States&quot;, zipcode:&quot;94305&quot;}}"/><answer type='loncapa/python'><![CDATA[
+import demjson
+correct = ['correct']
+messages = ['test message']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+quiz_answer = '''{'address': {'street_address':'23 Elm Drive', city:"Palo Alto", state: "California", country: "United States", zipcode:"94305"}}'''
+quiz_answer_json = {}
+try:
+  quiz_answer_json = demjson.decode(quiz_answer)
+except demjson.JSONDecodeError as err:
+  messages[0] = 'Quiz Answer failed to parse' + str(err)
+response_json = {}
+try:
+  response_json = demjson.decode(r)
+except demjson.JSONDecodeError as err:
+  messages[0] = 'Response failed to parse' + str(err)
+if not(response_json == quiz_answer_json):
+  correct[0] = 'incorrect'
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:uWcOsdV4Iz4'/></vertical></sequential><sequential display_name='Installing MongoDB (mac)'><vertical><video display_name='Lecture' youtube='1.0:6VFukRETCTg'/></vertical></sequential><sequential display_name='Installing Bottle and Python'><vertical><video display_name='Lecture' youtube='1.0:vxTN6KFegLg'/></vertical></sequential><sequential display_name='Installing PyMongo'><vertical><video display_name='Lecture' youtube='1.0:XRJawbpWxtg'/></vertical></sequential><sequential display_name='Hello World, Mongo Style'><vertical><video display_name='Lecture' youtube='1.0:IG7PntLyv2E'/></vertical></sequential><sequential display_name='Hello World on a Web Server'><vertical><video display_name='Lecture' youtube='1.0:8_o6nyenZbk'/></vertical></sequential><sequential display_name='Mongo is Schemaless'><vertical><video display_name='Lecture' youtube='1.0:K6dlBbH_XHI'/></vertical></sequential><sequential display_name='JSON Revisited'><vertical><video display_name='Lecture' youtube='1.0:zbYCcMWJGNY'/></vertical></sequential><sequential display_name='JSON Arrays'><vertical><video display_name='Lecture' youtube='1.0:JkK9n6_ahVk'/></vertical><problem display_name='Quiz'>Write the JSON for a simple document containing a single key "fruit" that has as its value an array containing three strings: "apple", "pear", and "peach"<customresponse><textbox rows='4' cols='50' correct_answer="{'fruit': ['apple', 'pear', 'peach']}"/><answer type='loncapa/python'><![CDATA[
+import demjson
+correct = ['correct']
+messages = ['test message']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+quiz_answer = '''{'fruit': ['apple', 'pear', 'peach']}'''
+quiz_answer_json = {}
+try:
+  quiz_answer_json = demjson.decode(quiz_answer)
+except demjson.JSONDecodeError as err:
+  messages[0] = 'Quiz Answer failed to parse' + str(err)
+response_json = {}
+try:
+  response_json = demjson.decode(r)
+except demjson.JSONDecodeError as err:
+  messages[0] = 'Response failed to parse' + str(err)
+if not(response_json == quiz_answer_json):
+  correct[0] = 'incorrect'
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:ciuq7XPqHKI'/></vertical></sequential><sequential display_name='JSON Subdocuments'><vertical><video display_name='Lecture' youtube='1.0:vrYAEH3g13M'/></vertical><problem display_name='Quiz'>Write a JSON document with a single key, "address" that has as it value another document with the keys 
+'street_address', 'city', 'state', 'zipcode', with the following values: 'street_address' is "23 Elm Drive", 'city' is "Palo Alto", 'state' is "California", 'zipcode' is "94305"<customresponse><textbox rows='4' cols='50' correct_answer="{'address': {'street_address': &quot;23 Elm Drive&quot;, 'city' : &quot;Palo Alto&quot;, 'state': &quot;California&quot;, 'zip': &quot;94305&quot;} }"/><answer type='loncapa/python'><![CDATA[
+import re
 correct = ['correct']
 try:
   r = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
   r = '0'
-if not(r == 'To bark with cheerios in your mouth.jfkdsljfkldsjfldksjfdkslfsdlfjdsfkdsjflkdsjfsldkfjsdlkfjdslkfjsdlkfjdsflkjdsflkdsjflkdsjflkdsjlkdsjflkds<br>
-Then talk to a dog.<br>
-And do homework.<br>
-I need more lines. <br>
-Don\'t you lose it <br>
-now listen to us <br>
-everything is going to be all right <br>
-Don\'t you lose it <br>
-remember to take <br>
-TIME OUT FOR FUN <br>
-'):
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''{'address': {'street_address': "23 Elm Drive", 'city' : "Palo Alto", 'state': "California", 'zip': "94305"} }'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
   correct[0] = 'incorrect'
-]]></answer></customresponse></problem><vertical><video youtube=''/></vertical></sequential><sequential display_name='Tasting Bears'><vertical><video youtube=''/></vertical><problem><text><p>What do bears taste like?</p><choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>sweat<endouttext/></choice><choice correct='true'><startouttext/>musk<endouttext/></choice><choice correct='true'><startouttext/>hair<endouttext/></choice><choice correct='false'><startouttext/>candy<endouttext/></choice><choice correct='false'><startouttext/>spice<endouttext/></choice></checkboxgroup></choiceresponse></text></problem><vertical><video youtube=''/></vertical></sequential></chapter><chapter display_name='Test'><sequential display_name='Test PreFormat'><vertical><video youtube=''/></vertical><problem><text><p>This is a test of preformatted lists:
-<ul>
-<li>Here is a bullet point.</li>
-<li>And another.</li>
-</ul>
-
-Is the spacing preserved?</p><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'></choicegroup></multiplechoiceresponse></text></problem><vertical><video youtube=''/></vertical></sequential><sequential display_name='Test Long Line'><vertical><video youtube=''/></vertical><problem><p>This is a test of long answers in text boxes.</p><customresponse><textbox rows='4' cols='50' correct_answer="{&quot;bob&quot;: &quot;cat&quot;, &quot;dog&quot;: &quot;ham&quot;, &quot;pig&quot;: &quot;water&quot;, &quot;dolphin&quot; : &quot;hippo&quot;, &quot;crab&quot;: &quot;claw&quot;, &quot;pliars&quot;: &quot;cable&quot;, &quot;ethernet&quot;: &quot;computer&quot;, &quot;games&quot;: &quot;StarCraft&quot;, &quot;stars&quot;: &quot;Earth&quot;} &#10;&#10;&lt;pre&gt;&#10;colors = {'sky': 'blue', 'sea': 'blue', 'earth': 'brown'}&#10;&lt;/pew&gt;"/><answer type='loncapa/python'><![CDATA[
-correct = ['correct']
-try:
-  r = str(submission[0])
-except ValueError:
-  correct[0] = 'incorrect'
-  r = '0'
-if not(r == '{"bob": "cat", "dog": "ham", "pig": "water", "dolphin" : "hippo", "crab": "claw", "pliars": "cable", "ethernet": "computer", "games": "StarCraft", "stars": "Earth"} 
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:NGp_y6BaEMw'/></vertical></sequential><sequential display_name='JSON Spec'><vertical><video display_name='Lecture' youtube='1.0:kOrsT94-A28'/></vertical></sequential><sequential display_name='Introduction to our class project, the blog'><vertical><video display_name='Lecture' youtube='1.0:ePi3kDoexoM'/></vertical></sequential><sequential display_name='Blog in Relational Tables'><vertical><video display_name='Lecture' youtube='1.0:boR2y9MHCa0'/></vertical><problem display_name='Quiz'>let’s assume that our blog can be modeled with the following relational tables:
 
 <pre>
-colors = {\'sky\': \'blue\', \'sea\': \'blue\', \'earth\': \'brown\'}
-</pew>'):
-  correct[0] = 'incorrect'
-]]></answer></customresponse></problem><vertical><video youtube=''/></vertical></sequential><sequential display_name='Test Text Answer Type'><vertical><video youtube=''/></vertical><problem><p>Enter the word "{bobcat: 'car'}"</p><customresponse><textbox rows='4' cols='50' correct_answer="{bobcat: 'car'}"/><answer type='loncapa/python'><![CDATA[
+authors:
+	author_id,
+	name,
+	email,
+	password
+
+posts:
+	post_id,
+	author_id
+	title,
+	body,	
+	publication_date
+
+comments:
+	comment_id,
+	name, 
+	email,
+	comment_text
+
+post_comments:
+	post_id,
+	comment_id
+
+
+tags
+	tag_id
+	name
+
+post_tags
+	post_id
+	tag_id
+</pre>
+
+In order to display a blog post with its comments and tags, how many tables will need to be accessed?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'>2</choice><choice location='bottom' correct='false'>3</choice><choice location='bottom' correct='false'>5</choice><choice location='bottom' correct='true'>6</choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:vB-4AbbLKeg'/></vertical></sequential><sequential display_name='Blog in Documents'><vertical><video display_name='Lecture' youtube='1.0:ZjwCzyqKVdY'/></vertical><problem display_name='Quiz'>Given the document schema that we proposed for the blog, how many collections would we need to access to display the blog home page?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'>0</choice><choice location='bottom' correct='true'>1</choice><choice location='bottom' correct='false'>2</choice><choice location='bottom' correct='false'>4</choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:WJblHPsp1p4'/></vertical></sequential><sequential display_name='Intro to Schema Design'><vertical><video display_name='Lecture' youtube='1.0:6XE3wZCPiZ8'/></vertical><problem display_name='Quiz'>In which scenario is it impossible to embed data within a document (you must put the data in it a separate collection). Check all that apply.<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>The data would be duplicated across multiple objects within a collection.<endouttext/></choice><choice correct='false'><startouttext/>You need an index on the data element.<endouttext/></choice><choice correct='true'><startouttext/>The embedded data could exceed the 16MB document limit within MongoDB<endouttext/></choice><choice correct='false'><startouttext/>The data is not isomorphic.<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:wiwOEG_6ojs'/></vertical></sequential><sequential display_name='Intro to Python'><vertical><video display_name='Lecture' youtube='1.0:-cAtffa59FM'/></vertical><problem display_name='Quiz'>Write an expression to concatenate two strings "hat" and "pin" in python to the string "hatpin"<customresponse><textbox rows='4' cols='50' correct_answer='"hat" + "pin"'/><answer type='loncapa/python'><![CDATA[
+import re
 correct = ['correct']
 try:
   r = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
   r = '0'
-if not(r == '{bobcat: \'car\'}'):
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''"hat" + "pin"'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
   correct[0] = 'incorrect'
-]]></answer></customresponse></problem><vertical><video youtube=''/></vertical></sequential></chapter></course>
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:PuyAdxxzSk0'/></vertical></sequential><sequential display_name='Python Lists'><vertical><video display_name='Lecture' youtube='1.0:H1BOYfbnPq8'/></vertical><problem display_name='Quiz'>Write the to code to initialize a list with the items "hammer", "nail" and "wall" and assign the list to the variable named "things"<customresponse><textbox rows='4' cols='50' correct_answer='things = ["hammer", "nail", "wall"]'/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''things = ["hammer", "nail", "wall"]'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:8WdnrhlfSLE'/></vertical></sequential><sequential display_name='Python Lists, Manipulating'><vertical><video display_name='Lecture' youtube='1.0:PHii2QYNyB8'/></vertical><problem display_name='Quiz'>Write the code to append the item "hammer" onto a list named things. <customresponse><textbox rows='4' cols='50' correct_answer='things.append("hammer")'/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''things.append("hammer")'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:ZSraFzkEDzs'/></vertical></sequential><sequential display_name='Python Lists, Slice Operator'><vertical><video display_name='Lecture' youtube='1.0:vNyIZNWK0rw'/></vertical><problem display_name='Quiz'>things = ['apples', 'orange', 'pear', 'grape', 'kiwi']. What is the slice notation that will return the sublist ['orange', 'pear']?
+<customresponse><textbox rows='4' cols='50' correct_answer="things[1:3]"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''things[1:3]'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:vE498xAFoGc'/></vertical></sequential><sequential display_name='Python Lists, Inclusion'><vertical><video display_name='Lecture' youtube='1.0:QXUMUvHB2Ws'/></vertical><problem display_name='Quiz'>given a python list called "fruit", write an if statement to check whether "apple" is in the list.<customresponse><textbox rows='4' cols='50' correct_answer='if "apple" in fruit:&#10;'/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''if "apple" in fruit:
+'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:LdA0__D4zLI'/></vertical></sequential><sequential display_name='Python, Working with Dicts'><vertical><video display_name='Lecture' youtube='1.0:_AbCyE0uKmE'/></vertical><problem display_name='Quiz'>Initialize a new dict named "colors" with the following key values pairs: sky is blue, sea is blue. earth is brown.<customresponse><textbox rows='4' cols='50' correct_answer="colors = {'sky': 'blue', 'sea' : 'blue', 'earth': 'brown'}"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''colors = {'sky': 'blue', 'sea' : 'blue', 'earth': 'brown'}'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:edEYrBoa7Ao'/></vertical></sequential><sequential display_name='Python: Dicts and Lists together'><vertical><video display_name='Lecture' youtube='1.0:9k1XvuoGdrk'/></vertical><problem display_name='Quiz'>Initialize a new dict with a single key, "animals" whose value is the list "dog", "cat", "zebra" and assign the entire expression to variable named "things"<customresponse><textbox rows='4' cols='50' correct_answer="things = {'animals' : ['dog', 'cat', 'zebra']}"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''things = {'animals' : ['dog', 'cat', 'zebra']}'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:Gqb-OUFcQas'/></vertical></sequential><sequential display_name='Python: for loops, with Lists'><vertical><video display_name='Lecture' youtube='1.0:zMqLCtf3ML4'/></vertical><problem display_name='Quiz'>What does the following code print?
+
+<pre>
+sum = 0
+numbers = [1,2,3,5,8]
+for i in numbers:
+  sum = sum + i
+print i
+</pre><customresponse><textbox rows='4' cols='50' correct_answer="8"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''8'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:ohA78_D5Rn8'/></vertical></sequential><sequential display_name='Python: for loops with dicts'><vertical><video display_name='Lecture' youtube='1.0:HHTICY6rUGI'/></vertical><problem display_name='Quiz'><pre>
+people = {'name':'Bob', 'hometown': "Palo Alto", 'favorite_color': 'red'}
+for item in people:
+  if (item == 'favorite_color'):
+     print  people[item]
+</pre>
+
+What does this program print?<customresponse><textbox rows='4' cols='50' correct_answer="red"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''red'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:OnkPdMP1fVc'/></vertical></sequential><sequential display_name='Python: Combining Dicts and Lists'><vertical><video display_name='Lecture' youtube='1.0:ome7jDN_lH0'/></vertical><problem display_name='Quiz'>
+<pre>
+obj = {'a':1,'b': 2, 'c': [1, 3, 5]}
+
+sum = 0
+if 'c' in obj:
+   for n in obj['c']:
+     sum = sum + n
+
+print sum
+</pre>
+     <customresponse><textbox rows='4' cols='50' correct_answer="9"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''9'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:Y6NKd6xUC6M'/></vertical></sequential><sequential display_name='Python: while loops'><vertical><video display_name='Lecture' youtube='1.0:TEdFAheS5UE'/></vertical></sequential><sequential display_name='Python: function calls'><vertical><video display_name='Lecture' youtube='1.0:PizwcirYuGY'/></vertical></sequential><sequential display_name='Python: exception handling'><vertical><video display_name='Lecture' youtube='1.0:nrZYqF9KwaU'/></vertical></sequential><sequential display_name='Bottle framework: Url Handlers'><vertical><video display_name='Lecture' youtube='1.0:x5TlvbWxjL0'/></vertical></sequential><sequential display_name='Bottle framework: using views'><vertical><video display_name='Lecture' youtube='1.0:GUFDtACjFcc'/></vertical></sequential><sequential display_name='Bottle framework: handling form content'><vertical><video display_name='Lecture' youtube='1.0:sUUT-gIS5ik'/></vertical></sequential><sequential display_name='Bottle framework: using cookies'><vertical><video display_name='Lecture' youtube='1.0:Wk_1Lz_-gk4'/></vertical></sequential><sequential display_name='The Pymongo driver'><vertical><video display_name='Lecture' youtube='1.0:u2kRRt861bU'/></vertical></sequential><sequential display_name='Pymongo driver, safe mode, exception processing'><vertical><video display_name='Lecture' youtube='1.0:GR6W-gHffXw'/></vertical></sequential><sequential display_name='Week1_section20'><problem display_name='Quiz'>create a JSON document with keys of address, city, state, zipcode, with the following values: address is "23 Elm Drive", city is "Palo Alto", state is "California", zipcode is the string "94305"<customresponse><textbox rows='4' cols='50' correct_answer='{street_address : "23 Elm Drive", city : "Palo Alto", state: "California", zipcode: "94305"}'/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''{street_address : "23 Elm Drive", city : "Palo Alto", state: "California", zipcode: "94305"}'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential><sequential display_name='JSON Introduced with the Mongo Shell'><problem display_name='Quiz'>Which of the following are valid JSON documents?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>{a:1, b:2, c: 3}<endouttext/></choice><choice correct='true'><startouttext/>{a:1, b:2, c:[1,2,3,4,5]}<endouttext/></choice><choice correct='true'><startouttext/>{a:1, b:{}, c: [ { a:1, b:2}, 5, 6]}<endouttext/></choice><choice correct='true'><startouttext/>{  }<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential display_name='Homework 1.1'><problem display_name='Quiz'>Install MongoDB on your computer and run it on the standard port.
+
+<p>
+Download the HW1 tarball (mac) or zipfile (windows), expand it as follows:
+</p>
+Mac Users
+<pre>
+tar xvf hw1.tar
+</pre>
+Windows Users
+<pre>
+You probably don't have tar installed so right click on the hw1.zip file and choose "extract all"
+</pre>
+Use mongorestore to restore the dump into your running mongod. Do this by opening a terminal window (mac) or cmd window (windows) and navigating to the directory so that the dump directory is directly beneath you. Now type
+<pre>
+mongorestore dump
+</pre>
+Note you will need to have your path setup correctly to find mongorestore.
+<p>
+Now, using the Mongo shell, perform a findone on the collection called <em>hw1</em> in the database <em>m101</em>. Please provide the answer from that query and enter it into the box below.
+</p><customresponse><textbox rows='4' cols='50' correct_answer="42"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''42'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential><sequential display_name='Homework 1.2'><problem display_name='Quiz'>Get Pymongo installed on your computer. To prove its installed, run the program hw1-2.py and provide the output from that program below. Note that you have to get MongoDB installed and the homework dataset imported from the previous homework.<customresponse><textbox rows='4' cols='50' correct_answer="1815"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''1815'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential><sequential display_name='Homework 1.3'><problem display_name='Quiz'>We are now going to test that you have bottle installed correctly and can run a bottle-based project. Run the hw1-3.py download as follows
+<pre>
+python hw1-3.py
+</pre>
+it requires bottle to be installed correctly, your mongodb to be running, and that you have run mongorestore properly.  From a different terminal window type the following from the command line: curl http://localhost:8080/hw1/50
+<p>
+Type the answer into the box below
+</p><customresponse><textbox rows='4' cols='50' correct_answer="53"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''53'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential></chapter><chapter display_name='Week2 - CRUD'><sequential display_name='Inserting Documents'><problem display_name='Quiz'>Insert a document into the "fruit" collection with the attributes of "name" being "apple", "color" being "red", and "shape" being round. Assume that we have already issued the use command to get into the right database. Use the "insert" command (versus the save command).<customresponse><textbox rows='4' cols='50' correct_answer='db.fruit.insert({name:"apple", color:"red", shape:"round"})'/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''db.fruit.insert({name:"apple", color:"red", shape:"round"})'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential><sequential display_name='$set operator'><problem display_name='Quiz'>Given the document
+<pre>
+{'username':'splunker', 'country':'US', 'phone':'718-343-3433'}
+</pre>
+in the collection <em>users</em>, write the shell command for updating the country to 'RU' for only this user. <customresponse><textbox rows='4' cols='50' correct_answer="db.users.set({'username':'splunker'},{$set:{'country':'RU'}})"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''db.users.set({'username':'splunker'},{$set:{'country':'RU'}})'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential><sequential display_name='$unset operator'><problem display_name='Quiz'>Write an update query that will unset the <em>interests</em> key in the following document in the collection <em>users</em>. Assume that their is a unique index on <em>username</em>.
+<pre>
+{'username':'joebiden', favorite_color:'blue', interests:['debating', 'politics', 'syria']}
+</pre><customresponse><textbox rows='4' cols='50' correct_answer="db.users.update({username:'joebiden'}, {$unset:{'interests':1}})"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''db.users.update({username:'joebiden'}, {$unset:{'interests':1}})'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential><sequential display_name='upserts'><problem display_name='Quiz'>After performing the following query on an empty collection
+<pre>
+db.foo.update({username:'foo'}, {'$set':{'interests':['cat', 'dog']}},true, false)
+</pre>
+What could be the state of the collection.<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>{ "_id" : ObjectId("507b78232e8dfde94c149949"), "interests" : [ "cat", "dog" ]}<endouttext/></choice><choice correct='false'><startouttext/>{"interests" : [ "cat", "dog" ], "username" : "foo" }<endouttext/></choice><choice correct='false'><startouttext/>{}<endouttext/></choice><choice correct='true'><startouttext/>{ "_id" : ObjectId("507b78232e8dfde94c149949"), "interests" : [ "cat", "dog" ], "username" : "foo" }<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential display_name='Wholesale Updating of a Document'><problem display_name='Quiz'>Let's say you had a collection with the following document in it:
+<pre>
+{ "_id" : "Texas", "population" : 2500000, "land_locked" : 1 }
+</pre>
+and you issued the query:
+<pre>
+db.foo.update({_id:"Texas"},{population:30000000})
+</pre>
+What would be the state of the collection after the update?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'>{ "_id" : "Texas", "population" : 2500000, "land_locked" : 1 }
+</choice><choice location='bottom' correct='false'>{ "_id" : "Texas", "population" : 3000000, "land_locked" : 1 }
+</choice><choice location='bottom' correct='true'>{ "_id" : "Texas", "population" : 30000000 }</choice><choice location='bottom' correct='false'>{ "_id" : ObjectId("507b7c601eb13126c9e3dcca"), "population" : 2500000 }</choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential display_name='Mongo shell, introdution to findOne'><problem display_name='Quiz'>Use <em>findOne</em> on the collection <em>users</em> to find one document where the key <em>username</em> is "dwight", and retrieve only the key named <em>email</em>.<customresponse><textbox rows='4' cols='50' correct_answer='db.users.findOne ( { "username" : "dwight" } , { "_id" : 0 , "email" : 1 } );'/></customresponse></problem></sequential><sequential display_name='Goals for week 2'><problem display_name='Quiz'>By the end of this week, you'll know which of the following?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>MongoDB's basic document creation, retrieval, modification, and removal operations<endouttext/></choice><choice correct='true'><startouttext/>Some features of the MongoDB shell, mongo<endouttext/></choice><choice correct='false'><startouttext/>How to measure performance of MongoDB operations<endouttext/></choice><choice correct='true'><startouttext/>How to manipulate MongoDB documents from Python<endouttext/></choice><choice correct='false'><startouttext/>How to analyze data in MongoDB collections<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential></chapter></course>
