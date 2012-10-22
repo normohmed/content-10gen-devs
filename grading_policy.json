@@ -3,7 +3,7 @@
     {
       "type" : "Homework",
       "min_count" : 1,
-      "drop_count" : 0,
+      "drop_count" : 1,
       "short_label" : "HW",
       "weight" : 0.5
     },
@@ -16,8 +16,8 @@
     }
   ],
   "GRADE_CUTOFFS" : {
-    "A" : 0.883,
-    "B" : 0.766,
+    "A" : 0.88,
+    "B" : 0.77,
     "C" : 0.65
   }
 }
