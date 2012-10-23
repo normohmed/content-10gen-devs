@@ -22,21 +22,28 @@ except demjson.JSONDecodeError as err:
 if not(response_json == quiz_answer_json):
   correct[0] = 'incorrect'
 ]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:ciuq7XPqHKI'/></vertical></sequential><sequential graded='false' display_name='JSON Subdocuments'><vertical><video display_name='Lecture' youtube='1.0:vrYAEH3g13M'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Write a JSON document with a single key, "address" that has as it value another document with the keys 
-'street_address', 'city', 'state', 'zipcode', with the following values: 'street_address' is "23 Elm Drive", 'city' is "Palo Alto", 'state' is "California", 'zipcode' is "94305"<customresponse><textbox rows='4' cols='50' correct_answer="{'address': {'street_address': &quot;23 Elm Drive&quot;, 'city' : &quot;Palo Alto&quot;, 'state': &quot;California&quot;, 'zip': &quot;94305&quot;} }"/><answer type='loncapa/python'><![CDATA[
-import re
+'street_address', 'city', 'state', 'zipcode', with the following values: 'street_address' is "23 Elm Drive", 'city' is "Palo Alto", 'state' is "California", 'zipcode' is "94305"<customresponse><textbox rows='4' cols='50' correct_answer="{'address': {'street_address': &quot;23 Elm Drive&quot;, 'city' : &quot;Palo Alto&quot;, 'state': &quot;California&quot;, 'zipcode': &quot;94305&quot;} }"/><answer type='loncapa/python'><![CDATA[
+import demjson
 correct = ['correct']
+messages = ['test message']
 try:
   r = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
   r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''{'address': {'street_address': "23 Elm Drive", 'city' : "Palo Alto", 'state': "California", 'zip': "94305"} }'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
+quiz_answer = '''{'address': {'street_address': "23 Elm Drive", 'city' : "Palo Alto", 'state': "California", 'zipcode': "94305"} }'''
+quiz_answer_json = {}
+try:
+  quiz_answer_json = demjson.decode(quiz_answer)
+except demjson.JSONDecodeError as err:
+  messages[0] = 'Quiz Answer failed to parse' + str(err)
+response_json = {}
+try:
+  response_json = demjson.decode(r)
+except demjson.JSONDecodeError as err:
+  messages[0] = 'Response failed to parse' + str(err)
+if not(response_json == quiz_answer_json):
   correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
 ]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:NGp_y6BaEMw'/></vertical></sequential><sequential graded='false' display_name='JSON Spec'><vertical><video display_name='Lecture' youtube='1.0:kOrsT94-A28'/></vertical></sequential><sequential graded='false' display_name='Introduction to our class project, the blog'><vertical><video display_name='Lecture' youtube='1.0:ePi3kDoexoM'/></vertical></sequential><sequential graded='false' display_name='Blog in Relational Tables'><vertical><video display_name='Lecture' youtube='1.0:boR2y9MHCa0'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>let’s assume that our blog can be modeled with the following relational tables:
 
 <pre>
