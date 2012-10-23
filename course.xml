@@ -254,7 +254,7 @@ if not(response == quiz_answer):
 ]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:Y6NKd6xUC6M'/></vertical></sequential><sequential graded='false' display_name='Python: while loops'><vertical><video display_name='Lecture' youtube='1.0:TEdFAheS5UE'/></vertical></sequential><sequential graded='false' display_name='Python: function calls'><vertical><video display_name='Lecture' youtube='1.0:PizwcirYuGY'/></vertical></sequential><sequential graded='false' display_name='Python: exception handling'><vertical><video display_name='Lecture' youtube='1.0:nrZYqF9KwaU'/></vertical></sequential><sequential graded='false' display_name='Bottle framework: Url Handlers'><vertical><video display_name='Lecture' youtube='1.0:x5TlvbWxjL0'/></vertical></sequential><sequential graded='false' display_name='Bottle framework: using views'><vertical><video display_name='Lecture' youtube='1.0:GUFDtACjFcc'/></vertical></sequential><sequential graded='false' display_name='Bottle framework: handling form content'><vertical><video display_name='Lecture' youtube='1.0:sUUT-gIS5ik'/></vertical></sequential><sequential graded='false' display_name='Bottle framework: using cookies'><vertical><video display_name='Lecture' youtube='1.0:Wk_1Lz_-gk4'/></vertical></sequential><sequential graded='false' display_name='The Pymongo driver'><vertical><video display_name='Lecture' youtube='1.0:u2kRRt861bU'/></vertical></sequential><sequential graded='false' display_name='Pymongo driver, safe mode, exception processing'><vertical><video display_name='Lecture' youtube='1.0:GR6W-gHffXw'/></vertical></sequential><sequential graded='true' display_name='Homework 1.1'><vertical><video display_name='Lecture' youtube='1.0:r48N7GcDqVI'/></vertical><problem showanswer='never' attempts='3' graded='true' format='Homework' display_name='Quiz'>Install MongoDB on your computer and run it on the standard port.
 
 <p>
-Download the HW1 tarball (mac) or zipfile (windows), expand it as follows:
+Download the <a href="/static/handouts/hw1.tar">HW1 tarball (mac)</a> or <a href="/static/handouts/hw1.zip">zipfile (windows)</a>, expand it as follows:
 </p>
 Mac Users
 <pre>
@@ -270,7 +270,7 @@ mongorestore dump
 </pre>
 Note you will need to have your path setup correctly to find mongorestore.
 <p>
-Now, using the Mongo shell, perform a findone on the collection called <em>hw1</em> in the database <em>m101</em>. Please provide the answer from that query and enter it into the box below.
+Now, using the Mongo shell, perform a findone on the collection called <em>hw1</em> in the database <em>m101</em>. That will return one document. Please provide the value corresponding to the "answer" key from the document returned.
 </p><customresponse><textbox rows='4' cols='50' correct_answer="42"/><answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
