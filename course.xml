@@ -114,7 +114,9 @@ if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:8WdnrhlfSLE'/></vertical></sequential><sequential graded='false' display_name='Python Lists, Manipulating'><vertical><video display_name='Lecture' youtube='1.0:PHii2QYNyB8'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Write the code to append the item "hammer" onto a list named things. <customresponse><textbox rows='4' cols='50' correct_answer='things.append("hammer")'/><answer type='loncapa/python'><![CDATA[
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:8WdnrhlfSLE'/></vertical></sequential><sequential graded='false' display_name='Python Lists, Manipulating'><vertical><video display_name='Lecture' youtube='1.0:PHii2QYNyB8'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Write the code to append the item "hammer" onto a list named things.
+
+<p>Please use double quotes at this time.</p><customresponse><textbox rows='4' cols='50' correct_answer='things.append("hammer")'/><answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
 try:
@@ -145,7 +147,9 @@ if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:vE498xAFoGc'/></vertical></sequential><sequential graded='false' display_name='Python Lists, Inclusion'><vertical><video display_name='Lecture' youtube='1.0:QXUMUvHB2Ws'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>given a python list called "fruit", write an if statement to check whether "apple" is in the list.<customresponse><textbox rows='4' cols='50' correct_answer='if "apple" in fruit:&#10;'/><answer type='loncapa/python'><![CDATA[
+]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:vE498xAFoGc'/></vertical></sequential><sequential graded='false' display_name='Python Lists, Inclusion'><vertical><video display_name='Lecture' youtube='1.0:QXUMUvHB2Ws'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>given a python list called "fruit", write an if statement to check whether "apple" is in the list.
+
+<p>Please use double quotes at this time.</p><customresponse><textbox rows='4' cols='50' correct_answer='if "apple" in fruit:&#10;'/><answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
 try:
@@ -406,7 +410,90 @@ db.foo.update({_id:"Texas"},{population:30000000})
 </pre>
 What would be the state of the collection after the update?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>{ "_id" : "Texas", "population" : 2500000, "land_locked" : 1 }
 </text></choice><choice location='bottom' correct='false'><text>{ "_id" : "Texas", "population" : 3000000, "land_locked" : 1 }
-</text></choice><choice location='bottom' correct='true'><text>{ "_id" : "Texas", "population" : 30000000 }</text></choice><choice location='bottom' correct='false'><text>{ "_id" : ObjectId("507b7c601eb13126c9e3dcca"), "population" : 2500000 }</text></choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Mongo shell, introdution to findOne'><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Use <em>findOne</em> on the collection <em>users</em> to find one document where the key <em>username</em> is "dwight", and retrieve only the key named <em>email</em>.<customresponse><textbox rows='4' cols='50' correct_answer='db.users.findOne ( { "username" : "dwight" } , { "_id" : false , "email" : true } );'/></customresponse></problem></sequential><sequential graded='false' display_name='Goals for week 2'><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>By the end of this week, you'll know which of the following?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>MongoDB's basic document creation, retrieval, modification, and removal operations<endouttext/></choice><choice correct='true'><startouttext/>Some features of the MongoDB shell, mongo<endouttext/></choice><choice correct='false'><startouttext/>How to measure performance of MongoDB operations<endouttext/></choice><choice correct='true'><startouttext/>How to manipulate MongoDB documents from Python<endouttext/></choice><choice correct='false'><startouttext/>How to analyze data in MongoDB collections<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='javascript basics'><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>What does the following fragment of JavaScript output?
+</text></choice><choice location='bottom' correct='true'><text>{ "_id" : "Texas", "population" : 30000000 }</text></choice><choice location='bottom' correct='false'><text>{ "_id" : ObjectId("507b7c601eb13126c9e3dcca"), "population" : 2500000 }</text></choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Mongo shell, introdution to findOne'><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Use <em>findOne</em> on the collection <em>users</em> to find one document where the key <em>username</em> is "dwight", and retrieve only the key named <em>email</em>.<customresponse><textbox rows='4' cols='50' correct_answer='db.users.findOne ( { "username" : "dwight" } , { "_id" : false , "email" : true } );'/>
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  response = '0'
+answer = '''db.users.findOne ( { "username" : "dwight" } , { "_id" : false , "email" : true } );'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='Goals for week 2'><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>By the end of this week, you'll know which of the following?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>MongoDB's basic document creation, retrieval, modification, and removal operations<endouttext/></choice><choice correct='true'><startouttext/>Some features of the MongoDB shell, mongo<endouttext/></choice><choice correct='false'><startouttext/>How to measure performance of MongoDB operations<endouttext/></choice><choice correct='true'><startouttext/>How to manipulate MongoDB documents from Python<endouttext/></choice><choice correct='false'><startouttext/>How to analyze data in MongoDB collections<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='javascript basics'><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>What does the following fragment of JavaScript output?
 
 <pre>
 x = { "a" : 1 };
