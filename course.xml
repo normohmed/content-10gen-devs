@@ -80,7 +80,8 @@ post_tags
 	tag_id
 </pre>
 
-In order to display a blog post with its comments and tags, how many tables will need to be accessed?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>2</text></choice><choice location='bottom' correct='false'><text>3</text></choice><choice location='bottom' correct='false'><text>5</text></choice><choice location='bottom' correct='true'><text>6</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:vB-4AbbLKeg'/></vertical></sequential><sequential graded='false' display_name='Blog in Documents'><vertical><video display_name='Lecture' youtube='1.0:ZjwCzyqKVdY'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Given the document schema that we proposed for the blog, how many collections would we need to access to display the blog home page?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>0</text></choice><choice location='bottom' correct='true'><text>1</text></choice><choice location='bottom' correct='false'><text>2</text></choice><choice location='bottom' correct='false'><text>4</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:WJblHPsp1p4'/></vertical></sequential><sequential graded='false' display_name='Intro to Schema Design'><vertical><video display_name='Lecture' youtube='1.0:6XE3wZCPiZ8'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>In which scenario is it impossible to embed data within a document (you must put the data in it a separate collection). Check all that apply.<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>The data would be duplicated across multiple objects within a collection.<endouttext/></choice><choice correct='false'><startouttext/>You need an index on the data element.<endouttext/></choice><choice correct='true'><startouttext/>The embedded data could exceed the 16MB document limit within MongoDB<endouttext/></choice><choice correct='false'><startouttext/>The data is not isomorphic.<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:wiwOEG_6ojs'/></vertical></sequential><sequential graded='false' display_name='Intro to Python'><vertical><video display_name='Lecture' youtube='1.0:-cAtffa59FM'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Write an expression to concatenate two strings "hat" and "pin" in python to the string "hatpin"<customresponse><textbox rows='4' cols='50' correct_answer='"hat" + "pin"'/><answer type='loncapa/python'><![CDATA[
+In order to display a blog post with its comments and tags, how many tables will need to be accessed?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>2</text></choice><choice location='bottom' correct='false'><text>3</text></choice><choice location='bottom' correct='false'><text>5</text></choice><choice location='bottom' correct='true'><text>6</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:vB-4AbbLKeg'/></vertical></sequential><sequential graded='false' display_name='Blog in Documents'><vertical><video display_name='Lecture' youtube='1.0:ZjwCzyqKVdY'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Given the document schema that we proposed for the blog, how many collections would we need to access to display the blog home page?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>0</text></choice><choice location='bottom' correct='true'><text>1</text></choice><choice location='bottom' correct='false'><text>2</text></choice><choice location='bottom' correct='false'><text>4</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:WJblHPsp1p4'/></vertical></sequential><sequential graded='false' display_name='Intro to Schema Design'><vertical><video display_name='Lecture' youtube='1.0:6XE3wZCPiZ8'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>In which scenario is it impossible to embed data within a document (you must put the data in it a separate collection). Check all that apply.<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>The data would be duplicated across multiple objects within a collection.<endouttext/></choice><choice correct='false'><startouttext/>You need an index on the data element.<endouttext/></choice><choice correct='true'><startouttext/>The embedded data could exceed the 16MB document limit within MongoDB<endouttext/></choice><choice correct='false'><startouttext/>The data is not isomorphic.<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:wiwOEG_6ojs'/></vertical></sequential><sequential graded='false' display_name='Intro to Python'><vertical><video display_name='Lecture' youtube='1.0:-cAtffa59FM'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Write an expression to concatenate two strings "hat" and "pin" in python to the string "hatpin"<customresponse><textbox rows='4' cols='50' correct_answer='"hat" + "pin"'/>
+<answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
 try:
@@ -88,18 +89,18 @@ try:
 except ValueError:
   correct[0] = 'incorrect'
   r = '0'
-response = re.sub(r'\s+', '', r)
+response = re.sub(r'[\s\'";]+', '', r)
 quiz_answer = '''"hat" + "pin"'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
+
+quiz_answer = re.sub(r'[\s\'";]+', '', quiz_answer)
 if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:PuyAdxxzSk0'/></vertical></sequential><sequential graded='false' display_name='Python Lists'><vertical><video display_name='Lecture' youtube='1.0:H1BOYfbnPq8'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Write the to code to initialize a list with the items "hammer", "nail" and "wall" and assign the list to the variable named "things".
-
-<p>
-Note:  Please use double quotes for string values for this quiz.
-</p><customresponse><textbox rows='4' cols='50' correct_answer='things = ["hammer", "nail", "wall"]'/><answer type='loncapa/python'><![CDATA[
+]]>
+</answer>
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:PuyAdxxzSk0'/></vertical></sequential><sequential graded='false' display_name='Python Lists'><vertical><video display_name='Lecture' youtube='1.0:H1BOYfbnPq8'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Write the to code to initialize a list with the items "hammer", "nail" and "wall" and assign the list to the variable named "things".<customresponse><textbox rows='4' cols='50' correct_answer='things = ["hammer", "nail", "wall"]'/>
+<answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
 try:
@@ -107,16 +108,20 @@ try:
 except ValueError:
   correct[0] = 'incorrect'
   r = '0'
-response = re.sub(r'\s+', '', r)
+response = re.sub(r'[\s\'";]+', '', r)
 quiz_answer = '''things = ["hammer", "nail", "wall"]'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
+
+quiz_answer = re.sub(r'[\s\'";]+', '', quiz_answer)
 if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:8WdnrhlfSLE'/></vertical></sequential><sequential graded='false' display_name='Python Lists, Manipulating'><vertical><video display_name='Lecture' youtube='1.0:PHii2QYNyB8'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Write the code to append the item "hammer" onto a list named things.
+]]>
+</answer>
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:8WdnrhlfSLE'/></vertical></sequential><sequential graded='false' display_name='Python Lists, Manipulating'><vertical><video display_name='Lecture' youtube='1.0:PHii2QYNyB8'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Write the code to append the item "hammer" onto a list named things.
 
-<p>Please use double quotes at this time.</p><customresponse><textbox rows='4' cols='50' correct_answer='things.append("hammer")'/><answer type='loncapa/python'><![CDATA[
+<p>Please use double quotes at this time.</p><customresponse><textbox rows='4' cols='50' correct_answer='things.append("hammer")'/>
+<answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
 try:
@@ -124,32 +129,19 @@ try:
 except ValueError:
   correct[0] = 'incorrect'
   r = '0'
-response = re.sub(r'\s+', '', r)
+response = re.sub(r'[\s\'";]+', '', r)
 quiz_answer = '''things.append("hammer")'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:ZSraFzkEDzs'/></vertical></sequential><sequential graded='false' display_name='Python Lists, Slice Operator'><vertical><video display_name='Lecture' youtube='1.0:vNyIZNWK0rw'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>things = ['apples', 'orange', 'pear', 'grape', 'kiwi']. What is the slice notation that will return the sublist ['orange', 'pear']?
-<customresponse><textbox rows='4' cols='50' correct_answer="things[1:3]"/><answer type='loncapa/python'><![CDATA[
-import re
-correct = ['correct']
-try:
-  r = str(submission[0])
-except ValueError:
-  correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''things[1:3]'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:vE498xAFoGc'/></vertical></sequential><sequential graded='false' display_name='Python Lists, Inclusion'><vertical><video display_name='Lecture' youtube='1.0:QXUMUvHB2Ws'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>given a python list called "fruit", write an if statement to check whether "apple" is in the list.
 
-<p>Please use double quotes at this time.</p><customresponse><textbox rows='4' cols='50' correct_answer='if "apple" in fruit:&#10;'/><answer type='loncapa/python'><![CDATA[
+quiz_answer = re.sub(r'[\s\'";]+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:ZSraFzkEDzs'/></vertical></sequential><sequential graded='false' display_name='Python Lists, Slice Operator'><vertical><video display_name='Lecture' youtube='1.0:vNyIZNWK0rw'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>things = ['apples', 'orange', 'pear', 'grape', 'kiwi']. What is the slice notation that will return the sublist ['orange', 'pear']?
+<customresponse><textbox rows='4' cols='50' correct_answer="things[1:3]"/>
+<answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
 try:
@@ -157,15 +149,42 @@ try:
 except ValueError:
   correct[0] = 'incorrect'
   r = '0'
-response = re.sub(r'\s+', '', r)
+response = re.sub(r'[\s\'";]+', '', r)
+quiz_answer = '''things[1:3]'''
+
+quiz_answer = re.sub(r'[\s\'";]+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:vE498xAFoGc'/></vertical></sequential><sequential graded='false' display_name='Python Lists, Inclusion'><vertical><video display_name='Lecture' youtube='1.0:QXUMUvHB2Ws'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>given a python list called "fruit", write an if statement to check whether "apple" is in the list.
+
+<p>Please use double quotes at this time.</p><customresponse><textbox rows='4' cols='50' correct_answer='if "apple" in fruit:&#10;'/>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'[\s\'";]+', '', r)
 quiz_answer = '''if "apple" in fruit:
 '''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
+
+quiz_answer = re.sub(r'[\s\'";]+', '', quiz_answer)
 if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:LdA0__D4zLI'/></vertical></sequential><sequential graded='false' display_name='Python, Working with Dicts'><vertical><video display_name='Lecture' youtube='1.0:_AbCyE0uKmE'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Initialize a new dict named "colors" with the following key values pairs: sky is blue, sea is blue. earth is brown.<customresponse><textbox rows='4' cols='50' correct_answer="colors = {'sky': 'blue', 'sea' : 'blue', 'earth': 'brown'}"/><answer type='loncapa/python'><![CDATA[
+]]>
+</answer>
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:LdA0__D4zLI'/></vertical></sequential><sequential graded='false' display_name='Python, Working with Dicts'><vertical><video display_name='Lecture' youtube='1.0:_AbCyE0uKmE'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Initialize a new dict named "colors" with the following key values pairs: sky is blue, sea is blue. earth is brown.
+
+<i>Note:  Please preserve the order of these keys when you enter your answer.</i><customresponse><textbox rows='4' cols='50' correct_answer="colors = {'sky': 'blue', 'sea' : 'blue', 'earth': 'brown'}"/>
+<answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
 try:
@@ -173,14 +192,18 @@ try:
 except ValueError:
   correct[0] = 'incorrect'
   r = '0'
-response = re.sub(r'\s+', '', r)
+response = re.sub(r'[\s\'";]+', '', r)
 quiz_answer = '''colors = {'sky': 'blue', 'sea' : 'blue', 'earth': 'brown'}'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
+
+quiz_answer = re.sub(r'[\s\'";]+', '', quiz_answer)
 if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:edEYrBoa7Ao'/></vertical></sequential><sequential graded='false' display_name='Python: Dicts and Lists together'><vertical><video display_name='Lecture' youtube='1.0:9k1XvuoGdrk'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Initialize a new dict with a single key, "animals" whose value is the list "dog", "cat", "zebra" and assign the entire expression to variable named "things"<customresponse><textbox rows='4' cols='50' correct_answer="things = {'animals' : ['dog', 'cat', 'zebra']}"/><answer type='loncapa/python'><![CDATA[
+]]>
+</answer>
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:edEYrBoa7Ao'/></vertical></sequential><sequential graded='false' display_name='Python: Dicts and Lists together'><vertical><video display_name='Lecture' youtube='1.0:9k1XvuoGdrk'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>Initialize a new dict with a single key, "animals" whose value is the list "dog", "cat", "zebra" and assign the entire expression to variable named "things"<customresponse><textbox rows='4' cols='50' correct_answer="things = {'animals' : ['dog', 'cat', 'zebra']}"/>
+<answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
 try:
@@ -188,14 +211,17 @@ try:
 except ValueError:
   correct[0] = 'incorrect'
   r = '0'
-response = re.sub(r'\s+', '', r)
+response = re.sub(r'[\s\'";]+', '', r)
 quiz_answer = '''things = {'animals' : ['dog', 'cat', 'zebra']}'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
+
+quiz_answer = re.sub(r'[\s\'";]+', '', quiz_answer)
 if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:Gqb-OUFcQas'/></vertical></sequential><sequential graded='false' display_name='Python: for loops, with Lists'><vertical><video display_name='Lecture' youtube='1.0:zMqLCtf3ML4'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>What does the following code print?
+]]>
+</answer>
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:Gqb-OUFcQas'/></vertical></sequential><sequential graded='false' display_name='Python: for loops, with Lists'><vertical><video display_name='Lecture' youtube='1.0:zMqLCtf3ML4'/></vertical><problem showanswer='attempted' graded='false' format='Quiz' display_name='Quiz'>What does the following code print?
 
 <pre>
 sum = 0
@@ -307,7 +333,7 @@ if not(response == quiz_answer):
 python hw1-2.py
 </pre>
 
-Then provide the output from that program below. Note that you have to get MongoDB installed and the homework dataset imported from the previous homework.<customresponse><textbox rows='4' cols='50' correct_answer="1815"/><answer type='loncapa/python'><![CDATA[
+This program will print a numeric answer.  Please put just the number into the space below.  Note that you will need to get MongoDB installed and the homework dataset imported from the previous homework before attempting this problem.<customresponse><textbox rows='4' cols='50' correct_answer="1815"/><answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
 try:
