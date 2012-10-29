@@ -370,59 +370,263 @@ if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential></chapter><chapter graceperiod='1 day' start='2012-10-29T23:00' due='November 5' display_name='Week2 - CRUD'><sequential graded='false' display_name='Inserting Documents'><problem showanswer='attempted' url_name='Inserting_Documents_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Insert a document into the "fruit" collection with the attributes of "name" being "apple", "color" being "red", and "shape" being round. Assume that we have already issued the use command to get into the right database. Use the "insert" method.<customresponse><textbox rows='4' cols='50' correct_answer='db.fruit.insert({name:"apple", color:"red", shape:"round"})'/><answer type='loncapa/python'><![CDATA[
-import re
-correct = ['correct']
+]]></answer></customresponse></problem></sequential></chapter><chapter graceperiod='1 day' start='2012-10-29T12:00' due='November 5' display_name='Week2 - CRUD'><sequential graded='false' display_name='Inserting Documents'><problem showanswer='attempted' url_name='Inserting_Documents_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Insert a document into the "fruit" collection with the attributes of "name" being "apple", "color" being "red", and "shape" being round. Assume that we have already issued the use command to get into the right database. Use the "insert" method.<customresponse><textbox rows='4' cols='50' correct_answer='db.fruit.insert({name:"apple", color:"red", shape:"round"})'/>
+<answer type='loncapa/python'><![CDATA[
 try:
-  r = str(submission[0])
+  response = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''db.fruit.insert({name:"apple", color:"red", shape:"round"})'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='$set operator'><problem showanswer='attempted' url_name='_set_operator_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Given the document
+  response = '0'
+answer = '''db.fruit.insert({name:"apple", color:"red", shape:"round"})'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='$set operator'><problem showanswer='attempted' url_name='_set_operator_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Given the document
 <pre>
 {'username':'splunker', 'country':'US', 'phone':'718-343-3433'}
 </pre>
-in the collection <em>users</em>, write the shell command for updating the country to 'RU' for only this user. <customresponse><textbox rows='4' cols='50' correct_answer="db.users.update({'username':'splunker'},{$set:{'country':'RU'}})"/><answer type='loncapa/python'><![CDATA[
-import re
-correct = ['correct']
+in the collection <em>users</em>, write the shell command for updating the country to 'RU' for only this user. <customresponse><textbox rows='4' cols='50' correct_answer="db.users.update({'username':'splunker'},{$set:{'country':'RU'}})"/>
+<answer type='loncapa/python'><![CDATA[
 try:
-  r = str(submission[0])
+  response = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''db.users.update({'username':'splunker'},{$set:{'country':'RU'}})'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='$unset operator'><problem showanswer='attempted' url_name='_unset_operator_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Write an update query that will unset the <em>interests</em> key in the following document in the collection <em>users</em>.
+  response = '0'
+answer = '''db.users.update({'username':'splunker'},{$set:{'country':'RU'}})'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='$unset operator'><problem showanswer='attempted' url_name='_unset_operator_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Write an update query that will unset the <em>interests</em> key in the following document in the collection <em>users</em>.
 <pre>
 {'username':'jimmy', favorite_color:'blue', interests:['debating', 'politics']}
-</pre><customresponse><textbox rows='4' cols='50' correct_answer="db.users.update({username:'jimmy'}, {$unset:{'interests':1}})"/><answer type='loncapa/python'><![CDATA[
-import re
-correct = ['correct']
+</pre><customresponse><textbox rows='4' cols='50' correct_answer="db.users.update({username:'jimmy'}, {$unset:{'interests':1}})"/>
+<answer type='loncapa/python'><![CDATA[
 try:
-  r = str(submission[0])
+  response = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''db.users.update({username:'jimmy'}, {$unset:{'interests':1}})'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='upserts'><problem showanswer='attempted' url_name='upserts_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>After performing the following update on an empty collection
+  response = '0'
+answer = '''db.users.update({username:'jimmy'}, {$unset:{'interests':1}})'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='upserts'><problem showanswer='attempted' url_name='upserts_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>After performing the following update on an empty collection
 <pre>
 db.foo.update({username:'bar'}, {'$set':{'interests':['cat', 'dog']}}, {upsert: true} );
 </pre>
@@ -542,56 +746,260 @@ if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='BSON types'><problem showanswer='attempted' url_name='BSON_types_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following are types available in BSON?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>Strings<endouttext/></choice><choice correct='true'><startouttext/>Floating-point numbers<endouttext/></choice><choice correct='false'><startouttext/>Complex numbers<endouttext/></choice><choice correct='true'><startouttext/>Arrays<endouttext/></choice><choice correct='true'><startouttext/>Objects<endouttext/></choice><choice correct='true'><startouttext/>Timestamps<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='Query by example, project'><problem showanswer='attempted' url_name='Query_by_example_project_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Supposing a <em>scores</em> collection similar to the one presented, how would you find all documents with an essay score equal to 50 and only retrieve the <em>student</em> field?<customresponse><textbox rows='4' cols='50' correct_answer='db.scores.find({ type:"essay", score:50}, {student:true,_id:false});'/><answer type='loncapa/python'><![CDATA[
-import re
-correct = ['correct']
+]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='BSON types'><problem showanswer='attempted' url_name='BSON_types_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following are types available in BSON?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>Strings<endouttext/></choice><choice correct='true'><startouttext/>Floating-point numbers<endouttext/></choice><choice correct='false'><startouttext/>Complex numbers<endouttext/></choice><choice correct='true'><startouttext/>Arrays<endouttext/></choice><choice correct='true'><startouttext/>Objects<endouttext/></choice><choice correct='true'><startouttext/>Timestamps<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='Query by example, project'><problem showanswer='attempted' url_name='Query_by_example_project_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Supposing a <em>scores</em> collection similar to the one presented, how would you find all documents with an essay score equal to 50 and only retrieve the <em>student</em> field?<customresponse><textbox rows='4' cols='50' correct_answer='db.scores.find({ type:"essay", score:50}, {student:true,_id:false});'/>
+<answer type='loncapa/python'><![CDATA[
 try:
-  r = str(submission[0])
+  response = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''db.scores.find({ type:"essay", score:50}, {student:true,_id:false});'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='Query modifiers'><problem showanswer='attempted' url_name='Query_modifiers_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of these finds documents with a score between 50 and 60, inclusive?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gt : 50 , $lt : 60 } } );</text></choice><choice location='bottom' correct='true'><text>db.scores.find({ score : { $gte : 50 , $lte : 60 } } );</text></choice><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gt : 50 , $lte : 60 } } );</text></choice><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gte : 50 , $lt : 60 } } );</text></choice><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gt : 50 } } );</text></choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Query modifiers, continued'><problem showanswer='attempted' url_name='Query_modifiers_continued_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following will find all users with username between "F" and "Q"?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>db.users.find( { name : { $gte : "F" ,  $lte : "Q" } } );<endouttext/></choice><choice correct='true'><startouttext/>db.users.find( { name : { $lte : "Q" , $gte : "F" } } );<endouttext/></choice><choice correct='false'><startouttext/>db.users.find( { name : { $gte : "f" ,  $lte : "Q" } } );<endouttext/></choice><choice correct='false'><startouttext/>db.users.find( { name :  { $lte : "Q" } });<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='Query modifiers, continued continued'><problem showanswer='attempted' url_name='Query_modifiers_continued_continued_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Write a query that retrieves documents from a <em>users</em> collection where the <em>username</em> has a "q" in it, and the document has an <em>email</em> field.<customresponse><textbox rows='4' cols='50' correct_answer='db.users.find({ name : { $regex : "q" }, email : { $exists: true } } );'/><answer type='loncapa/python'><![CDATA[
+  response = '0'
+answer = '''db.scores.find({ type:"essay", score:50}, {student:true,_id:false});'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
 import re
-correct = ['correct']
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
 try:
-  r = str(submission[0])
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='Query modifiers'><problem showanswer='attempted' url_name='Query_modifiers_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of these finds documents with a score between 50 and 60, inclusive?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gt : 50 , $lt : 60 } } );</text></choice><choice location='bottom' correct='true'><text>db.scores.find({ score : { $gte : 50 , $lte : 60 } } );</text></choice><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gt : 50 , $lte : 60 } } );</text></choice><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gte : 50 , $lt : 60 } } );</text></choice><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gt : 50 } } );</text></choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Query modifiers, continued'><problem showanswer='attempted' url_name='Query_modifiers_continued_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following will find all users with username between "F" and "Q"?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>db.users.find( { name : { $gte : "F" ,  $lte : "Q" } } );<endouttext/></choice><choice correct='true'><startouttext/>db.users.find( { name : { $lte : "Q" , $gte : "F" } } );<endouttext/></choice><choice correct='false'><startouttext/>db.users.find( { name : { $gte : "f" ,  $lte : "Q" } } );<endouttext/></choice><choice correct='false'><startouttext/>db.users.find( { name :  { $lte : "Q" } });<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='Query modifiers, continued continued'><problem showanswer='attempted' url_name='Query_modifiers_continued_continued_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Write a query that retrieves documents from a <em>users</em> collection where the <em>username</em> has a "q" in it, and the document has an <em>email</em> field.<customresponse><textbox rows='4' cols='50' correct_answer='db.users.find({ name : { $regex : "q" }, email : { $exists: true } } );'/>
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''db.users.find({ name : { $regex : "q" }, email : { $exists: true } } );'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='Query modifiers, continued continued continued'><problem showanswer='attempted' url_name='Query_modifiers_continued_continued_continued_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>How would you find all documents in the <em>scores</em> collection where the <em>score</em> is less than 50 or greater than 90?<customresponse><textbox rows='4' cols='50' correct_answer="db.scores.find( { $or : [ { score : { $lt : 50 } }, { score : { $gt : 90 } } ] } ) ;"/><answer type='loncapa/python'><![CDATA[
+  response = '0'
+answer = '''db.users.find({ name : { $regex : "q" }, email : { $exists: true } } );'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
 import re
-correct = ['correct']
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
 try:
-  r = str(submission[0])
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='Query modifiers, continued continued continued'><problem showanswer='attempted' url_name='Query_modifiers_continued_continued_continued_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>How would you find all documents in the <em>scores</em> collection where the <em>score</em> is less than 50 or greater than 90?<customresponse><textbox rows='4' cols='50' correct_answer="db.scores.find( { $or : [ { score : { $lt : 50 } }, { score : { $gt : 90 } } ] } ) ;"/>
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''db.scores.find( { $or : [ { score : { $lt : 50 } }, { score : { $gt : 90 } } ] } ) ;'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='Query modifiers, trick question'><problem showanswer='attempted' url_name='Query_modifiers_trick_question_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>What will the following query do?
+  response = '0'
+answer = '''db.scores.find( { $or : [ { score : { $lt : 50 } }, { score : { $gt : 90 } } ] } ) ;'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='Query modifiers, trick question'><problem showanswer='attempted' url_name='Query_modifiers_trick_question_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>What will the following query do?
 
 <pre>db.scores.find( { score : { $gt : 50 }, score : { $lt : 60 } } );</pre><choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>Find all documents with score between 50 and 60<endouttext/></choice><choice correct='false'><startouttext/>Find all documents with score greater than 50<endouttext/></choice><choice correct='true'><startouttext/>Find all documents with score less than 60<endouttext/></choice><choice correct='false'><startouttext/>Explode like the Death Star<endouttext/></choice><choice correct='false'><startouttext/>None of the above<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='Querying arrays'><problem showanswer='attempted' url_name='Querying_arrays_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following documents would be returned by this query?
 
-<pre>db.products.find( { tag : "shiny" } );</pre><choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>{ _id : 42 , name : "Whizzy Wiz-o-matic", tags : [ "awesome", "shiny" , "green" ] }<endouttext/></choice><choice correct='false'><startouttext/>{ _id : 704 , name : "Fooey Foo-o-tron", tags : [ "blue", "mediocre" ] }<endouttext/></choice><choice correct='true'><startouttext/>{ _id : 1040 , name : "Snappy Snap-o-lux", tags : "shiny" }<endouttext/></choice><choice correct='false'><startouttext/>{ _id : 12345 , name : "Quuxinator", tags : [ ] }<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='Querying with arrays'><problem showanswer='attempted' url_name='Querying_with_arrays_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following documents does not match this query?
+<pre>db.products.find( { tag : "shiny" } );</pre><choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>{ _id : 42 , name : "Whizzy Wiz-o-matic", tags : [ "awesome", "shiny" , "green" ] }<endouttext/></choice><choice correct='false'><startouttext/>{ _id : 704 , name : "Fooey Foo-o-tron", tags : [ "blue", "mediocre" ] }<endouttext/></choice><choice correct='true'><startouttext/>{ _id : 1040 , name : "Snappy Snap-o-lux", tags : "shiny" }<endouttext/></choice><choice correct='false'><startouttext/>{ _id : 12345 , name : "Quuxinator", tags : [ ] }<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='Querying with arrays'><problem showanswer='attempted' url_name='Querying_with_arrays_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following documents matches this query?
 
 <pre>db.users.find( { friends : { $all : [ "Joe" , "Bob" ] }, favorites : { $in : [ "running" , "pickles" ] } } )</pre><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>{ name : "William" , friends : [ "Bob" , "Fred" ] , favorites : [ "hamburgers", "running" ] }</text></choice><choice location='bottom' correct='false'><text>{ name : "Stephen" , friends : [ "Joe" , "Pete" ] , favorites : [ "pickles", "swimming" ] }</text></choice><choice location='bottom' correct='true'><text>{ name : "Cliff" , friends : [ "Pete" , "Joe" , "Tom" , "Bob" ] , favorites : [ "pickles", "cycling" ] }</text></choice><choice location='bottom' correct='false'><text>{ name : "Harry" , friends : [ "Joe" , "Bob" ] , favorites : [ "hot dogs", "swimming" ] }</text></choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Queries with dot notation'><problem showanswer='attempted' url_name='Queries_with_dot_notation_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Suppose a simple e-commerce product catalog called <em>catalog</em> with documents that look like this:
 
@@ -603,22 +1011,90 @@ if not(response == quiz_answer):
   ... }
 </pre>
 
-Write a query that finds all products that cost more than 10,000 and that have a rating of 5 or better.<customresponse><textbox rows='4' cols='50' correct_answer='db.catalog.find( { price : { $gt : 10000 } , "reviews.rating" : { $gte : 5 } } ); '/><answer type='loncapa/python'><![CDATA[
-import re
-correct = ['correct']
+Write a query that finds all products that cost more than 10,000 and that have a rating of 5 or better.<customresponse><textbox rows='4' cols='50' correct_answer='db.catalog.find( { price : { $gt : 10000 } , "reviews.rating" : { $gte : 5 } } ); '/>
+<answer type='loncapa/python'><![CDATA[
 try:
-  r = str(submission[0])
+  response = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''db.catalog.find( { price : { $gt : 10000 } , "reviews.rating" : { $gte : 5 } } ); '''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='Querying, cursor modifiers'><problem showanswer='attempted' url_name='Querying_cursor_modifiers_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Recall the documents in the scores collection:
+  response = '0'
+answer = '''db.catalog.find( { price : { $gt : 10000 } , "reviews.rating" : { $gte : 5 } } ); '''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='Querying, cursor modifiers'><problem showanswer='attempted' url_name='Querying_cursor_modifiers_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Recall the documents in the scores collection:
 
 <pre>
 {
@@ -629,22 +1105,90 @@ if not(response == quiz_answer):
 }
 </pre>
 
-Write a query that retrieves exam documents, sorted by score in descending order, skipping the first 50 and showing only the next 20.<customresponse><textbox rows='4' cols='50' correct_answer='db.scores.find( { type : "exam" } ).sort( { score : -1 } ).skip(50).limit(20)'/><answer type='loncapa/python'><![CDATA[
-import re
-correct = ['correct']
+Write a query that retrieves exam documents, sorted by score in descending order, skipping the first 50 and showing only the next 20.<customresponse><textbox rows='4' cols='50' correct_answer='db.scores.find( { type : "exam" } ).sort( { score : -1 } ).skip(50).limit(20)'/>
+<answer type='loncapa/python'><![CDATA[
 try:
-  r = str(submission[0])
+  response = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''db.scores.find( { type : "exam" } ).sort( { score : -1 } ).skip(50).limit(20)'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='Counting documents'><problem showanswer='attempted' url_name='Counting_documents_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>How would you count the documents in the <em>scores</em> collection where the type was "essay" and the score was greater than 90?<customresponse><textbox rows='4' cols='50' correct_answer='db.scores.count({ type:"essay", score:{$gt:90}});'/><answer type='loncapa/python'><![CDATA[
+  response = '0'
+answer = '''db.scores.find( { type : "exam" } ).sort( { score : -1 } ).skip(50).limit(20)'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='Counting documents'><problem showanswer='attempted' url_name='Counting_documents_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>How would you count the documents in the <em>scores</em> collection where the type was "essay" and the score was greater than 90?<customresponse><textbox rows='4' cols='50' correct_answer='db.scores.count({ type:"essay", score:{$gt:90}});'/><answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
 try:
@@ -739,4 +1283,197 @@ if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential></chapter></course>
+]]></answer></customresponse></problem></sequential><sequential graded='false' display_name='Pymongo, find, find_one and cursors'><problem showanswer='attempted' url_name='Pymongo_find_find_one_and_cursors_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>In the following code snippet:
+<pre>
+
+import pymongo
+import sys
+
+# establish a connection to the database
+connection = pymongo.Connection("mongodb://localhost", safe=True)
+
+# get a handle to the school database
+db=connection.school
+scores = db.scores
+     
+try:
+        xxxx
+        
+except:
+        print "Unexpected error:", sys.exc_info()[0]
+
+
+print doc
+</pre>
+please enter the one line of python code that would be needed in in place of xxxx to find one document in the collection.<customresponse><textbox rows='4' cols='50' correct_answer="doc = scores.find_one()"/>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'[\s\'";]+', '', r)
+quiz_answer = '''doc = scores.find_one()'''
+
+quiz_answer = re.sub(r'[\s\'";]+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='Pymongo, using field selection'><problem showanswer='attempted' url_name='Pymongo_using_field_selection_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following could work using pymongo, depending on variable names, to select out just the student_id from the scores collection using a find command.<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>cursor = students.find({'student_id':1, '_id':0})</text></choice><choice location='bottom' correct='false'><text>cursor = students.find({'student_id':1})</text></choice><choice location='bottom' correct='true'><text>cursor = students.find({}, {'student_id':1, '_id':0})</text></choice><choice location='bottom' correct='false'><text>cursor = students.find({}, {student_id:1, _id:0})</text></choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Pymongo, using $gt and $lt'><problem showanswer='attempted' url_name='Pymongo_using_gt_and_lt_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>In the following code, what is the correct line of code, marked by xxxx,  to search for all quiz scores that are greater than 20 and less than 90.
+<pre>
+
+import pymongo
+import sys
+
+# establish a connection to the database
+connection = pymongo.Connection("mongodb://localhost", safe=True)
+
+# get a handle to the school database
+db=connection.school
+scores = db.scores
+
+
+def find():
+
+    print "find, reporting for duty"
+
+    xxxx
+
+    try:
+        iter = scores.find(query)
+
+    except:
+        print "Unexpected error:", sys.exc_info()[0]
+        
+    return iter
+
+find()
+</pre>
+
+<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text> query = {'score':{'$gt':20, '$lt':90}}</text></choice><choice location='bottom' correct='true'><text> query = {'type':'quiz', 'score':{'$gt':20, '$lt':90}}</text></choice><choice location='bottom' correct='false'><text> query = {'type':'quiz', '$gt':{'score':20}, '$lt':{'score':90}}</text></choice><choice location='bottom' correct='false'><text> query = {'type':'quiz', 'score':{$gt:20, $lt:90}}</text></choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Importing from Reddit'><problem showanswer='attempted' url_name='Importing_from_Reddit_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Pymongo, using a regex'><problem showanswer='attempted' url_name='Pymongo_using_a_regex_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Pymongo, using dot notation'><problem showanswer='attempted' url_name='Pymongo_using_dot_notation_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>In the following code, what do you think will happen if a document that matches the query doesn't have a key called <i>media.oembed.url</i>?
+<pre>
+
+import pymongo
+import sys
+
+# establish a connection to the database
+connection = pymongo.Connection("mongodb://localhost", safe=True)
+
+# get a handle to the reddit database
+db=connection.reddit
+scores = db.stories
+
+
+def find():
+
+    print "find, reporting for duty"
+
+    query = {'media.oembed.type':'video'}
+    projection = {'media.oembed.url':1, '_id':0}
+
+    try:
+        iter = scores.find(query, projection)
+
+    except:
+        print "Unexpected error:", sys.exc_info()[0]
+
+    sanity = 0
+    for doc in iter:
+        print doc
+        sanity += 1
+        if (sanity > 10):
+            break
+        
+
+find()
+
+</pre>
+<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>Pymongo will throw an exception.</text></choice><choice location='bottom' correct='true'><text>Pymongo will return an empty document</text></choice><choice location='bottom' correct='false'><text>Pymongo will return a document with the following structure {media:{oembed:{url:{}}}}</text></choice><choice location='bottom' correct='false'><text>There is not enough information to know</text></choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Pymongo, sort, skip and limit'><problem showanswer='attempted' url_name='Pymongo_sort_skip_and_limit_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Supposed you had the following documents in a collection named things.
+<pre>
+{ "_id" : 0, "value" : 10 }
+{ "_id" : 2, "value" : 5 }
+{ "_id" : 3, "value" : 7 }
+{ "_id" : 4, "value" : 20 }
+</pre>
+If you performed the following query in pymongo:
+<pre>
+cursor = things.find().skip(3).limit(1).sort('value",pymongo.DESCENDING)
+</pre>
+which document would be returned?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>The document with _id=0</text></choice><choice location='bottom' correct='true'><text>The document with _id=2</text></choice><choice location='bottom' correct='false'><text>The document with _id=3</text></choice><choice location='bottom' correct='false'><text>The doucment with _id=4</text></choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Pymongo, Sort, final thoughts'><problem showanswer='attempted' url_name='Pymongo_Sort_final_thoughts_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Pymongo, Inserting'><problem showanswer='attempted' url_name='Pymongo_Inserting_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Do you expect the second insert below to succeed?
+<pre>
+
+# get a handle to the school database
+db=connection.school
+people = db.people
+
+doc = {"name":"Andrew Erlichson", "company":"10gen",
+              "interests":['running', 'cycling', 'photography']}
+
+try:
+        people.insert(doc)   # first insert
+        del(doc['_id'])
+        people.insert(doc)   # second insert
+
+except:
+        print "Unexpected error:", sys.exc_info()[0]
+
+</pre><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>No, because the _id will be a duplicate in the collection</text></choice><choice location='bottom' correct='false'><text>No, because the del call will delete the entire record in python</text></choice><choice location='bottom' correct='true'><text>Yes, because the del call will remove the _id key added by the pymongo driver in the first delete</text></choice><choice location='bottom' correct='false'><text>Yes, because the pymongo driver always adds a unique _id field on insert.</text></choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Pymongo, Updating'><problem showanswer='attempted' url_name='Pymongo_Updating_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>In the following code fragment, what is the python expression in place of xxxx to set a new key "examiner" to be "Jones"
+
+Please use the $set operator
+
+<pre>
+
+def using_set():
+
+    print "updating record using set"
+    # get a handle to the school database
+    db=connection.school
+    scores = db.scores
+
+
+    try:
+        # get the doc
+        score = scores.find_one({'student_id':1, 'type':'homework'})
+        print "before: ", score
+
+        # update using set
+        scores.update({'student_id':1, 'type':'homework'},
+                      xxxx)
+
+        score = scores.find_one({'student_id':1, 'type':'homework'})
+        print "after: ", score
+
+    except:
+        print "Unexpected error:", sys.exc_info()[0]
+        raise
+
+</pre>
+<customresponse><textbox rows='4' cols='50' correct_answer="{'$set':{'examiner':'Jones'}}"/>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'[\s\'";]+', '', r)
+quiz_answer = '''{'$set':{'examiner':'Jones'}}'''
+
+quiz_answer = re.sub(r'[\s\'";]+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse></problem></sequential><sequential graded='false' display_name='Pymongo, upserts'><problem showanswer='attempted' url_name='Pymongo_upserts_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Suppose we would like to upsert the following document into the collection <i>stuff</i>:
+<pre>
+{_id:"bat", friend:'ball', cousin:'glove'}
+</pre>
+Which of the following python statements work. Check all that apply.<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>stuff.update({'_id':'bat'},  {'friend':'ball', 'cousin':'glove'}, upsert=True)<endouttext/></choice><choice correct='false'><startouttext/>stuff.update({'_id':'bat'},  {'friend':'ball', 'cousin':'glove'}, upsert=False)<endouttext/></choice><choice correct='true'><startouttext/>stuff.update({'_id':'bat'},  {'_id':'bat', 'friend':'ball', 'cousin':'glove'}, upsert=True)<endouttext/></choice><choice correct='true'><startouttext/>stuff.update({'_id':'bat'},  {'$set': {'friend':'ball', 'cousin':'glove'}}, upsert=True)<endouttext/></choice></checkboxgroup></choiceresponse></problem></sequential><sequential graded='false' display_name='Pymongo, find_and_modify'><problem showanswer='attempted' url_name='Pymongo_find_and_modify_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Blog, User Interface'><problem showanswer='attempted' url_name='Blog_User_Interface_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Blog, Session Management'><problem showanswer='attempted' url_name='Blog_Session_Management_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='false' display_name='Blog, Internals'><problem showanswer='attempted' url_name='Blog_Internals_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'><multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'></choicegroup></multiplechoiceresponse></problem></sequential></chapter></course>
