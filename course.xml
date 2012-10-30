@@ -642,7 +642,7 @@ except demjson.JSONDecodeError as err:
   messages[0] = "Response failed to parse " + str(err)
 ]]>
 </answer>
-</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:ouHFZgtEAuU'/></vertical></sequential><sequential graded='false' display_name='Querying using $gt and $lt'><vertical><video display_name='Lecture' youtube='1.0:FHLrz4VGzkg'/></vertical><problem showanswer='attempted' url_name='Querying_using_gt_and_lt_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of these finds documents with a score between 50 and 60, inclusive?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gt : 50 , $lt : 60 } } );</text></choice><choice location='bottom' correct='true'><text>db.scores.find({ score : { $gte : 50 , $lte : 60 } } );</text></choice><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gt : 50 , $lte : 60 } } );</text></choice><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gte : 50 , $lt : 60 } } );</text></choice><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gt : 50 } } );</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:tY7I1l8JdDI'/></vertical></sequential><sequential graded='false' display_name='Inequalities on strings'><vertical><video display_name='Lecture' youtube='1.0:imCCKOevU3c'/></vertical><problem showanswer='attempted' url_name='Inequalities_on_strings_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following will find all users with username between "F" and "Q"?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>db.users.find( { name : { $gte : "F" ,  $lte : "Q" } } );<endouttext/></choice><choice correct='true'><startouttext/>db.users.find( { name : { $lte : "Q" , $gte : "F" } } );<endouttext/></choice><choice correct='false'><startouttext/>db.users.find( { name : { $gte : "f" ,  $lte : "Q" } } );<endouttext/></choice><choice correct='false'><startouttext/>db.users.find( { name :  { $lte : "Q" } });<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:ZRWT0lcHsoU'/></vertical></sequential><sequential graded='false' display_name='Using regexes, $exists, $type'><vertical><video display_name='Lecture' youtube='1.0:lI-jhqYf1JY'/></vertical><problem showanswer='attempted' url_name='Using_regexes_exists_type_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Write a query that retrieves documents from a <em>users</em> collection where the <em>username</em> has a "q" in it, and the document has an <em>email</em> field.<customresponse><textbox rows='4' cols='50' correct_answer='db.users.find({ name : { $regex : "q" }, email : { $exists: true } } );'/>
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:ouHFZgtEAuU'/></vertical></sequential><sequential graded='false' display_name='Querying using $gt and $lt'><vertical><video display_name='Lecture' youtube='1.0:FHLrz4VGzkg'/></vertical><problem showanswer='attempted' url_name='Querying_using_gt_and_lt_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of these finds documents with a score between 50 and 60, inclusive?<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gt : 50 , $lt : 60 } } );</text></choice><choice location='bottom' correct='true'><text>db.scores.find({ score : { $gte : 50 , $lte : 60 } } );</text></choice><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gt : 50 , $lte : 60 } } );</text></choice><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gte : 50 , $lt : 60 } } );</text></choice><choice location='bottom' correct='false'><text>db.scores.find({ score : { $gt : 50 } } );</text></choice></choicegroup></multiplechoiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:tY7I1l8JdDI'/></vertical></sequential><sequential graded='false' display_name='Inequalities on strings'><vertical><video display_name='Lecture' youtube='1.0:imCCKOevU3c'/></vertical><problem showanswer='attempted' url_name='Inequalities_on_strings_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Which of the following will find all users with <em>name</em> between "F" and "Q"?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>db.users.find( { name : { $gte : "F" ,  $lte : "Q" } } );<endouttext/></choice><choice correct='true'><startouttext/>db.users.find( { name : { $lte : "Q" , $gte : "F" } } );<endouttext/></choice><choice correct='false'><startouttext/>db.users.find( { name : { $gte : "f" ,  $lte : "Q" } } );<endouttext/></choice><choice correct='false'><startouttext/>db.users.find( { name :  { $lte : "Q" } });<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:ZRWT0lcHsoU'/></vertical></sequential><sequential graded='false' display_name='Using regexes, $exists, $type'><vertical><video display_name='Lecture' youtube='1.0:lI-jhqYf1JY'/></vertical><problem showanswer='attempted' url_name='Using_regexes_exists_type_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Write a query that retrieves documents from a <em>users</em> collection where the <em>name</em> has a "q" in it, and the document has an <em>email</em> field.<customresponse><textbox rows='4' cols='50' correct_answer='db.users.find({ name : { $regex : "q" }, email : { $exists: true } } );'/>
 <answer type='loncapa/python'><![CDATA[
 try:
   response = str(submission[0])
@@ -1001,22 +1001,90 @@ except demjson.JSONDecodeError as err:
   messages[0] = "Response failed to parse " + str(err)
 ]]>
 </answer>
-</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:djzpK7UIO94'/></vertical></sequential><sequential graded='false' display_name='Counting results'><vertical><video display_name='Lecture' youtube='1.0:eKD5bVmNQMI'/></vertical><problem showanswer='attempted' url_name='Counting_results_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>How would you count the documents in the <em>scores</em> collection where the type was "essay" and the score was greater than 90?<customresponse><textbox rows='4' cols='50' correct_answer='db.scores.count({ type:"essay", score:{$gt:90}});'/><answer type='loncapa/python'><![CDATA[
-import re
-correct = ['correct']
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:djzpK7UIO94'/></vertical></sequential><sequential graded='false' display_name='Counting results'><vertical><video display_name='Lecture' youtube='1.0:eKD5bVmNQMI'/></vertical><problem showanswer='attempted' url_name='Counting_results_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>How would you count the documents in the <em>scores</em> collection where the type was "essay" and the score was greater than 90?<customresponse><textbox rows='4' cols='50' correct_answer='db.scores.count({ type:"essay", score:{$gt:90}});'/>
+<answer type='loncapa/python'><![CDATA[
 try:
-  r = str(submission[0])
+  response = str(submission[0])
 except ValueError:
   correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''db.scores.count({ type:"essay", score:{$gt:90}});'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem><vertical><video display_name='Answer' youtube='1.0:Uozp0diXOc8'/></vertical></sequential><sequential graded='false' display_name='Wholesale Updating of a Document'><vertical><video display_name='Lecture' youtube='1.0:EBCk6W7x-OY'/></vertical><problem showanswer='attempted' url_name='Wholesale_Updating_of_a_Document_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Let's say you had a collection with the following document in it:
+  response = '0'
+answer = '''db.scores.count({ type:"essay", score:{$gt:90}});'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['test message']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse></problem><vertical><video display_name='Answer' youtube='1.0:Uozp0diXOc8'/></vertical></sequential><sequential graded='false' display_name='Wholesale Updating of a Document'><vertical><video display_name='Lecture' youtube='1.0:EBCk6W7x-OY'/></vertical><problem showanswer='attempted' url_name='Wholesale_Updating_of_a_Document_problem' rerandomize='never' graded='false' format='Quiz' display_name='Quiz'>Let's say you had a collection with the following document in it:
 <pre>
 { "_id" : "Texas", "population" : 2500000, "land_locked" : 1 }
 </pre>
