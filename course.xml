@@ -370,7 +370,7 @@ if not(response == quiz_answer):
   correct[0] = 'incorrect'
   print 'response = ', response
   print 'quiz_answer = ', quiz_answer
-]]></answer></customresponse></problem></sequential></chapter><chapter graceperiod='1 day' start='2012-10-29T12:00' due='November 5' display_name='Week2 - CRUD'><sequential graded='false' format='Quiz' display_name='Introduction to Week 2'><vertical><video display_name='Lecture' youtube='1.0:kB_9lXE-EbY'/></vertical><problem showanswer='attempted' url_name='Introduction_to_Week_2_problem' rerandomize='onreset' display_name='Quiz'>By the end of this week, you'll know which of the following?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>MongoDB's basic document creation, retrieval, modification, and removal operations<endouttext/></choice><choice correct='true'><startouttext/>Some features of the MongoDB shell, mongo<endouttext/></choice><choice correct='false'><startouttext/>How to measure performance of MongoDB operations<endouttext/></choice><choice correct='true'><startouttext/>How to manipulate MongoDB documents from Python<endouttext/></choice><choice correct='false'><startouttext/>How to analyze data in MongoDB collections<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:osal1NuP4UA'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Secrets of the Mongo Shell'><vertical><video display_name='Lecture' youtube='1.0:hJy10xgZXzc'/></vertical><problem showanswer='attempted' url_name='Secrets_of_the_Mongo_Shell_problem' rerandomize='onreset' display_name='Quiz'>What does the following fragment of JavaScript output?
+]]></answer></customresponse></problem></sequential></chapter><chapter graceperiod='1 day' start='2012-10-29T12:00' due='2012-11-08T03:00' display_name='Week2 - CRUD'><sequential graded='false' format='Quiz' display_name='Introduction to Week 2'><vertical><video display_name='Lecture' youtube='1.0:kB_9lXE-EbY'/></vertical><problem showanswer='attempted' url_name='Introduction_to_Week_2_problem' rerandomize='onreset' display_name='Quiz'>By the end of this week, you'll know which of the following?<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='true'><startouttext/>MongoDB's basic document creation, retrieval, modification, and removal operations<endouttext/></choice><choice correct='true'><startouttext/>Some features of the MongoDB shell, mongo<endouttext/></choice><choice correct='false'><startouttext/>How to measure performance of MongoDB operations<endouttext/></choice><choice correct='true'><startouttext/>How to manipulate MongoDB documents from Python<endouttext/></choice><choice correct='false'><startouttext/>How to analyze data in MongoDB collections<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:osal1NuP4UA'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Secrets of the Mongo Shell'><vertical><video display_name='Lecture' youtube='1.0:hJy10xgZXzc'/></vertical><problem showanswer='attempted' url_name='Secrets_of_the_Mongo_Shell_problem' rerandomize='onreset' display_name='Quiz'>What does the following fragment of JavaScript output?
 
 <pre>
 x = { "a" : 1 };
@@ -1748,4 +1748,176 @@ if not(response == quiz_answer):
 <pre>
 {_id:"bat", friend:'ball', cousin:'glove'}
 </pre>
-Which of the following python statements work. Check all that apply.<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>stuff.update({'_id':'bat'},  {'friend':'ball', 'cousin':'glove'}, upsert=True)<endouttext/></choice><choice correct='false'><startouttext/>stuff.update({'_id':'bat'},  {'friend':'ball', 'cousin':'glove'}, upsert=False)<endouttext/></choice><choice correct='true'><startouttext/>stuff.update({'_id':'bat'},  {'_id':'bat', 'friend':'ball', 'cousin':'glove'}, upsert=True)<endouttext/></choice><choice correct='true'><startouttext/>stuff.update({'_id':'bat'},  {'$set': {'friend':'ball', 'cousin':'glove'}}, upsert=True)<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:tMEohyZX0cI'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Pymongo, find_and_modify'><vertical><video display_name='Lecture' youtube='1.0:rQ8Oml5e6PI'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Blog, User Interface'><vertical><video display_name='Lecture' youtube='1.0:QA80WBg0hLg'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Blog, Session Management'><vertical><video display_name='Lecture' youtube='1.0:sNigml3JoY0'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Blog, Internals'><vertical><video display_name='Lecture' youtube='1.0:tTqQZvBGhyU'/></vertical></sequential></chapter></course>
+Which of the following python statements work. Check all that apply.<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>stuff.update({'_id':'bat'},  {'friend':'ball', 'cousin':'glove'}, upsert=True)<endouttext/></choice><choice correct='false'><startouttext/>stuff.update({'_id':'bat'},  {'friend':'ball', 'cousin':'glove'}, upsert=False)<endouttext/></choice><choice correct='true'><startouttext/>stuff.update({'_id':'bat'},  {'_id':'bat', 'friend':'ball', 'cousin':'glove'}, upsert=True)<endouttext/></choice><choice correct='true'><startouttext/>stuff.update({'_id':'bat'},  {'$set': {'friend':'ball', 'cousin':'glove'}}, upsert=True)<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:tMEohyZX0cI'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Pymongo, find_and_modify'><vertical><video display_name='Lecture' youtube='1.0:rQ8Oml5e6PI'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Blog, User Interface'><vertical><video display_name='Lecture' youtube='1.0:QA80WBg0hLg'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Blog, Session Management'><vertical><video display_name='Lecture' youtube='1.0:sNigml3JoY0'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Blog, Internals'><vertical><video display_name='Lecture' youtube='1.0:tTqQZvBGhyU'/></vertical></sequential><sequential graded='true' format='Homework' display_name='Homework 2.1'><problem showanswer='never' attempts='3' url_name='Homework_2_1_problem' rerandomize='onreset' display_name='Quiz'>In this problem, you will be using a collection of student scores that is similar to what we used in the lessons. Please download the <a href="/static/handouts/grades.js">grades.js</a> file and import it into your local mongo database as follows:
+<pre>
+mongoimport -d students -c grades < grades.js
+</pre>
+The dataset contains 4 scores for 200 students.
+<p>
+First, let’s confirm your data is intact; the number of documents should be 800.
+<pre>
+> db.grades.count()
+800
+</pre>
+<p>
+This next query, which uses the aggregation framework that we have not taught yet, will tell you the <em>student_id</em> with the highest average score:
+</p>
+
+<pre>
+> db.grades.aggregate({'$group':{'_id':'$student_id', 'average':{$avg:'$score'}}}, {'$sort':{'average':-1}}, {'$limit':1})
+</pre>
+
+<p>
+The answer, deep in the resulting document, should be <em>student_id</em> 164 with an average of approximately 89.3.
+</p>
+
+Now it’s your turn to analyze the data set. Find all exam scores greater than or equal to 65. and sort those scores from lowest to highest.
+<p>What is the <em>student_id</em> of the lowest exam score above 65?</p>
+<multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>115</text></choice><choice location='bottom' correct='true'><text>22</text></choice><choice location='bottom' correct='false'><text>48</text></choice><choice location='bottom' correct='false'><text>57</text></choice><choice location='bottom' correct='false'><text>87</text></choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='true' format='Homework' display_name='Homework 2.2'><problem showanswer='never' attempts='3' url_name='Homework_2_2_problem' rerandomize='onreset' display_name='Quiz'><p>
+Write a program in the language of your choice that will remove the lowest homework score for each student from the <a href="/static/handouts/grades.js">dataset</a> that you imported in HW 2.1.  Since each document is one score, it should remove one document per student.
+</p>
+<p>
+<i>Hint/spoiler</i>: If you select homework documents,  sort  by student and then by score, you can iterate through and find the lowest score for each student by noticing a change in student id. As you notice that change of student_id, remove the document.
+</p>
+
+<p>
+To confirm you are on the right track, here are some queries to run after you process the data with the correct answer shown:
+</p>
+
+Let us count the number of grades we have:
+<pre>
+> db.grades.count() 
+600
+</pre>
+
+Now let us find the student who holds the 101st best grade across all grades:
+<pre>
+> db.grades.find().sort({'grade':1}).skip(100).limit(1)
+{ "_id" : ObjectId("50906d7fa3c412bb040eb5fc"), "student_id" : 33, "type" : "quiz", "score" : 22.45632142235159 }
+</pre>
+
+Now let us sort the students by student_id, score and see what the top five docs are:
+<pre>
+> db.grades.find({},{'student_id':1, 'type':1, 'score':1, '_id':0}).sort({'student_id':1, 'grade':1, }).limit(5)
+{ "student_id" : 0, "type" : "exam", "score" : 54.6535436362647 }
+{ "student_id" : 0, "type" : "quiz", "score" : 31.95004496742112 }
+{ "student_id" : 0, "type" : "homework", "score" : 63.98402553675503 }
+{ "student_id" : 1, "type" : "exam", "score" : 74.20010837299897 }
+{ "student_id" : 1, "type" : "quiz", "score" : 96.76851542258362 }
+</pre>
+
+<p>
+To verify that you have completed this task correctly, provide the identify of the student with the highest average in the class with following query that uses the aggregation framework. The answer will appear in the _id field of the resulting document. 
+</p>
+<pre>
+> db.grades.aggregate({'$group':{'_id':'$student_id', 'average':{$avg:'$score'}}}, {'$sort':{'average':-1}}, {'$limit':1})
+</pre>
+
+Enter the student ID below. Please enter just the number, with no spaces, commas or other characters.<customresponse><textbox rows='4' cols='50' correct_answer="54"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''54'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential><sequential graded='true' format='Homework' display_name='Homework 2.3'><problem showanswer='never' attempts='3' url_name='Homework_2_3_problem' rerandomize='onreset' display_name='Quiz'><em>Blog User Sign-up and Login</em>
+<p>
+Download <a href="/static/handouts/hw2.3.zip">hw2.3.zip</a> or <a href="/static/handouts/hw2.3.tar">hw2.3.tar</a> and unpack.
+</p>
+<p>
+You should see two files at the highest level: <i>blog.py</i> and <i>user.py</i>. There is also a views directory which contains the templates for the project. 
+</p>
+<p>
+The project roughly follows the model/view/controller paradigm. <i>user.py</i> is the model. <i>blog.py</i> is the controller.  The templates comprise the view.
+</p>
+
+<p>
+If everything is working properly, you should be able to start the blog by typing:
+</p>
+<pre>
+python blog.py
+</pre>
+
+<p>
+Note that this project requires the following python modules be installed on your computer: pymongo, cgi, hmac, re, datetime, random, json, sys, string, hashlib, bson, urllib, urllib2, random, and re. The one you may need to install is urllib and urllib.
+</p>
+<p>
+If you goto <a href="http://localhost:8082/">http://localhost:8082</a> you should see a message “this is a placeholder for the blog”
+</p>
+
+<p>
+Here are some URLs that must work when you are done.
+</p>
+<pre>
+http://localhost:8082/signup
+http://localhost:8082/login
+http://localhost:8082/logout
+</pre>
+
+<p>
+When you login or sign-up, the blog will redirect to 
+http://localhost:8082/welcome
+and that must work properly, welcoming the user by username
+</p>
+<p>
+We have removed two pymongo statements from user.py and marked the area where you need to work with XXX. You should not need to touch any other code.  The pymongo statements that you are going to add will add a new user upon sign-up and validate a login by retrieving the right user document. 
+</p>
+<p>
+The blog stores its data in the blog database in two collections, <i>users</i> and <i>sessions</i>.  Here are two example docs for a username ‘erlichson’ with password ‘fubar’. You can insert these if you like, but you don’t need to.
+</p>
+<pre>
+> db.users.find()
+{ "_id" : "erlichson", "password" : "d3caddd3699ef6f990d4d53337ed645a3804fac56207d1b0fa44544db1d6c5de,YCRvW" }
+> 
+> db.sessions.find()
+{ "_id" : ObjectId("50907cda49037223b802117d"), "username" : "erlichson" }
+> 
+</pre>
+
+<p>
+Once you have the the project working, the following steps should work:
+</p>
+<ul>
+<li>go to http://localhost:8082/signup</li>
+<li>create a user</li>
+</ul>
+It should redirect you to the welcome page and say: welcome username, where username is the user you signed up with.  Now
+<ul>
+<li>Goto http://localhost:8082/logout</li>
+<li>Now login http://localhost:8082/login.</li>
+</ul>
+<br/>
+<p>
+Ok, now it’s time to validate you got it all working.
+</p>
+<p>
+There was one additional program that should have been downloaded in the project called <i>validate.py</i>.
+</p>
+<pre>
+python validate.pl
+</pre>
+If you got it right, it will provide a validation code for you to enter into the box below. Enter just the code, no spaces.
+<customresponse><textbox rows='4' cols='50' correct_answer="h726dgdf63289wjaklf9467ghdsjkf"/><answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''h726dgdf63289wjaklf9467ghdsjkf'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]></answer></customresponse></problem></sequential></chapter></course>
