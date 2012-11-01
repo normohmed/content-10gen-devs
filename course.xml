@@ -1795,8 +1795,8 @@ Let us count the number of grades we have:
 
 Now let us find the student who holds the 101st best grade across all grades:
 <pre>
-> db.grades.find().sort({'grade':1}).skip(100).limit(1)
-{ "_id" : ObjectId("50906d7fa3c412bb040eb5fc"), "student_id" : 33, "type" : "quiz", "score" : 22.45632142235159 }
+> db.grades.find().sort({'score':-1}).skip(100).limit(1)
+{ "_id" : ObjectId("50906d7fa3c412bb040eb84b"), "student_id" : 181, "type" : "exam", "score" : 89.10554845143109 }
 </pre>
 
 Now let us sort the students by student_id, score and see what the top five docs are:
@@ -1911,7 +1911,7 @@ Ok, now it’s time to validate you got it all working.
 There was one additional program that should have been downloaded in the project called <i>validate.py</i>.
 </p>
 <pre>
-python validate.pl
+python validate.py
 </pre>
 If you got it right, it will provide a validation code for you to enter into the box below. Enter just the code, no spaces.
 <customresponse><textbox rows='4' cols='50' correct_answer="h726dgdf63289wjaklf9467ghdsjkf"/><answer type='loncapa/python'><![CDATA[
