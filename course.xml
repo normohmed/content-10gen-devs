@@ -1750,12 +1750,14 @@ if not(response == quiz_answer):
 </pre>
 Which of the following python statements work. Check all that apply.<choiceresponse direction='vertical'><checkboxgroup type='MultipleChoice'><choice correct='false'><startouttext/>stuff.update({'_id':'bat'},  {'friend':'ball', 'cousin':'glove'}, upsert=True)<endouttext/></choice><choice correct='false'><startouttext/>stuff.update({'_id':'bat'},  {'friend':'ball', 'cousin':'glove'}, upsert=False)<endouttext/></choice><choice correct='true'><startouttext/>stuff.update({'_id':'bat'},  {'_id':'bat', 'friend':'ball', 'cousin':'glove'}, upsert=True)<endouttext/></choice><choice correct='true'><startouttext/>stuff.update({'_id':'bat'},  {'$set': {'friend':'ball', 'cousin':'glove'}}, upsert=True)<endouttext/></choice></checkboxgroup></choiceresponse></problem><vertical><video display_name='Answer' youtube='1.0:tMEohyZX0cI'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Pymongo, find_and_modify'><vertical><video display_name='Lecture' youtube='1.0:rQ8Oml5e6PI'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Blog, User Interface'><vertical><video display_name='Lecture' youtube='1.0:QA80WBg0hLg'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Blog, Session Management'><vertical><video display_name='Lecture' youtube='1.0:sNigml3JoY0'/></vertical></sequential><sequential graded='false' format='Quiz' display_name='Blog, Internals'><vertical><video display_name='Lecture' youtube='1.0:tTqQZvBGhyU'/></vertical></sequential><sequential graded='true' format='Homework' display_name='Homework 2.1'><problem showanswer='never' attempts='3' url_name='Homework_2_1_problem' rerandomize='onreset' display_name='Quiz'>In this problem, you will be using a collection of student scores that is similar to what we used in the lessons. Please download the <a href="/static/handouts/grades.js">grades.js</a> file and import it into your local mongo database as follows:
 <pre>
-mongoimport -d students -c grades < grades.js
+mongoimport -d students -c grades &lt; grades.js
 </pre>
 The dataset contains 4 scores for 200 students.
 <p>
 First, let’s confirm your data is intact; the number of documents should be 800.
+</p>
 <pre>
+> use students
 > db.grades.count()
 800
 </pre>
@@ -1766,6 +1768,7 @@ This next query, which uses the aggregation framework that we have not taught ye
 <pre>
 > db.grades.aggregate({'$group':{'_id':'$student_id', 'average':{$avg:'$score'}}}, {'$sort':{'average':-1}}, {'$limit':1})
 </pre>
+<b><i>Note:  Aggregation requires <a href="http://www.mongodb.org/downloads">mongodb 2.2</a> or above.</i></b>
 
 <p>
 The answer, deep in the resulting document, should be <em>student_id</em> 164 with an average of approximately 89.3.
@@ -1847,8 +1850,14 @@ python blog.py
 </pre>
 
 <p>
-Note that this project requires the following python modules be installed on your computer: pymongo, cgi, hmac, re, datetime, random, json, sys, string, hashlib, bson, urllib, urllib2, random, and re. The one you may need to install is urllib and urllib.
+Note that this project requires the following python modules be installed on your computer: cgi, hmac, re, datetime, random, json, sys, string, hashlib, bson, urllib, urllib2, random, re, pymongo, and bottle. A typical Python installation will already have most of these installed except <i>pymongo</i> and <i>bottle</i>.
 </p>
+<p>
+If you have python-setuptools installed, the command "easy_install" makes this simple.  Any other missing packages will show up when <i>validate.py</i> is run, and can be installed in a similar fashion.
+</p>
+<pre>
+$ easy_install pymongo bottle
+</pre>
 <p>
 If you goto <a href="http://localhost:8082/">http://localhost:8082</a> you should see a message “this is a placeholder for the blog”
 </p>
