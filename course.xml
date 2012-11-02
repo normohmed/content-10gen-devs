@@ -1796,7 +1796,7 @@ Let us count the number of grades we have:
 Now let us find the student who holds the 101st best grade across all grades:
 <pre>
 > db.grades.find().sort({'score':-1}).skip(100).limit(1)
-{ "_id" : ObjectId("50906d7fa3c412bb040eb84b"), "student_id" : 181, "type" : "exam", "score" : 89.10554845143109 }
+{ "_id" : ObjectId("50906d7fa3c412bb040eb709"), "student_id" : 100, "type" : "homework", "score" : 88.50425479139126 }
 </pre>
 
 Now let us sort the students by student_id, score and see what the top five docs are:
