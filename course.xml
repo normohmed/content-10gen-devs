@@ -1777,10 +1777,10 @@ The answer, deep in the resulting document, should be <em>student_id</em> 164 wi
 Now it’s your turn to analyze the data set. Find all exam scores greater than or equal to 65. and sort those scores from lowest to highest.
 <p>What is the <em>student_id</em> of the lowest exam score above 65?</p>
 <multiplechoiceresponse direction='vertical'><choicegroup type='MultipleChoice'><choice location='bottom' correct='false'><text>115</text></choice><choice location='bottom' correct='true'><text>22</text></choice><choice location='bottom' correct='false'><text>48</text></choice><choice location='bottom' correct='false'><text>57</text></choice><choice location='bottom' correct='false'><text>87</text></choice></choicegroup></multiplechoiceresponse></problem></sequential><sequential graded='true' format='Homework' display_name='Homework 2.2'><problem showanswer='due' attempts='3' url_name='Homework_2_2_problem' rerandomize='never' display_name='Quiz'><p>
-Write a program in the language of your choice that will remove the lowest homework score for each student from the <a href="/static/handouts/grades.js">dataset</a> that you imported in HW 2.1.  Since each document is one score, it should remove one document per student.
+Write a program in the language of your choice that will remove the grade of type "homework" with the lowest score for each student from the <a href="/static/handouts/grades.js">dataset</a> that you imported in HW 2.1.  Since each document is one grade, it should remove one document per student.
 </p>
 <p>
-<i>Hint/spoiler</i>: If you select homework documents,  sort  by student and then by score, you can iterate through and find the lowest score for each student by noticing a change in student id. As you notice that change of student_id, remove the document.
+<i>Hint/spoiler</i>: If you select homework grade-documents, sort  by student and then by score, you can iterate through and find the lowest score for each student by noticing a change in student id. As you notice that change of student_id, remove the document.
 </p>
 
 <p>
@@ -1801,12 +1801,12 @@ Now let us find the student who holds the 101st best grade across all grades:
 
 Now let us sort the students by student_id, score and see what the top five docs are:
 <pre>
-> db.grades.find({},{'student_id':1, 'type':1, 'score':1, '_id':0}).sort({'student_id':1, 'grade':1, }).limit(5)
-{ "student_id" : 0, "type" : "exam", "score" : 54.6535436362647 }
+> db.grades.find({},{'student_id':1, 'type':1, 'score':1, '_id':0}).sort({'student_id':1, 'score':1, }).limit(5)
 { "student_id" : 0, "type" : "quiz", "score" : 31.95004496742112 }
+{ "student_id" : 0, "type" : "exam", "score" : 54.6535436362647 }
 { "student_id" : 0, "type" : "homework", "score" : 63.98402553675503 }
+{ "student_id" : 1, "type" : "homework", "score" : 44.31667452616328 }
 { "student_id" : 1, "type" : "exam", "score" : 74.20010837299897 }
-{ "student_id" : 1, "type" : "quiz", "score" : 96.76851542258362 }
 </pre>
 
 <p>
