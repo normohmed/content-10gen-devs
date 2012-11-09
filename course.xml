@@ -1,5 +1,5 @@
 <course url_name='2012_Fall' org='10gen' course='M101' start='2012-10-22T00:00' display_name='MongoDB for Developers'>
-<chapter start='2012-10-22T00:00' due='2012-10-31T03:00' display_name='Week 1'>
+<chapter start='2012-10-22T00:00' due='Oct 30 23:00 EST 2012' display_name='Week 1'>
 <sequential graded='false' format='Quiz' display_name='Welcome to M101'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:179MiZSibco'/>
@@ -3060,10 +3060,10 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 </chapter>
-<chapter start='2012-11-10T00:00' due='Nov 15 23:00 EST 2012' display_name='Week3 - Schema Design'>
+<chapter start='2012-11-09T00:00' due='Nov 15 23:00 EST 2012' display_name='Week3 - Schema Design'>
 <sequential graded='false' format='Quiz' display_name='Introduction to Week 3'>
 <vertical>
-<video display_name='Lecture' youtube='1.0:jN0i5iELxnA'/>
+<video display_name='Lecture' youtube='1.0:itnfWjMnQ4A'/>
 </vertical>
 <problem showanswer='attempted' url_name='Introduction_to_Week_3_problem' rerandomize='never' display_name='Quiz'>
 What's the single most important factor in designing your application schema within MongoDB?<multiplechoiceresponse direction='vertical'>
@@ -3244,87 +3244,8 @@ Which query will find all descendants of  the snorkeling category?<multiplechoic
 </sequential>
 <sequential graded='false' format='Quiz' display_name='Handling Blobs'>
 <vertical>
-<video display_name='Lecture' youtube='1.0:X3PhnORSV7U'/>
+<video display_name='Lecture' youtube='1.0:AsL5p1Z0Ss8'/>
 </vertical>
-</sequential>
-<sequential graded='false' format='Quiz' display_name='HW 3.1'>
-<vertical>
-<video display_name='Lecture' youtube='1.0:lpSMbphEl7c'/>
-</vertical>
-<problem showanswer='attempted' url_name='HW_3_1_problem' rerandomize='never' display_name='Quiz'>
-Download the <a href="/static/handouts/students.js">students.js</a> file to your computer and import it into your local Mongo instance with this command:
-<pre>
-$ mongoimport -d school -c students &lt; students.js
-</pre>
-<p>
-This dataset holds the same type of data as last week's grade collection, but it's modeled differently. You might want to start by inspecting it in the Mongo shell.
-</p><p>
-Write a program in the language of your choice that will remove the lowest homework score for each student. Since there is a single document for each student containing an array of scores, you will need to update the scores array and remove the homework.
-</p><p>
-Hint/spoiler: With the new schema, this problem is a lot harder and that is sort of the point. One way is to find the lowest homework in code and then update the scores array with the low homework pruned. If you are struggling with the Python side of this, look at the remove operator, which can remove stuff from a Python list.
-</p><p>
-To confirm you are on the right track, here are some queries to run after you process the data with the correct answer shown:
-</p><p>
-
-Let us count the number of students we have:
-</p>
-<pre>
-> use school
-> db.students.count() 
-200
-</pre>
-
-Let's see what Demarcus Audette's record looks like:
-<pre>
-&gt; db.students.find({_id:100}).pretty()
-{
-	"_id" : 100,
-	"name" : "Demarcus Audette",
-	"scores" : [
-		{
-			"score" : 47.42608580155614,
-			"type" : "exam"
-		},
-		{
-			"score" : 44.83416623719906,
-			"type" : "quiz"
-		},
-		{
-			"score" : 39.01726616178844,
-			"type" : "homework"
-		}
-	]
-}
-
-</pre>
-<p>
-To verify that you have completed this task correctly, provide the identify of the student with the highest average in the class with following query that uses the aggregation framework. The answer will appear in the _id field of the resulting document.
-</p>
-<pre>
-&gt; db.students.aggregate({'$unwind':'$scores'},{'$group':{'_id':'$_id', 'average':{$avg:'$scores.score'}}}, {'$sort':{'average':-1}}, {'$limit':1})
-</pre>
-
-<customresponse>
-<textbox rows='4' cols='50' correct_answer="13"/>
-<answer type='loncapa/python'><![CDATA[
-import re
-correct = ['correct']
-try:
-  r = str(submission[0])
-except ValueError:
-  correct[0] = 'incorrect'
-  r = '0'
-response = re.sub(r'\s+', '', r)
-quiz_answer = '''13'''
-quiz_answer = re.sub(r'\s+', '', quiz_answer)
-if not(response == quiz_answer):
-  correct[0] = 'incorrect'
-  print 'response = ', response
-  print 'quiz_answer = ', quiz_answer
-]]>
-</answer>
-</customresponse>
-</problem>
 </sequential>
 </chapter>
 </course>
