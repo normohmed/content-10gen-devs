@@ -3247,5 +3247,220 @@ Which query will find all descendants of  the snorkeling category?<multiplechoic
 <video display_name='Lecture' youtube='1.0:AsL5p1Z0Ss8'/>
 </vertical>
 </sequential>
+<sequential graded='true' format='Homework' display_name='HW 3.1'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:lpSMbphEl7c'/>
+</vertical>
+<problem showanswer='due' attempts='3' url_name='HW_3_1_problem' rerandomize='never' display_name='Quiz'>
+Download the <a href="/static/handouts/students.js">students.js</a> file to your computer and import it into your local Mongo instance with this command:
+<pre>
+$ mongoimport -d school -c students &lt; students.js
+</pre>
+<p>
+This dataset holds the same type of data as last week's grade collection, but it's modeled differently. You might want to start by inspecting it in the Mongo shell.
+</p><p>
+Write a program in the language of your choice that will remove the lowest homework score for each student. Since there is a single document for each student containing an array of scores, you will need to update the scores array and remove the homework.
+</p><p>
+Hint/spoiler: With the new schema, this problem is a lot harder and that is sort of the point. One way is to find the lowest homework in code and then update the scores array with the low homework pruned. If you are struggling with the Python side of this, look at the remove operator, which can remove stuff from a Python list.
+</p><p>
+To confirm you are on the right track, here are some queries to run after you process the data with the correct answer shown:
+</p><p>
+
+Let us count the number of students we have:
+</p>
+<pre>
+> use school
+> db.students.count() 
+200
+</pre>
+
+Let's see what Demarcus Audette's record looks like:
+<pre>
+&gt; db.students.find({_id:100}).pretty()
+{
+	"_id" : 100,
+	"name" : "Demarcus Audette",
+	"scores" : [
+		{
+			"score" : 47.42608580155614,
+			"type" : "exam"
+		},
+		{
+			"score" : 44.83416623719906,
+			"type" : "quiz"
+		},
+		{
+			"score" : 39.01726616178844,
+			"type" : "homework"
+		}
+	]
+}
+
+</pre>
+<p>
+To verify that you have completed this task correctly, provide the identify of the student with the highest average in the class with following query that uses the aggregation framework. The answer will appear in the _id field of the resulting document.
+</p>
+<pre>
+&gt; db.students.aggregate({'$unwind':'$scores'},{'$group':{'_id':'$_id', 'average':{$avg:'$scores.score'}}}, {'$sort':{'average':-1}}, {'$limit':1})
+</pre>
+
+<customresponse>
+<textbox rows='4' cols='50' correct_answer="13"/>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''13'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
+<sequential graded='true' format='Homework' display_name='HW 3.2'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:SEh6Y4lHkWQ'/>
+</vertical>
+<problem showanswer='due' attempts='3' url_name='HW_3_2_problem' rerandomize='never' display_name='Quiz'>
+<b>Making your blog accept posts</b>
+<p>In this homework you will be enhancing the blog project to insert entries into the posts collection. After this, the blog will work. It will allow you to add blog posts with a title, body and tags and have it be added to the posts collection properly.
+</p><p>We have provided the code that creates users and allows you to login (the assignment from last week). To get started, please download <a href="/static/handouts/hw3-blog.tar">hw3-blog.tar</a> or <a href="/static/handouts/hw3-blog.zip">hw3-blog.zip</a> and unpack. You will be using these file for this homework and the HW 3.3.
+</p><p>
+The areas where you need to add code are marked with XXX.  You need only touch the blog.py file.  There are three locations for you to add code for this problem. Scan that file for XXX to see where to work.
+</p>
+As a reminder, to run your blog you type<br/>
+<pre>
+python blog.py
+</pre>
+To play with the blog you can navigate to the following URLs<br/>
+<pre>
+http://localhost:8082/
+http://localhost:8082/signup
+http://localhost:8082/login
+http://localhost:8082/newpost
+</pre>
+You will be proving that it works by running our validation script as follows:
+<br/>
+<pre>
+python validate.py
+</pre>
+<p>
+You need to run this in a separate terminal window while your blog is running and while the database is running. It makes connections to both to determine if your program works properly. Validate connects to localhost:8082 and expects that mongod is running on localhost on port 27017.
+</p><p>
+<i>Read if you want to run your blog on non-standard port, different host or connected to a mongod on  different server.</i>
+</p><p>
+<font size="-1">By popular demand, validate.py now takes some optional arguments that you can discover with the -h flag. These arguments will allow you to direct validate.py to make a connection to a web server at different port on a different host and connect to a mongod on a different host. You can also use a database name other than blog, a necessity if you are running on the free tier at MongoHW (for eg). I won't go into how these arguments work, as they are pretty self documenting. Note that to run the blog.py code to connect to a database outside of localhost (for example to a database at MongoHQ), you will need to make some global changes. </font>
+</p><p>
+This project requires Python 2.7. The code is not 3.0 compliant. 
+</p><p>
+Ok, once you get the blog posts working, validate.py will print out a validation code for HW 3.2. Please enter it below, exactly as shown with no spaces.
+</p>
+<customresponse>
+<textbox rows='4' cols='50' correct_answer="hjkfd489hjkfhds8934kf23"/>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''hjkfd489hjkfhds8934kf23'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
+<sequential graded='true' format='Homework' display_name='HW 3.3'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:HPSgVT2BEYQ'/>
+</vertical>
+<problem showanswer='due' attempts='3' url_name='HW_3_3_problem' rerandomize='never' display_name='Quiz'>
+<b>Making your blog accept comments</b>
+<p>
+In this homework  you will add code to your blog so that it accepts comments. You will be using the same code as you downloaded for HW 3.2.
+</p><p>
+Once again, the area where you need to work is marked with an XXX in the blog.py file. There are two locations. You don't need to figure out how to retrieve comments for this homework because the code you did in 3.2 already pulls the entire blog post (unless you specifically projected to eliminate the comments) and we gave you the code that pulls them out of the JSON document.
+</p><p>
+This assignment has fairly little code, but it's a little more subtle than the previous assignment because you are going to be manipulating an array within the Mongo document.  For the sake of clarity, here is a document out of the posts collection from a working project.
+</p>
+<pre>
+{
+	"_id" : ObjectId("509df76fbcf1bf5b27b4a23e"),
+	"author" : "erlichson",
+	"body" : "This is a blog entry",
+	"comments" : [
+		{
+			"body" : "This is my comment",
+			"author" : "Andrew Erlichson"
+		},
+		{
+			"body" : "Give me liberty or give me death.",
+			"author" : "Patrick Henry"
+		}
+	],
+	"date" : ISODate("2012-11-10T06:42:55.733Z"),
+	"permalink" : "This_is_a_blog_post_title",
+	"tags" : [
+		"cycling",
+		"running",
+		"swimming"
+	],
+	"title" : "This is a blog post title"
+}
+</pre>
+
+<p>
+Note that you add comments in this blog from the blog post detail page, which appears at 
+<pre>
+http://localhost:8082/post/post_slug
+</pre>
+where post_slug is the permalink. For the sake of eliminating doubt, the permalink for the example blog post above is http://localhost:8082/post/This_is_a_blog_post_title
+</p><p>
+You will run validation.py to check your work, much like the last problem. Validation.py will run through and check the requirements of HW 3.2 and then will check to make sure it can add blog comments, as required by this problem, HW 3.3. It checks the web output as well as the database documents.
+</p>
+<pre>
+python validate.py
+</pre>
+<p>
+Once you have the validation code, please copy and paste in the box below, no spaces. 
+</p>
+<customresponse>
+<textbox rows='4' cols='50' correct_answer="dhfr48nf89jk093f9kj0d2d"/>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''dhfr48nf89jk093f9kj0d2d'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
 </chapter>
 </course>
