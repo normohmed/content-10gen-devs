@@ -197,7 +197,7 @@ Which of the following are valid JSON documents?<choiceresponse direction='verti
 </vertical>
 <problem showanswer='attempted' url_name='JSON_Arrays_problem' rerandomize='never' display_name='Quiz'>
 Write the JSON for a simple document containing a single key "fruit" that has as its value an array containing three strings: "apple", "pear", and "peach"<customresponse>
-<textbox rows='4' cols='50' correct_answer="{'fruit': ['apple', 'pear', 'peach']}"/>
+<textbox rows='4' cols='50' correct_answer="{'fruit': ['apple', 'pear', 'peach']}"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import demjson
 correct = ['correct']
@@ -234,7 +234,7 @@ if not(response_json == quiz_answer_json):
 <problem showanswer='attempted' url_name='JSON_Subdocuments_problem' rerandomize='never' display_name='Quiz'>
 Write a JSON document with a single key, "address" that has as it value another document with the keys 
 'street_address', 'city', 'state', 'zipcode', with the following values: 'street_address' is "23 Elm Drive", 'city' is "Palo Alto", 'state' is "California", 'zipcode' is "94305"<customresponse>
-<textbox rows='4' cols='50' correct_answer="{'address': {'street_address': &quot;23 Elm Drive&quot;, 'city' : &quot;Palo Alto&quot;, 'state': &quot;California&quot;, 'zipcode': &quot;94305&quot;} }"/>
+<textbox rows='4' cols='50' correct_answer="{'address': {'street_address': &quot;23 Elm Drive&quot;, 'city' : &quot;Palo Alto&quot;, 'state': &quot;California&quot;, 'zipcode': &quot;94305&quot;} }"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import demjson
 correct = ['correct']
@@ -378,7 +378,7 @@ In which scenario is it impossible to embed data within a document (you must put
 </vertical>
 <problem showanswer='attempted' url_name='Intro_to_Python_problem' rerandomize='never' display_name='Quiz'>
 Write an expression to concatenate two strings "hat" and "pin" in python to the string "hatpin"<customresponse>
-<textbox rows='4' cols='50' correct_answer='"hat" + "pin"'/>
+<textbox rows='4' cols='50' correct_answer='"hat" + "pin"'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 import re
@@ -410,7 +410,7 @@ if not(response == quiz_answer):
 </vertical>
 <problem showanswer='attempted' url_name='Python_Lists_problem' rerandomize='never' display_name='Quiz'>
 Write the to code to initialize a list with the items "hammer", "nail" and "wall" and assign the list to the variable named "things".<customresponse>
-<textbox rows='4' cols='50' correct_answer='things = ["hammer", "nail", "wall"]'/>
+<textbox rows='4' cols='50' correct_answer='things = ["hammer", "nail", "wall"]'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 import re
@@ -444,7 +444,7 @@ if not(response == quiz_answer):
 Write the code to append the item "hammer" onto a list named things.
 
 <p>Please use double quotes at this time.</p><customresponse>
-<textbox rows='4' cols='50' correct_answer='things.append("hammer")'/>
+<textbox rows='4' cols='50' correct_answer='things.append("hammer")'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 import re
@@ -477,7 +477,7 @@ if not(response == quiz_answer):
 <problem showanswer='attempted' url_name='Python_Lists_Slice_Operator_problem' rerandomize='never' display_name='Quiz'>
 things = ['apples', 'orange', 'pear', 'grape', 'kiwi']. What is the slice notation that will return the sublist ['orange', 'pear']?
 <customresponse>
-<textbox rows='4' cols='50' correct_answer="things[1:3]"/>
+<textbox rows='4' cols='50' correct_answer="things[1:3]"> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 import re
@@ -511,7 +511,7 @@ if not(response == quiz_answer):
 given a python list called "fruit", write an if statement to check whether "apple" is in the list.
 
 <p>Please use double quotes at this time.</p><customresponse>
-<textbox rows='4' cols='50' correct_answer='if "apple" in fruit:&#10;'/>
+<textbox rows='4' cols='50' correct_answer='if "apple" in fruit:&#10;'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 import re
@@ -546,7 +546,7 @@ if not(response == quiz_answer):
 Initialize a new dict named "colors" with the following key values pairs: sky is blue, sea is blue. earth is brown.
 
 <i>Note:  Please preserve the order of these keys when you enter your answer.</i><customresponse>
-<textbox rows='4' cols='50' correct_answer="colors = {'sky': 'blue', 'sea' : 'blue', 'earth': 'brown'}"/>
+<textbox rows='4' cols='50' correct_answer="colors = {'sky': 'blue', 'sea' : 'blue', 'earth': 'brown'}"> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 import re
@@ -578,7 +578,7 @@ if not(response == quiz_answer):
 </vertical>
 <problem showanswer='attempted' url_name='Python_Dicts_and_Lists_together_problem' rerandomize='never' display_name='Quiz'>
 Initialize a new dict with a single key, "animals" whose value is the list "dog", "cat", "zebra" and assign the entire expression to variable named "things"<customresponse>
-<textbox rows='4' cols='50' correct_answer="things = {'animals' : ['dog', 'cat', 'zebra']}"/>
+<textbox rows='4' cols='50' correct_answer="things = {'animals' : ['dog', 'cat', 'zebra']}"> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 import re
@@ -618,7 +618,7 @@ for i in numbers:
   sum = sum + i
 print i
 </pre><customresponse>
-<textbox rows='4' cols='50' correct_answer="8"/>
+<textbox rows='4' cols='50' correct_answer="8"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -655,7 +655,7 @@ for item in people:
 </pre>
 
 What does this program print?<customresponse>
-<textbox rows='4' cols='50' correct_answer="red"/>
+<textbox rows='4' cols='50' correct_answer="red"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -696,7 +696,7 @@ if 'c' in obj:
 print sum
 </pre>
      <customresponse>
-<textbox rows='4' cols='50' correct_answer="9"/>
+<textbox rows='4' cols='50' correct_answer="9"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -791,7 +791,7 @@ Note you will need to have your path setup correctly to find mongorestore.
 <p>
 Now, using the Mongo shell, perform a findone on the collection called <em>hw1</em> in the database <em>m101</em>. That will return one document. Please provide the value corresponding to the "answer" key from the document returned.
 </p><customresponse>
-<textbox rows='4' cols='50' correct_answer="42"/>
+<textbox rows='4' cols='50' correct_answer="42"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -824,7 +824,7 @@ python hw1-2.py
 </pre>
 
 This program will print a numeric answer.  Please put just the number into the space below.  Note that you will need to get MongoDB installed and the homework dataset imported from the previous homework before attempting this problem.<customresponse>
-<textbox rows='4' cols='50' correct_answer="1815"/>
+<textbox rows='4' cols='50' correct_answer="1815"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -858,7 +858,7 @@ It requires bottle to be installed correctly, your mongodb to be running, and th
 <p>
 Type the answer into the box below
 </p><customresponse>
-<textbox rows='4' cols='50' correct_answer="53"/>
+<textbox rows='4' cols='50' correct_answer="53"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -927,7 +927,7 @@ x[y]++;
 print(x.a);
 </pre>
 <customresponse>
-<textbox rows='4' cols='50' correct_answer="2"/>
+<textbox rows='4' cols='50' correct_answer="2"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -989,7 +989,7 @@ Which of the following are types available in BSON?<choiceresponse direction='ve
 </vertical>
 <problem showanswer='attempted' url_name='Mongo_shell_inserting_docs_problem' rerandomize='never' display_name='Quiz'>
 Insert a document into the "fruit" collection with the attributes of "name" being "apple", "color" being "red", and "shape" being round. Assume that we have already issued the use command to get into the right database. Use the "insert" method.<customresponse>
-<textbox rows='4' cols='50' correct_answer='db.fruit.insert({name:"apple", color:"red", shape:"round"})'/>
+<textbox rows='4' cols='50' correct_answer='db.fruit.insert({name:"apple", color:"red", shape:"round"})'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -1085,7 +1085,7 @@ except demjson.JSONDecodeError as err:
 </vertical>
 <problem showanswer='attempted' url_name='Mongo_shell_introdution_to_findOne_problem' rerandomize='never' display_name='Quiz'>
 Use <em>findOne</em> on the collection <em>users</em> to find one document where the key <em>username</em> is "dwight", and retrieve only the key named <em>email</em>.<customresponse>
-<textbox rows='4' cols='50' correct_answer='db.users.findOne ( { "username" : "dwight" } , { "_id" : false , "email" : true } );'/>
+<textbox rows='4' cols='50' correct_answer='db.users.findOne ( { "username" : "dwight" } , { "_id" : false , "email" : true } );'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -1186,7 +1186,7 @@ except demjson.JSONDecodeError as err:
 </vertical>
 <problem showanswer='attempted' url_name='Mongo_shell_querying_using_field_selection_problem' rerandomize='never' display_name='Quiz'>
 Supposing a <em>scores</em> collection similar to the one presented, how would you find all documents with an essay score equal to 50 and only retrieve the <em>student</em> field?<customresponse>
-<textbox rows='4' cols='50' correct_answer='db.scores.find({ type:"essay", score:50}, {student:true,_id:false});'/>
+<textbox rows='4' cols='50' correct_answer='db.scores.find({ type:"essay", score:50}, {student:true,_id:false});'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -1327,7 +1327,7 @@ Which of the following will find all users with <em>name</em> between "F" and "Q
 </vertical>
 <problem showanswer='attempted' url_name='Using_regexes_exists_type_problem' rerandomize='never' display_name='Quiz'>
 Write a query that retrieves documents from a <em>users</em> collection where the <em>name</em> has a "q" in it, and the document has an <em>email</em> field.<customresponse>
-<textbox rows='4' cols='50' correct_answer='db.users.find({ name : { $regex : "q" }, email : { $exists: true } } );'/>
+<textbox rows='4' cols='50' correct_answer='db.users.find({ name : { $regex : "q" }, email : { $exists: true } } );'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -1423,7 +1423,7 @@ except demjson.JSONDecodeError as err:
 </vertical>
 <problem showanswer='attempted' url_name='Using_or_problem' rerandomize='never' display_name='Quiz'>
 How would you find all documents in the <em>scores</em> collection where the <em>score</em> is less than 50 or greater than 90?<customresponse>
-<textbox rows='4' cols='50' correct_answer="db.scores.find( { $or : [ { score : { $lt : 50 } }, { score : { $gt : 90 } } ] } ) ;"/>
+<textbox rows='4' cols='50' correct_answer="db.scores.find( { $or : [ { score : { $lt : 50 } }, { score : { $gt : 90 } } ] } ) ;"> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -1608,7 +1608,7 @@ Suppose a simple e-commerce product catalog called <em>catalog</em> with documen
 </pre>
 
 Write a query that finds all products that cost more than 10,000 and that have a rating of 5 or better.<customresponse>
-<textbox rows='4' cols='50' correct_answer='db.catalog.find( { price : { $gt : 10000 } , "reviews.rating" : { $gte : 5 } } ); '/>
+<textbox rows='4' cols='50' correct_answer='db.catalog.find( { price : { $gt : 10000 } , "reviews.rating" : { $gte : 5 } } ); '> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -1715,7 +1715,7 @@ Recall the documents in the scores collection:
 </pre>
 
 Write a query that retrieves exam documents, sorted by score in descending order, skipping the first 50 and showing only the next 20.<customresponse>
-<textbox rows='4' cols='50' correct_answer='db.scores.find( { type : "exam" } ).sort( { score : -1 } ).skip(50).limit(20)'/>
+<textbox rows='4' cols='50' correct_answer='db.scores.find( { type : "exam" } ).sort( { score : -1 } ).skip(50).limit(20)'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -1811,7 +1811,7 @@ except demjson.JSONDecodeError as err:
 </vertical>
 <problem showanswer='attempted' url_name='Counting_results_problem' rerandomize='never' display_name='Quiz'>
 How would you count the documents in the <em>scores</em> collection where the type was "essay" and the score was greater than 90?<customresponse>
-<textbox rows='4' cols='50' correct_answer='db.scores.count({ type:"essay", score:{$gt:90}});'/>
+<textbox rows='4' cols='50' correct_answer='db.scores.count({ type:"essay", score:{$gt:90}});'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -1939,7 +1939,7 @@ Given the document
 {'username':'splunker', 'country':'US', 'phone':'718-343-3433'}
 </pre>
 in the collection <em>users</em>, write the shell command for updating the country to 'RU' for only this user. <customresponse>
-<textbox rows='4' cols='50' correct_answer="db.users.update({'username':'splunker'},{$set:{'country':'RU'}})"/>
+<textbox rows='4' cols='50' correct_answer="db.users.update({'username':'splunker'},{$set:{'country':'RU'}})"> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -2038,7 +2038,7 @@ Write an update query that will unset the <em>interests</em> key in the followin
 <pre>
 {'username':'jimmy', favorite_color:'blue', interests:['debating', 'politics']}
 </pre><customresponse>
-<textbox rows='4' cols='50' correct_answer="db.users.update({username:'jimmy'}, {$unset:{'interests':1}})"/>
+<textbox rows='4' cols='50' correct_answer="db.users.update({username:'jimmy'}, {$unset:{'interests':1}})"> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -2147,7 +2147,7 @@ db.friends.update( { _id : "Mike" }, { $pop : { interests : -1 } } );
 db.friends.update( { _id : "Mike" }, { $addToSet : { interests : "skydiving" } } );
 db.friends.update( { _id : "Mike" }, { $pushAll: { interests : [ "skydiving" , "skiing" ] } } );
 </pre><customresponse>
-<textbox rows='4' cols='50' correct_answer='{ _id : "Mike" , "interests" : [ "botany", "skydiving", "skydiving", "skiing" ] }'/>
+<textbox rows='4' cols='50' correct_answer='{ _id : "Mike" , "interests" : [ "botany", "skydiving", "skydiving", "skiing" ] }'> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -2284,7 +2284,7 @@ Recall the schema of the <em>scores</em> collection:
 </pre>
 
 How would you give every record whose score was less than 70 an extra 20 points?<customresponse>
-<textbox rows='4' cols='50' correct_answer="db.scores.update( { score : { $lt: 70 } } , { $inc : { score : 20 } } , { multi : true } );"/>
+<textbox rows='4' cols='50' correct_answer="db.scores.update( { score : { $lt: 70 } } , { $inc : { score : 20 } } , { multi : true } );"> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -2391,7 +2391,7 @@ Recall the schema of the <em>scores</em> collection:
 </pre>
 
 How would you delete every record whose score was less than 60?<customresponse>
-<textbox rows='4' cols='50' correct_answer="db.scores.remove( { score : { $lt : 60 } } );"/>
+<textbox rows='4' cols='50' correct_answer="db.scores.remove( { score : { $lt : 60 } } );"> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -2514,7 +2514,7 @@ except:
 print doc
 </pre>
 please enter the one line of python code that would be needed in in place of xxxx to find one document in the collection.<customresponse>
-<textbox rows='4' cols='50' correct_answer="doc = scores.find_one()"/>
+<textbox rows='4' cols='50' correct_answer="doc = scores.find_one()"> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 import re
@@ -2780,7 +2780,7 @@ def using_set():
 
 </pre>
 <customresponse>
-<textbox rows='4' cols='50' correct_answer="{'$set':{'examiner':'Jones'}}"/>
+<textbox rows='4' cols='50' correct_answer="{'$set':{'examiner':'Jones'}}"> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 import re
@@ -2943,7 +2943,7 @@ To verify that you have completed this task correctly, provide the identify of t
 </pre>
 
 Enter the student ID below. Please enter just the number, with no spaces, commas or other characters.<customresponse>
-<textbox rows='4' cols='50' correct_answer="54"/>
+<textbox rows='4' cols='50' correct_answer="54"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -3053,7 +3053,7 @@ python validate.py
 </pre>
 If you got it right, it will provide a validation code for you to enter into the box below. Enter just the code, no spaces.
 <customresponse>
-<textbox rows='4' cols='50' correct_answer="h726dgdf63289wjaklf9467ghdsjkf"/>
+<textbox rows='4' cols='50' correct_answer="h726dgdf63289wjaklf9467ghdsjkf"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -3323,7 +3323,7 @@ To verify that you have completed this task correctly, provide the identify of t
 </pre>
 
 <customresponse>
-<textbox rows='4' cols='50' correct_answer="13"/>
+<textbox rows='4' cols='50' correct_answer="13"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -3383,7 +3383,7 @@ This project requires Python 2.7. The code is not 3.0 compliant.
 Ok, once you get the blog posts working, validate.py will print out a validation code for HW 3.2. Please enter it below, exactly as shown with no spaces.
 </p>
 <customresponse>
-<textbox rows='4' cols='50' correct_answer="hjkfd489hjkfhds8934kf23"/>
+<textbox rows='4' cols='50' correct_answer="hjkfd489hjkfhds8934kf23"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
@@ -3459,7 +3459,7 @@ python validate.py
 Once you have the validation code, please copy and paste in the box below, no spaces. 
 </p>
 <customresponse>
-<textbox rows='4' cols='50' correct_answer="dhfr48nf89jk093f9kj0d2d"/>
+<textbox rows='4' cols='50' correct_answer="dhfr48nf89jk093f9kj0d2d"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
 correct = ['correct']
