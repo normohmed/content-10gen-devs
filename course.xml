@@ -10,7 +10,7 @@
 <li>Note 1</li>
 <li>Note 2</li>
 </ul></html>
-<discussion for='Welcome to M101' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Welcome_to_M101_problem' rerandomize='never' display_name='Quiz: Welcome to M101'>
 What counts toward your final grade in the class?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -36,7 +36,7 @@ What counts toward your final grade in the class?<choiceresponse direction='vert
 <sequential graded='false' display_name='What is MongoDB?' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Lfl8hdQOi6Y'/>
-<discussion for='What is MongoDB?' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='What_is_MongoDB__problem' rerandomize='never' display_name='Quiz: What is MongoDB?'>
 Which of the following statements are true about MongoDB?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -62,7 +62,7 @@ Which of the following statements are true about MongoDB?<choiceresponse directi
 <sequential graded='false' display_name='Mongo Relative to Relational' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:-KIC1LXxcGM'/>
-<discussion for='Mongo Relative to Relational' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Mongo_Relative_to_Relational_problem' rerandomize='never' display_name='Quiz: Mongo Relative to Relational'>
 Which features did MongoDB omit in order to retain scalability?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -88,12 +88,12 @@ Which features did MongoDB omit in order to retain scalability?<choiceresponse d
 <sequential graded='false' display_name='Overview of Building an app with Mongo'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:_e0J06elxb8'/>
-<discussion for='Overview of Building an app with Mongo' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Quick Introduction to the Mongo Shell' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:f-lyGAMnNY4'/>
-<discussion for='Quick Introduction to the Mongo Shell' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Quick_Introduction_to_the_Mongo_Shell_problem' rerandomize='never' display_name='Quiz: Quick Introduction to the Mongo Shell'>
 Which of the following expressions are valid JSON documents?
 <choiceresponse direction='vertical'>
@@ -120,7 +120,7 @@ Which of the following expressions are valid JSON documents?
 <sequential graded='false' display_name='JSON introduced' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:2jsJeH8q6YM'/>
-<discussion for='JSON introduced' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='JSON_introduced_problem' rerandomize='never' display_name='Quiz: JSON introduced'>
 Which of the following are valid JSON documents?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -146,62 +146,62 @@ Which of the following are valid JSON documents?<choiceresponse direction='verti
 <sequential graded='false' display_name='Installing MongoDB (mac)'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:6VFukRETCTg'/>
-<discussion for='Installing MongoDB (mac)' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Installing MongoDB (windows)'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hX5louVryOQ'/>
-<discussion for='Installing MongoDB (windows)' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Installing Bottle and Python (mac)'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:vxTN6KFegLg'/>
-<discussion for='Installing Bottle and Python (mac)' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Installing Python (windows)'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:njfPdZTmTrI'/>
-<discussion for='Installing Python (windows)' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Installing Bottle.py (windows)'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:OhEpXjL0vt8'/>
-<discussion for='Installing Bottle.py (windows)' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Installing PyMongo (mac)'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:XRJawbpWxtg'/>
-<discussion for='Installing PyMongo (mac)' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Installing PyMongo (windows)'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:YwWc6HZ0LWo'/>
-<discussion for='Installing PyMongo (windows)' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Hello World, Mongo Style'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:IG7PntLyv2E'/>
-<discussion for='Hello World, Mongo Style' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Hello World on a Web Server'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:8_o6nyenZbk'/>
-<discussion for='Hello World on a Web Server' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Mongo is Schemaless'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:K6dlBbH_XHI'/>
-<discussion for='Mongo is Schemaless' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='JSON Revisited'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:zbYCcMWJGNY'/>
-<discussion for='JSON Revisited' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='JSON Arrays' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:JkK9n6_ahVk'/>
-<discussion for='JSON Arrays' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='JSON_Arrays_problem' rerandomize='never' display_name='Quiz: JSON Arrays'>
 Write the JSON for a simple document containing a single key "fruit" that has as its value an array containing three strings: "apple", "pear", and "peach"<customresponse>
 <textbox rows='4' cols='50' correct_answer="{'fruit': ['apple', 'pear', 'peach']}"> </textbox>
@@ -237,7 +237,7 @@ if not(response_json == quiz_answer_json):
 <sequential graded='false' display_name='JSON Subdocuments' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:vrYAEH3g13M'/>
-<discussion for='JSON Subdocuments' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='JSON_Subdocuments_problem' rerandomize='never' display_name='Quiz: JSON Subdocuments'>
 Write a JSON document with a single key, "address" that has as it value another document with the keys 
 'street_address', 'city', 'state', 'zipcode', with the following values: 'street_address' is "23 Elm Drive", 'city' is "Palo Alto", 'state' is "California", 'zipcode' is "94305"<customresponse>
@@ -274,17 +274,17 @@ if not(response_json == quiz_answer_json):
 <sequential graded='false' display_name='JSON Spec'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:kOrsT94-A28'/>
-<discussion for='JSON Spec' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Introduction to our class project, the blog'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ePi3kDoexoM'/>
-<discussion for='Introduction to our class project, the blog' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Blog in Relational Tables' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:boR2y9MHCa0'/>
-<discussion for='Blog in Relational Tables' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Blog_in_Relational_Tables_problem' rerandomize='never' display_name='Quiz: Blog in Relational Tables'>
 let’s assume that our blog can be modeled with the following relational tables:
 
@@ -338,7 +338,7 @@ In order to display a blog post with its comments and tags, how many tables will
 <sequential graded='false' display_name='Blog in Documents' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ZjwCzyqKVdY'/>
-<discussion for='Blog in Documents' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Blog_in_Documents_problem' rerandomize='never' display_name='Quiz: Blog in Documents'>
 Given the document schema that we proposed for the blog, how many collections would we need to access to display the blog home page?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -356,7 +356,7 @@ Given the document schema that we proposed for the blog, how many collections wo
 <sequential graded='false' display_name='Intro to Schema Design' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:6XE3wZCPiZ8'/>
-<discussion for='Intro to Schema Design' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Intro_to_Schema_Design_problem' rerandomize='never' display_name='Quiz: Intro to Schema Design'>
 In which scenario is it impossible to embed data within a document (you must put the data in it a separate collection). Check all that apply.<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -382,7 +382,7 @@ In which scenario is it impossible to embed data within a document (you must put
 <sequential graded='false' display_name='Intro to Python' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:-cAtffa59FM'/>
-<discussion for='Intro to Python' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Intro_to_Python_problem' rerandomize='never' display_name='Quiz: Intro to Python'>
 Write an expression to concatenate two strings "hat" and "pin" in python to the string "hatpin"<customresponse>
 <textbox rows='4' cols='50' correct_answer='"hat" + "pin"'> </textbox>
@@ -414,7 +414,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Python Lists' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:H1BOYfbnPq8'/>
-<discussion for='Python Lists' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Python_Lists_problem' rerandomize='never' display_name='Quiz: Python Lists'>
 Write the to code to initialize a list with the items "hammer", "nail" and "wall" and assign the list to the variable named "things".<customresponse>
 <textbox rows='4' cols='50' correct_answer='things = ["hammer", "nail", "wall"]'> </textbox>
@@ -446,7 +446,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Python Lists, Manipulating' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:PHii2QYNyB8'/>
-<discussion for='Python Lists, Manipulating' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Python_Lists_Manipulating_problem' rerandomize='never' display_name='Quiz: Python Lists, Manipulating'>
 Write the code to append the item "hammer" onto a list named things.
 
@@ -480,7 +480,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Python Lists, Slice Operator' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:vNyIZNWK0rw'/>
-<discussion for='Python Lists, Slice Operator' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Python_Lists_Slice_Operator_problem' rerandomize='never' display_name='Quiz: Python Lists, Slice Operator'>
 things = ['apples', 'orange', 'pear', 'grape', 'kiwi']. What is the slice notation that will return the sublist ['orange', 'pear']?
 <customresponse>
@@ -513,7 +513,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Python Lists, Inclusion' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:QXUMUvHB2Ws'/>
-<discussion for='Python Lists, Inclusion' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Python_Lists_Inclusion_problem' rerandomize='never' display_name='Quiz: Python Lists, Inclusion'>
 given a python list called "fruit", write an if statement to check whether "apple" is in the list.
 
@@ -548,7 +548,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Python, Working with Dicts' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:_AbCyE0uKmE'/>
-<discussion for='Python, Working with Dicts' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Python_Working_with_Dicts_problem' rerandomize='never' display_name='Quiz: Python, Working with Dicts'>
 Initialize a new dict named "colors" with the following key values pairs: sky is blue, sea is blue. earth is brown.
 
@@ -582,7 +582,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Python: Dicts and Lists together' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:9k1XvuoGdrk'/>
-<discussion for='Python: Dicts and Lists together' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Python_Dicts_and_Lists_together_problem' rerandomize='never' display_name='Quiz: Python: Dicts and Lists together'>
 Initialize a new dict with a single key, "animals" whose value is the list "dog", "cat", "zebra" and assign the entire expression to variable named "things"<customresponse>
 <textbox rows='4' cols='50' correct_answer="things = {'animals' : ['dog', 'cat', 'zebra']}"> </textbox>
@@ -614,7 +614,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Python: for loops, with Lists' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:zMqLCtf3ML4'/>
-<discussion for='Python: for loops, with Lists' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Python_for_loops_with_Lists_problem' rerandomize='never' display_name='Quiz: Python: for loops, with Lists'>
 What does the following code print?
 
@@ -652,7 +652,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Python: for loops with dicts' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:HHTICY6rUGI'/>
-<discussion for='Python: for loops with dicts' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Python_for_loops_with_dicts_problem' rerandomize='never' display_name='Quiz: Python: for loops with dicts'>
 <pre>
 people = {'name':'Bob', 'hometown': "Palo Alto", 'favorite_color': 'red'}
@@ -689,7 +689,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Python: Combining Dicts and Lists' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ome7jDN_lH0'/>
-<discussion for='Python: Combining Dicts and Lists' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Python_Combining_Dicts_and_Lists_problem' rerandomize='never' display_name='Quiz: Python: Combining Dicts and Lists'>
 
 <pre>
@@ -730,52 +730,52 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Python: while loops'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:TEdFAheS5UE'/>
-<discussion for='Python: while loops' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Python: function calls'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:PizwcirYuGY'/>
-<discussion for='Python: function calls' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Python: exception handling'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:nrZYqF9KwaU'/>
-<discussion for='Python: exception handling' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Bottle framework: Url Handlers'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:x5TlvbWxjL0'/>
-<discussion for='Bottle framework: Url Handlers' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Bottle framework: using views'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:GUFDtACjFcc'/>
-<discussion for='Bottle framework: using views' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Bottle framework: handling form content'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:sUUT-gIS5ik'/>
-<discussion for='Bottle framework: handling form content' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Bottle framework: using cookies'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Wk_1Lz_-gk4'/>
-<discussion for='Bottle framework: using cookies' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='The Pymongo driver'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:u2kRRt861bU'/>
-<discussion for='The Pymongo driver' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Pymongo driver, safe mode, exception processing'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:GR6W-gHffXw'/>
-<discussion for='Pymongo driver, safe mode, exception processing' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 1.1' format='Homework' due='Oct 30 23:00 EST 2012'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:r48N7GcDqVI'/>
-<discussion for='Homework 1.1' discussion_category='Week 1 - Introduction' /></vertical>
+</vertical>
 <problem showanswer='due' attempts='3' url_name='Homework_1_1_problem' rerandomize='never' display_name='Quiz: Homework 1.1'>
 Install MongoDB on your computer and run it on the standard port.
 
@@ -894,7 +894,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Introduction to Week 2' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:kB_9lXE-EbY'/>
-<discussion for='Introduction to Week 2' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Introduction_to_Week_2_problem' rerandomize='never' display_name='Quiz: Introduction to Week 2'>
 By the end of this week, you'll know which of the following?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -923,7 +923,7 @@ By the end of this week, you'll know which of the following?<choiceresponse dire
 <sequential graded='false' display_name='Secrets of the Mongo Shell' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hJy10xgZXzc'/>
-<discussion for='Secrets of the Mongo Shell' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Secrets_of_the_Mongo_Shell_problem' rerandomize='never' display_name='Quiz: Secrets of the Mongo Shell'>
 What does the following fragment of JavaScript output?
 
@@ -961,7 +961,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='BSON Introduced' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:K3J6WvDW-Hc'/>
-<discussion for='BSON Introduced' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='BSON_Introduced_problem' rerandomize='never' display_name='Quiz: BSON Introduced'>
 Which of the following are types available in BSON?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -993,7 +993,7 @@ Which of the following are types available in BSON?<choiceresponse direction='ve
 <sequential graded='false' display_name='Mongo shell, inserting docs' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:RbRRvBLl7Qo'/>
-<discussion for='Mongo shell, inserting docs' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Mongo_shell_inserting_docs_problem' rerandomize='never' display_name='Quiz: Mongo shell, inserting docs'>
 Insert a document into the "fruit" collection with the attributes of "name" being "apple", "color" being "red", and "shape" being round. Assume that we have already issued the use command to get into the right database. Use the "insert" method.<customresponse>
 <textbox rows='4' cols='50' correct_answer='db.fruit.insert({name:"apple", color:"red", shape:"round"})'> </textbox>
@@ -1089,7 +1089,7 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Mongo shell, introdution to findOne' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:w9V0fJsDwbQ'/>
-<discussion for='Mongo shell, introdution to findOne' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Mongo_shell_introdution_to_findOne_problem' rerandomize='never' display_name='Quiz: Mongo shell, introdution to findOne'>
 Use <em>findOne</em> on the collection <em>users</em> to find one document where the key <em>username</em> is "dwight", and retrieve only the key named <em>email</em>.<customresponse>
 <textbox rows='4' cols='50' correct_answer='db.users.findOne ( { "username" : "dwight" } , { "_id" : false , "email" : true } );'> </textbox>
@@ -1185,12 +1185,12 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Mongo shell, introduction to find'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:8kKfFK6a0Ak'/>
-<discussion for='Mongo shell, introduction to find' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Mongo shell, querying using field selection' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:UIg86QjSoyY'/>
-<discussion for='Mongo shell, querying using field selection' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Mongo_shell_querying_using_field_selection_problem' rerandomize='never' display_name='Quiz: Mongo shell, querying using field selection'>
 Supposing a <em>scores</em> collection similar to the one presented, how would you find all documents with an essay score equal to 50 and only retrieve the <em>student</em> field?<customresponse>
 <textbox rows='4' cols='50' correct_answer='db.scores.find({ type:"essay", score:50}, {student:true,_id:false});'> </textbox>
@@ -1286,7 +1286,7 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Querying using $gt and $lt' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:FHLrz4VGzkg'/>
-<discussion for='Querying using $gt and $lt' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Querying_using_gt_and_lt_problem' rerandomize='never' display_name='Quiz: Querying using $gt and $lt'>
 Which of these finds documents with a score between 50 and 60, inclusive?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -1305,7 +1305,7 @@ Which of these finds documents with a score between 50 and 60, inclusive?<multip
 <sequential graded='false' display_name='Inequalities on strings' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:imCCKOevU3c'/>
-<discussion for='Inequalities on strings' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Inequalities_on_strings_problem' rerandomize='never' display_name='Quiz: Inequalities on strings'>
 Which of the following will find all users with <em>name</em> between "F" and "Q"?<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -1331,7 +1331,7 @@ Which of the following will find all users with <em>name</em> between "F" and "Q
 <sequential graded='false' display_name='Using regexes, $exists, $type' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:lI-jhqYf1JY'/>
-<discussion for='Using regexes, $exists, $type' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Using_regexes_exists_type_problem' rerandomize='never' display_name='Quiz: Using regexes, $exists, $type'>
 Write a query that retrieves documents from a <em>users</em> collection where the <em>name</em> has a "q" in it, and the document has an <em>email</em> field.<customresponse>
 <textbox rows='4' cols='50' correct_answer='db.users.find({ name : { $regex : "q" }, email : { $exists: true } } );'> </textbox>
@@ -1427,7 +1427,7 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Using $or' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:BW5ElNCRZps'/>
-<discussion for='Using $or' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Using_or_problem' rerandomize='never' display_name='Quiz: Using $or'>
 How would you find all documents in the <em>scores</em> collection where the <em>score</em> is less than 50 or greater than 90?<customresponse>
 <textbox rows='4' cols='50' correct_answer="db.scores.find( { $or : [ { score : { $lt : 50 } }, { score : { $gt : 90 } } ] } ) ;"> </textbox>
@@ -1523,7 +1523,7 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Using $and' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hYk7pjgjjzc'/>
-<discussion for='Using $and' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Using_and_problem' rerandomize='never' display_name='Quiz: Using $and'>
 What will the following query do?
 
@@ -1554,7 +1554,7 @@ What will the following query do?
 <sequential graded='false' display_name='Querying inside arrays' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:jvEqwW75Bus'/>
-<discussion for='Querying inside arrays' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Querying_inside_arrays_problem' rerandomize='never' display_name='Quiz: Querying inside arrays'>
 Which of the following documents would be returned by this query?
 
@@ -1582,7 +1582,7 @@ Which of the following documents would be returned by this query?
 <sequential graded='false' display_name='Using $in and $all' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Lv-tYcQfuZg'/>
-<discussion for='Using $in and $all' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Using_in_and_all_problem' rerandomize='never' display_name='Quiz: Using $in and $all'>
 Which of the following documents matches this query?
 
@@ -1602,7 +1602,7 @@ Which of the following documents matches this query?
 <sequential graded='false' display_name='Queries with dot notation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:NrjFECIfwqk'/>
-<discussion for='Queries with dot notation' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Queries_with_dot_notation_problem' rerandomize='never' display_name='Quiz: Queries with dot notation'>
 Suppose a simple e-commerce product catalog called <em>catalog</em> with documents that look like this:
 
@@ -1708,7 +1708,7 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Querying, cursors' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:3jA6iFSEJOI'/>
-<discussion for='Querying, cursors' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Querying_cursors_problem' rerandomize='never' display_name='Quiz: Querying, cursors'>
 Recall the documents in the scores collection:
 
@@ -1815,7 +1815,7 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Counting results' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:eKD5bVmNQMI'/>
-<discussion for='Counting results' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Counting_results_problem' rerandomize='never' display_name='Quiz: Counting results'>
 How would you count the documents in the <em>scores</em> collection where the type was "essay" and the score was greater than 90?<customresponse>
 <textbox rows='4' cols='50' correct_answer='db.scores.count({ type:"essay", score:{$gt:90}});'> </textbox>
@@ -1911,7 +1911,7 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Wholesale Updating of a Document' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:EBCk6W7x-OY'/>
-<discussion for='Wholesale Updating of a Document' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Wholesale_Updating_of_a_Document_problem' rerandomize='never' display_name='Quiz: Wholesale Updating of a Document'>
 Let's say you had a collection with the following document in it:
 <pre>
@@ -1939,7 +1939,7 @@ What would be the state of the collection after the update?<multiplechoicerespon
 <sequential graded='false' display_name='Using the $set command' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:9iMX2KxYAd8'/>
-<discussion for='Using the $set command' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Using_the_set_command_problem' rerandomize='never' display_name='Quiz: Using the $set command'>
 Given the document
 <pre>
@@ -2039,7 +2039,7 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Using the $unset command' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Kxd4MXBEx-I'/>
-<discussion for='Using the $unset command' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Using_the_unset_command_problem' rerandomize='never' display_name='Quiz: Using the $unset command'>
 Write an update query that will unset the <em>interests</em> key in the following document in the collection <em>users</em>.  The primary key is <em>username</em>.
 <pre>
@@ -2138,7 +2138,7 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Using $push, $pop, $pull, $pushAll, $pullAll, $addToSet' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:iHSwyr7bfQs'/>
-<discussion for='Using $push, $pop, $pull, $pushAll, $pullAll, $addToSet' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Using_push_pop_pull_pushAll_pullAll_addToSet_problem' rerandomize='never' display_name='Quiz: Using $push, $pop, $pull, $pushAll, $pullAll, $addToSet'>
 Suppose you have the following document in your <em>friends</em> collection:
 
@@ -2247,7 +2247,7 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Upserts' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:dfvwrlVODGc'/>
-<discussion for='Upserts' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Upserts_problem' rerandomize='never' display_name='Quiz: Upserts'>
 After performing the following update on an empty collection
 <pre>
@@ -2277,7 +2277,7 @@ What could be the state of the collection.<choiceresponse direction='vertical'>
 <sequential graded='false' display_name='Multi-update' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:8uNNDduO09w'/>
-<discussion for='Multi-update' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Multi_update_problem' rerandomize='never' display_name='Quiz: Multi-update'>
 Recall the schema of the <em>scores</em> collection:
 
@@ -2384,7 +2384,7 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Removing data' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:PMhGgc3HCn4'/>
-<discussion for='Removing data' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Removing_data_problem' rerandomize='never' display_name='Quiz: Removing data'>
 Recall the schema of the <em>scores</em> collection:
 
@@ -2491,12 +2491,12 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='getLastError'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:kUulkJQvH_A'/>
-<discussion for='getLastError' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Pymongo, find, find_one and cursors' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:kXu5V3MlFI0'/>
-<discussion for='Pymongo, find, find_one and cursors' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Pymongo_find_find_one_and_cursors_problem' rerandomize='never' display_name='Quiz: Pymongo, find, find_one and cursors'>
 In the following code snippet:
 <pre>
@@ -2550,7 +2550,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Pymongo, using field selection' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:pCRMWfF_SC8'/>
-<discussion for='Pymongo, using field selection' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Pymongo_using_field_selection_problem' rerandomize='never' display_name='Quiz: Pymongo, using field selection'>
 Which of the following could work using pymongo, depending on variable names, to select out just the student_id from the scores collection using a find command.<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -2568,7 +2568,7 @@ Which of the following could work using pymongo, depending on variable names, to
 <sequential graded='false' display_name='Pymongo, using $gt and $lt' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:p5ltB0g3lUo'/>
-<discussion for='Pymongo, using $gt and $lt' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Pymongo_using_gt_and_lt_problem' rerandomize='never' display_name='Quiz: Pymongo, using $gt and $lt'>
 In the following code, what is the correct line of code, marked by xxxx,  to search for all quiz scores that are greater than 20 and less than 90.
 <pre>
@@ -2617,17 +2617,17 @@ find()
 <sequential graded='false' display_name='Importing from Reddit'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:dd49ULz7y6Q'/>
-<discussion for='Importing from Reddit' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Pymongo, using a regex'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:UIes2_2rBWE'/>
-<discussion for='Pymongo, using a regex' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Pymongo, using dot notation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:kiJRqBbCSGk'/>
-<discussion for='Pymongo, using dot notation' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Pymongo_using_dot_notation_problem' rerandomize='never' display_name='Quiz: Pymongo, using dot notation'>
 In the following code, what do you think will happen if a document that matches the query doesn't have a key called <i>media.oembed.url</i>?
 <pre>
@@ -2683,7 +2683,7 @@ find()
 <sequential graded='false' display_name='Pymongo, sort, skip and limit' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:F1bSsbt5Qfk'/>
-<discussion for='Pymongo, sort, skip and limit' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Pymongo_sort_skip_and_limit_problem' rerandomize='never' display_name='Quiz: Pymongo, sort, skip and limit'>
 Supposed you had the following documents in a collection named things.
 <pre>
@@ -2712,12 +2712,12 @@ which document would be returned?<multiplechoiceresponse direction='vertical'>
 <sequential graded='false' display_name='Pymongo, Sort, final thoughts'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hwUg8r7a-d8'/>
-<discussion for='Pymongo, Sort, final thoughts' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Pymongo, Inserting' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:1buD4Ern9rA'/>
-<discussion for='Pymongo, Inserting' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Pymongo_Inserting_problem' rerandomize='never' display_name='Quiz: Pymongo, Inserting'>
 Do you expect the second insert below to succeed?
 <pre>
@@ -2753,7 +2753,7 @@ except:
 <sequential graded='false' display_name='Pymongo, Updating' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:u6iRURy8rY0'/>
-<discussion for='Pymongo, Updating' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Pymongo_Updating_problem' rerandomize='never' display_name='Quiz: Pymongo, Updating'>
 In the following code fragment, what is the python expression in place of xxxx to set a new key "examiner" to be "Jones"
 
@@ -2816,7 +2816,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Pymongo, upserts' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hcGo9lV9HwI'/>
-<discussion for='Pymongo, upserts' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Pymongo_upserts_problem' rerandomize='never' display_name='Quiz: Pymongo, upserts'>
 Suppose we would like to upsert the following document into the collection <i>stuff</i>:
 <pre>
@@ -2846,22 +2846,22 @@ Which of the following python statements work. Check all that apply.<choicerespo
 <sequential graded='false' display_name='Pymongo, find_and_modify'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:rQ8Oml5e6PI'/>
-<discussion for='Pymongo, find_and_modify' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Blog, User Interface'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:QA80WBg0hLg'/>
-<discussion for='Blog, User Interface' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Blog, Session Management'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:sNigml3JoY0'/>
-<discussion for='Blog, Session Management' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Blog, Internals'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:tTqQZvBGhyU'/>
-<discussion for='Blog, Internals' discussion_category='Week 2 - CRUD' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 2.1' format='Homework' due='Nov 9 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_1_problem' rerandomize='never' display_name='Quiz: Homework 2.1'>
@@ -3089,7 +3089,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Introduction to Week 3' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:itnfWjMnQ4A'/>
-<discussion for='Introduction to Week 3' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Introduction_to_Week_3_problem' rerandomize='never' display_name='Quiz: Introduction to Week 3'>
 What's the single most important factor in designing your application schema within MongoDB?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -3107,12 +3107,12 @@ What's the single most important factor in designing your application schema wit
 <sequential graded='false' display_name='Relational Normalization'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:GX__f2s4hd8'/>
-<discussion for='Relational Normalization' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Mongo Design for Blog' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:PRylEHH5t84'/>
-<discussion for='Mongo Design for Blog' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Mongo_Design_for_Blog_problem' rerandomize='never' display_name='Quiz: Mongo Design for Blog'>
 Which data access pattern is not well supported by the blog schema?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -3130,12 +3130,12 @@ Which data access pattern is not well supported by the blog schema?<multiplechoi
 <sequential graded='false' display_name='Alternative Schema for Blog'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ZvqNWVWB2-o'/>
-<discussion for='Alternative Schema for Blog' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Living Without Constraints' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:YFRMkDPaams'/>
-<discussion for='Living Without Constraints' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Living_Without_Constraints_problem' rerandomize='never' display_name='Quiz: Living Without Constraints'>
 What does Living Without Constraints refer to?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -3153,7 +3153,7 @@ What does Living Without Constraints refer to?<multiplechoiceresponse direction=
 <sequential graded='false' display_name='Living without Transactions' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:FfRr3qjRfww'/>
-<discussion for='Living without Transactions' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Living_without_Transactions_problem' rerandomize='never' display_name='Quiz: Living without Transactions'>
 Which of the following operations operate atomically within a single document? Check all that apply.<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -3179,7 +3179,7 @@ Which of the following operations operate atomically within a single document? C
 <sequential graded='false' display_name='One to One Relations' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:cCsfon0vUlQ'/>
-<discussion for='One to One Relations' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='One_to_One_Relations_problem' rerandomize='never' display_name='Quiz: One to One Relations'>
 What's a good reason you might want to keep two documents that are related to each other one-to-one in separate collections? Check all that apply.<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -3205,7 +3205,7 @@ What's a good reason you might want to keep two documents that are related to ea
 <sequential graded='false' display_name='One To Many Relations' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:EIaP1KbVkUc'/>
-<discussion for='One To Many Relations' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='One_To_Many_Relations_problem' rerandomize='never' display_name='Quiz: One To Many Relations'>
 When is it recommended to represent a one to many relationship in multiple collections?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -3223,22 +3223,22 @@ When is it recommended to represent a one to many relationship in multiple colle
 <sequential graded='false' display_name='Many to Many Relations'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:fEYYjZ7zEHc'/>
-<discussion for='Many to Many Relations' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Multikeys'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ocU9WNUL9YQ'/>
-<discussion for='Multikeys' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Benefits of Embedding'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:XIN0Dqht08Q'/>
-<discussion for='Benefits of Embedding' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Trees' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:lIjXyQklGWY'/>
-<discussion for='Trees' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Trees_problem' rerandomize='never' display_name='Quiz: Trees'>
 Given the following typical document for a e-commerce category hierarchy collection called <em>categories</em>
 <pre>
@@ -3265,17 +3265,17 @@ Which query will find all descendants of  the snorkeling category?<multiplechoic
 <sequential graded='false' display_name='When to Denormalize'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:jDZ-HFoJ0vg'/>
-<discussion for='When to Denormalize' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Handling Blobs'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:AsL5p1Z0Ss8'/>
-<discussion for='Handling Blobs' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 3.1' format='Homework' due='Nov 19 23:00 EST 2012'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:lpSMbphEl7c'/>
-<discussion for='HW 3.1' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 <problem showanswer='due' attempts='3' url_name='HW_3_1_problem' rerandomize='never' display_name='Quiz: HW 3.1'>
 Download the <a href="/static/handouts/students.js">students.js</a> file to your computer and import it into your local Mongo instance with this command:
 <pre>
@@ -3354,7 +3354,7 @@ if not(response == quiz_answer):
 <sequential graded='true' display_name='HW 3.2' format='Homework' due='Nov 19 23:00 EST 2012'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:SEh6Y4lHkWQ'/>
-<discussion for='HW 3.2' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 <problem showanswer='due' attempts='3' url_name='HW_3_2_problem' rerandomize='never' display_name='Quiz: HW 3.2'>
 <b>Making your blog accept posts</b>
 <p>In this homework you will be enhancing the blog project to insert entries into the posts collection. After this, the blog will work. It will allow you to add blog posts with a title, body and tags and have it be added to the posts collection properly.
@@ -3414,7 +3414,7 @@ if not(response == quiz_answer):
 <sequential graded='true' display_name='HW 3.3' format='Homework' due='Nov 19 23:00 EST 2012'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:HPSgVT2BEYQ'/>
-<discussion for='HW 3.3' discussion_category='Week 3 - Schema Design' /></vertical>
+</vertical>
 <problem showanswer='due' attempts='3' url_name='HW_3_3_problem' rerandomize='never' display_name='Quiz: HW 3.3'>
 <b>Making your blog accept comments</b>
 <p>
@@ -3492,12 +3492,12 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:MA0QpaGggY8'/>
-<discussion for='Introduction' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Indexes' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:pPnRWpL5zl4'/>
-<discussion for='Indexes' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Indexes_problem' rerandomize='never' display_name='Quiz: Indexes'>
 Which optimization will typically have the greatest impact on the performance of a database.
 <multiplechoiceresponse direction='vertical'>
@@ -3519,7 +3519,7 @@ Which optimization will typically have the greatest impact on the performance of
 <sequential graded='false' display_name='Creating Indexes' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:tRqenx45UAM'/>
-<discussion for='Creating Indexes' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Creating_Indexes_problem' rerandomize='never' display_name='Quiz: Creating Indexes'>
 Please provide the mongo shell command to add an index to a collection named <i>students</i>, having the index  key be <i>class</i>, <i>student_name</i>. <customresponse>
 <textbox rows='4' cols='50' correct_answer="db.students.ensureIndex({class:1, student_name:1})"> </textbox>
@@ -3615,12 +3615,12 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Discovering indexes'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hH7kYu_-FXg'/>
-<discussion for='Discovering indexes' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Multikey Indexes' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:JO_puGONaLc'/>
-<discussion for='Multikey Indexes' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Multikey_Indexes_problem' rerandomize='never' display_name='Quiz: Multikey Indexes'>
 Suppose we have a collection <i>foo</i> that has an index created as follows:
 <pre>
@@ -3650,12 +3650,12 @@ Which of the following inserts are valid to this collection?<choiceresponse dire
 <sequential graded='false' display_name='Multikey Continued'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:mPSGG2p33RQ'/>
-<discussion for='Multikey Continued' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Index Creation option, Unique' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:764mQG1iL8E'/>
-<discussion for='Index Creation option, Unique' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Index_Creation_option_Unique_problem' rerandomize='never' display_name='Quiz: Index Creation option, Unique'>
 Please provide the mongo shell command to add a unique index to the collection <i>students</i> on the keys <i>student_id</i>, <i>class_id</i>.<customresponse>
 <textbox rows='4' cols='50' correct_answer="db.students.ensureIndex({student_id:1, class_id:1}, {unique:true})"> </textbox>
@@ -3751,7 +3751,7 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Index Creation, Removing Dups' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:YJaWPXNGvoU'/>
-<discussion for='Index Creation, Removing Dups' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Index_Creation_Removing_Dups_problem' rerandomize='never' display_name='Quiz: Index Creation, Removing Dups'>
 If you choose the dropDups option when creating a unique index, what will the MongoDB do to documents that conflict with an existing index entry? <multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -3769,7 +3769,7 @@ If you choose the dropDups option when creating a unique index, what will the Mo
 <sequential graded='false' display_name='Index Creation, Sparse' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:s4sYwLndtTI'/>
-<discussion for='Index Creation, Sparse' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Index_Creation_Sparse_problem' rerandomize='never' display_name='Quiz: Index Creation, Sparse'>
 Suppose you had the following documents in a collection called <i>people</i> with the following docs:
 <pre>
@@ -3803,7 +3803,7 @@ db.people.find({title:null})
 <sequential graded='false' display_name='Index Creation, Background' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:28wCvoXmY7A'/>
-<discussion for='Index Creation, Background' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Index_Creation_Background_problem' rerandomize='never' display_name='Quiz: Index Creation, Background'>
 Which things are true about creating an index in the background in MongoDB. Check all that apply.<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
@@ -3829,7 +3829,7 @@ Which things are true about creating an index in the background in MongoDB. Chec
 <sequential graded='false' display_name='Using Explain' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:inmABt5RKf0'/>
-<discussion for='Using Explain' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Using_Explain_problem' rerandomize='never' display_name='Quiz: Using Explain'>
 Given the following output from explain, what is the best description of what happened during the query?
 <pre>
@@ -3869,7 +3869,7 @@ Given the following output from explain, what is the best description of what ha
 <sequential graded='false' display_name='When is an index used?' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Lwms58Y_3Jc'/>
-<discussion for='When is an index used?' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='When_is_an_index_used__problem' rerandomize='never' display_name='Quiz: When is an index used?'>
 Given collection foo with the following index:
 <pre>
@@ -3899,7 +3899,7 @@ Which of the following queries will use the index?<choiceresponse direction='ver
 <sequential graded='false' display_name='How large is your index?' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:oywrqWNY46s'/>
-<discussion for='How large is your index?' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='How_large_is_your_index__problem' rerandomize='never' display_name='Quiz: How large is your index?'>
 Is it more important that your index or your data fit into memory?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -3915,7 +3915,7 @@ Is it more important that your index or your data fit into memory?<multiplechoic
 <sequential graded='false' display_name='Index Cardinality' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:xiujksUfzUA'/>
-<discussion for='Index Cardinality' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Index_Cardinality_problem' rerandomize='never' display_name='Quiz: Index Cardinality'>
 Let's say you update a document with a key called tags and that update causes the document to need to get moved on disk. If the document has 100 tags in it, and if the tags array is indexed with a multikey index, how many index points need to be updated in the index to accomodate the move? Put just the number below.<customresponse>
 <textbox rows='4' cols='50' correct_answer="100"> </textbox>
@@ -3945,7 +3945,7 @@ if not(response == quiz_answer):
 <sequential graded='false' display_name='Index Selectivity' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:On8HHR1agsI'/>
-<discussion for='Index Selectivity' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Index_Selectivity_problem' rerandomize='never' display_name='Quiz: Index Selectivity'>
 Given the following attributes of automobiles: color, weight, manufacturer, odometer mileage, which index is likely be the most selective, provided you can provide all four attributes on a search:<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
@@ -3963,7 +3963,7 @@ Given the following attributes of automobiles: color, weight, manufacturer, odom
 <sequential graded='false' display_name='Hinting an Index' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ksOn-SkaIcg'/>
-<discussion for='Hinting an Index' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Hinting_an_Index_problem' rerandomize='never' display_name='Quiz: Hinting an Index'>
 Given the following data in a collection:
 <pre>
@@ -4012,17 +4012,17 @@ Which query below will return the most documents.<multiplechoiceresponse directi
 <sequential graded='false' display_name='Hinting in Pymongo'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:dlKcfo7WtGU'/>
-<discussion for='Hinting in Pymongo' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Efficiency of Index Use'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:1sADN-NKwhY'/>
-<discussion for='Efficiency of Index Use' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Geospatial Indexes' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:UKUDYqNVL6I'/>
-<discussion for='Geospatial Indexes' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Geospatial_Indexes_problem' rerandomize='never' display_name='Quiz: Geospatial Indexes'>
 Suppose you have a 2D geospatial index defined on the key <i>location</i> in the collection <i>places</i>. Write a query that will find the closest three places (the closest three documents) to the location 74, 140.<customresponse>
 <textbox rows='4' cols='50' correct_answer="db.places.find( { location : { $near : [74,140] } ).limit(3)&#10;"> </textbox>
@@ -4119,17 +4119,17 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Geospacial Spherical'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:vY3_H4MzkIY'/>
-<discussion for='Geospacial Spherical' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Logging Slow Queries'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:aWuvC-O7Qkk'/>
-<discussion for='Logging Slow Queries' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Profiling' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:pN1Yhrup9-I'/>
-<discussion for='Profiling' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 <problem showanswer='attempted' url_name='Profiling_problem' rerandomize='never' display_name='Quiz: Profiling'>
 Write the query to look in the system profile collection for all queries that took longer than one second, ordered by timestamp descending.<customresponse>
 <textbox rows='4' cols='50' correct_answer="db.system.profile.find({millis:{$gt:1000}}).sort({ts:-1})"> </textbox>
@@ -4225,17 +4225,166 @@ except demjson.JSONDecodeError as err:
 <sequential graded='false' display_name='Mongotop'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:D9YLXgy7NYo'/>
-<discussion for='Mongotop' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Mongostat'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:eLWQO_AJmrI'/>
-<discussion for='Mongostat' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
 </sequential>
 <sequential graded='false' display_name='Sharding Overview'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:BDxT-VZdYqc'/>
-<discussion for='Sharding Overview' discussion_category='Week 4 - Performance' /></vertical>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='HW 4.1' format='Quiz'>
+<problem showanswer='attempted' url_name='HW_4_1_problem' rerandomize='never' display_name='Quiz: HW 4.1'>
+Suppose you have a collection with the following indexes:
+<pre>
+> db.products.getIndexes()
+[
+	{
+		"v" : 1,
+		"key" : {
+			"_id" : 1
+		},
+		"ns" : "store.products",
+		"name" : "_id_"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"sku" : 1,
+			"unique" : true
+		},
+		"ns" : "store.products",
+		"name" : "sku_1_unique_true"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"price" : -1
+		},
+		"ns" : "store.products",
+		"name" : "price_-1"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"description" : 1
+		},
+		"ns" : "store.products",
+		"name" : "description_1"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"category" : 1,
+			"brand" : 1
+		},
+		"ns" : "store.products",
+		"name" : "category_1_brand_1"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"reviews.author" : 1
+		},
+		"ns" : "store.products",
+		"name" : "reviews.author_1"
+	}
+
+</pre>
+Which of the following queries can utilize an index. Check all that apply.<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='false'>
+<startouttext/>db.products.find({'brand':"GE"})<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>db.products.find({'brand':"GE"}).sort({price:1})<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>db.products.find({$and:[{price:{$gt:30}},{price:{$lt:50}}]}).sort({brand:1})<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>db.products.find({brand:'GE'}).sort({category:1, brand:-1}).explain()<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='HW 4.2' format='Homework' due='Nov 26 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='HW_4_2_problem' rerandomize='never' display_name='Quiz: HW 4.2'>
+Suppose you have a collection called <i>tweets</i> whose documents contain information about the created_at time of the tweet, and the user's follower count at the time they issued the tweet. What can you infer from the following <i>explain</i> output?
+
+<pre>
+db.tweets.find({"user.followers_count":{$gt:1000}}).sort({"created_at" : 1 }).limit(10).skip(5000).explain()
+{
+        "cursor" : "BtreeCursor created_at_-1 reverse",
+        "isMultiKey" : false,
+        "n" : 10,
+        "nscannedObjects" : 46462,
+        "nscanned" : 46462,
+        "nscannedObjectsAllPlans" : 49763,
+        "nscannedAllPlans" : 49763,
+        "scanAndOrder" : false,
+        "indexOnly" : false,
+        "nYields" : 0,
+        "nChunkSkips" : 0,
+        "millis" : 205,
+        "indexBounds" : {
+                "created_at" : [
+                        [
+                                {
+                                        "$minElement" : 1
+                                },
+                                {
+                                        "$maxElement" : 1
+                                }
+                        ]
+                ]
+        },
+        "server" : "localhost.localdomain:27017"
+}
+</pre><choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='false'>
+<startouttext/>This query performs a table scan.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>The query uses an index to determine the order in which to return result documents.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>The query uses an index to determine which documents match.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>The query returns 46462 documents.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>The query visits 46462 documents.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>The query is a "covered index query".<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' display_name='HW 4.3' format='Quiz'>
+<problem showanswer='attempted' url_name='HW_4_3_problem' rerandomize='never' display_name='Quiz: HW 4.3'>
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' display_name='HW 4.4' format='Quiz'>
+<problem showanswer='attempted' url_name='HW_4_4_problem' rerandomize='never' display_name='Quiz: HW 4.4'>
+<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+</checkboxgroup>
+</choiceresponse>
+</problem>
 </sequential>
 </chapter>
 </course>
