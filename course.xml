@@ -4237,5 +4237,219 @@ except demjson.JSONDecodeError as err:
 <video display_name='Lecture' youtube='1.0:BDxT-VZdYqc'/>
 </vertical>
 </sequential>
+<sequential graded='true' display_name='HW 4.1' format='Homework' due='Nov 26 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='HW_4_1_problem' rerandomize='never' display_name='Quiz: HW 4.1'>
+Suppose you have a collection with the following indexes:
+<pre>
+> db.products.getIndexes()
+[
+	{
+		"v" : 1,
+		"key" : {
+			"_id" : 1
+		},
+		"ns" : "store.products",
+		"name" : "_id_"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"sku" : 1,
+			"unique" : true
+		},
+		"ns" : "store.products",
+		"name" : "sku_1_unique_true"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"price" : -1
+		},
+		"ns" : "store.products",
+		"name" : "price_-1"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"description" : 1
+		},
+		"ns" : "store.products",
+		"name" : "description_1"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"category" : 1,
+			"brand" : 1
+		},
+		"ns" : "store.products",
+		"name" : "category_1_brand_1"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"reviews.author" : 1
+		},
+		"ns" : "store.products",
+		"name" : "reviews.author_1"
+	}
+
+</pre>
+Which of the following queries can utilize an index. Check all that apply.<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='false'>
+<startouttext/>db.products.find({'brand':"GE"})<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>db.products.find({'brand':"GE"}).sort({price:1})<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>db.products.find({$and:[{price:{$gt:30}},{price:{$lt:50}}]}).sort({brand:1})<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>db.products.find({brand:'GE'}).sort({category:1, brand:-1}).explain()<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='HW 4.2' format='Homework' due='Nov 26 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='HW_4_2_problem' rerandomize='never' display_name='Quiz: HW 4.2'>
+Suppose you have a collection called <i>tweets</i> whose documents contain information about the created_at time of the tweet, and the user's follower count at the time they issued the tweet. What can you infer from the following <i>explain</i> output?
+
+<pre>
+db.tweets.find({"user.followers_count":{$gt:1000}}).sort({"created_at" : 1 }).limit(10).skip(5000).explain()
+{
+        "cursor" : "BtreeCursor created_at_-1 reverse",
+        "isMultiKey" : false,
+        "n" : 10,
+        "nscannedObjects" : 46462,
+        "nscanned" : 46462,
+        "nscannedObjectsAllPlans" : 49763,
+        "nscannedAllPlans" : 49763,
+        "scanAndOrder" : false,
+        "indexOnly" : false,
+        "nYields" : 0,
+        "nChunkSkips" : 0,
+        "millis" : 205,
+        "indexBounds" : {
+                "created_at" : [
+                        [
+                                {
+                                        "$minElement" : 1
+                                },
+                                {
+                                        "$maxElement" : 1
+                                }
+                        ]
+                ]
+        },
+        "server" : "localhost.localdomain:27017"
+}
+</pre><choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='true'>
+<startouttext/>This query performs a collection scan.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>The query uses an index to determine the order in which to return result documents.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>The query uses an index to determine which documents match.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>The query returns 46462 documents.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>The query visits 46462 documents.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>The query is a "covered index query".<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='HW 4.3' format='Homework' due='Nov 26 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='HW_4_3_problem' rerandomize='never' display_name='Quiz: HW 4.3'>
+<b>Making the Blog fast</b>
+<p>Please download <a href="/static/handouts/hw4-3.tar">hw4-3.tar</a> (mac) or <a href="/static/handouts/hw4-3.zip">hw4-3.zip</a> (pc) to get started. This assignment requires Mongo 2.2 or above. </p>
+
+<p>In this homework assignment you will be adding some indexes to the post collection to make the blog fast.</p>
+
+<p>We have provided the full code for the blog application and you don't need to make any changes, or even run the blog. But you can, for fun.</p>
+
+<p>We are also providing a patriotic (if you are an American) data set for the blog. There are 1000 entries with lots of comments and tags. You must load this dataset to complete the problem.</p>
+<pre>
+# from the mongo shell
+use blog
+db.posts.drop()
+# from the a mac or PC terminal window
+mongoimport -d blog -c posts &lt; posts.json
+</pre>
+<p>
+The blog has been enhanced so that it can also display the top 10 most recent posts by tag. There are hyperlinks from the post tags to the page that displays the 10 most recent blog entries for that tag. (run the blog and it will be obvious)
+</p><p>
+Your assignment is to make the following blog pages fast:
+</p>
+<ul>
+<li>The blog home page</li>
+<li>The page that displays blog posts by tag (http://localhost:8082/tag/whatever)</li>
+<li>The page that displays a blog entry by permalink (http://localhost:8082/post/permalink)</li>
+</ul>
+By fast, we mean that indexes should be in place to satisfy these queries such that we only need to scan the number of documents we are going to return.
+
+<p>
+To figure out what queries you need to optimize,  you can read the blog.py code and see what it does to display those pages. Isolate those queries and use explain to explore.
+</p><p>
+Once you have added the indexes to make those pages fast run the following.
+</p>
+<pre>
+python validate.py
+</pre>
+(note that for folks who are using MongoLabs or MongoHQ there are some command line options to validate.py to make it possible to use those services)
+Now enter the validation code below. 
+<customresponse>
+<textbox rows='4' cols='50' correct_answer="nffhe89hfkdjsbapajsfda89jks"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''nffhe89hfkdjsbapajsfda89jks'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='HW 4.4' format='Homework' due='Nov 26 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='HW_4_4_problem' rerandomize='never' display_name='Quiz: HW 4.4'>
+In this problem you will analyze a profile log taken from a mongoDB instance. To start, please download <a href="/static/handouts/sysprofile.json"> sysprofile.json</a> and import it with the following command:
+
+<pre>
+mongoimport -d m101 c profile &lt; sysprofile.json
+</pre>
+
+Now query the profile data, looking for all queries to the <i>students</i> collection in the database <i>school2</i>, sorted in order of decreasing latency. What is the latency of the longest running operation to the collection, in milliseconds?
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>4715</text></choice>
+<choice location='bottom' correct='false'><text>34430</text></choice>
+<choice location='bottom' correct='false'><text>5018</text></choice>
+<choice location='bottom' correct='true'><text>15820</text></choice>
+<choice location='bottom' correct='false'><text>3217</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
 </chapter>
 </course>
