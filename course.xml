@@ -4445,7 +4445,7 @@ if not(response == quiz_answer):
 In this problem you will analyze a profile log taken from a mongoDB instance. To start, please download <a href="/static/handouts/sysprofile.json"> sysprofile.json</a> and import it with the following command:
 
 <pre>
-mongoimport -d m101 c profile &lt; sysprofile.json
+mongoimport -d m101 -c profile &lt; sysprofile.json
 </pre>
 
 Now query the profile data, looking for all queries to the <i>students</i> collection in the database <i>school2</i>, sorted in order of decreasing latency. What is the latency of the longest running operation to the collection, in milliseconds?
