@@ -4238,6 +4238,9 @@ except demjson.JSONDecodeError as err:
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 4.1' format='Homework' due='Nov 26 23:00 EST 2012'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:0tpXSPgYk4I'/>
+</vertical>
 <problem showanswer='due' attempts='3' url_name='HW_4_1_problem' rerandomize='never' display_name='Quiz: HW 4.1'>
 Suppose you have a collection with the following indexes:
 <pre>
@@ -4314,8 +4317,11 @@ Which of the following queries can utilize an index. Check all that apply.<choic
 </problem>
 </sequential>
 <sequential graded='true' display_name='HW 4.2' format='Homework' due='Nov 26 23:00 EST 2012'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:Zz8TerE95Ss'/>
+</vertical>
 <problem showanswer='due' attempts='3' url_name='HW_4_2_problem' rerandomize='never' display_name='Quiz: HW 4.2'>
-Suppose you have a collection called <i>tweets</i> whose documents contain information about the created_at time of the tweet, and the user's follower count at the time they issued the tweet. What can you infer from the following <i>explain</i> output?
+Suppose you have a collection called <i>tweets</i> whose documents contain information about the <i>created_at</i> time of the tweet and the user's <i>followers_count</i> at the time they issued the tweet. What can you infer from the following <i>explain</i> output?
 
 <pre>
 db.tweets.find({"user.followers_count":{$gt:1000}}).sort({"created_at" : 1 }).limit(10).skip(5000).explain()
@@ -4371,6 +4377,9 @@ db.tweets.find({"user.followers_count":{$gt:1000}}).sort({"created_at" : 1 }).li
 </problem>
 </sequential>
 <sequential graded='true' display_name='HW 4.3' format='Homework' due='Nov 26 23:00 EST 2012'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:K-oXNC7voR8'/>
+</vertical>
 <problem showanswer='due' attempts='3' url_name='HW_4_3_problem' rerandomize='never' display_name='Quiz: HW 4.3'>
 <b>Making the Blog fast</b>
 <p>Please download <a href="/static/handouts/hw4-3.tar">hw4-3.tar</a> (mac) or <a href="/static/handouts/hw4-3.zip">hw4-3.zip</a> (pc) to get started. This assignment requires Mongo 2.2 or above. </p>
