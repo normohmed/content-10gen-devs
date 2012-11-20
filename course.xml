@@ -4025,7 +4025,7 @@ Which query below will return the most documents.<multiplechoiceresponse directi
 </vertical>
 <problem showanswer='attempted' url_name='Geospatial_Indexes_problem' rerandomize='never' display_name='Quiz: Geospatial Indexes'>
 Suppose you have a 2D geospatial index defined on the key <i>location</i> in the collection <i>places</i>. Write a query that will find the closest three places (the closest three documents) to the location 74, 140.<customresponse>
-<textbox rows='4' cols='50' correct_answer="db.places.find( { location : { $near : [74,140] } ).limit(3)&#10;"> </textbox>
+<textbox rows='4' cols='50' correct_answer="db.places.find( { location : { $near : [74,140] } }).limit(3)&#10;"> </textbox>
 
 <answer type='loncapa/python'><![CDATA[
 try:
@@ -4033,7 +4033,7 @@ try:
 except ValueError:
   correct[0] = 'incorrect'
   response = '0'
-answer = '''db.places.find( { location : { $near : [74,140] } ).limit(3)
+answer = '''db.places.find( { location : { $near : [74,140] } }).limit(3)
 '''
 
 # Filter out newlines, carriage returns, and semicolons.
@@ -4236,155 +4236,6 @@ except demjson.JSONDecodeError as err:
 <vertical>
 <video display_name='Lecture' youtube='1.0:BDxT-VZdYqc'/>
 </vertical>
-</sequential>
-<sequential graded='false' display_name='HW 4.1' format='Quiz'>
-<problem showanswer='attempted' url_name='HW_4_1_problem' rerandomize='never' display_name='Quiz: HW 4.1'>
-Suppose you have a collection with the following indexes:
-<pre>
-> db.products.getIndexes()
-[
-	{
-		"v" : 1,
-		"key" : {
-			"_id" : 1
-		},
-		"ns" : "store.products",
-		"name" : "_id_"
-	},
-	{
-		"v" : 1,
-		"key" : {
-			"sku" : 1,
-			"unique" : true
-		},
-		"ns" : "store.products",
-		"name" : "sku_1_unique_true"
-	},
-	{
-		"v" : 1,
-		"key" : {
-			"price" : -1
-		},
-		"ns" : "store.products",
-		"name" : "price_-1"
-	},
-	{
-		"v" : 1,
-		"key" : {
-			"description" : 1
-		},
-		"ns" : "store.products",
-		"name" : "description_1"
-	},
-	{
-		"v" : 1,
-		"key" : {
-			"category" : 1,
-			"brand" : 1
-		},
-		"ns" : "store.products",
-		"name" : "category_1_brand_1"
-	},
-	{
-		"v" : 1,
-		"key" : {
-			"reviews.author" : 1
-		},
-		"ns" : "store.products",
-		"name" : "reviews.author_1"
-	}
-
-</pre>
-Which of the following queries can utilize an index. Check all that apply.<choiceresponse direction='vertical'>
-<checkboxgroup type='MultipleChoice'>
-<choice correct='false'>
-<startouttext/>db.products.find({'brand':"GE"})<endouttext/>
-</choice>
-<choice correct='true'>
-<startouttext/>db.products.find({'brand':"GE"}).sort({price:1})<endouttext/>
-</choice>
-<choice correct='true'>
-<startouttext/>db.products.find({$and:[{price:{$gt:30}},{price:{$lt:50}}]}).sort({brand:1})<endouttext/>
-</choice>
-<choice correct='false'>
-<startouttext/>db.products.find({brand:'GE'}).sort({category:1, brand:-1}).explain()<endouttext/>
-</choice>
-</checkboxgroup>
-</choiceresponse>
-</problem>
-</sequential>
-<sequential graded='true' display_name='HW 4.2' format='Homework' due='Nov 26 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_4_2_problem' rerandomize='never' display_name='Quiz: HW 4.2'>
-Suppose you have a collection called <i>tweets</i> whose documents contain information about the created_at time of the tweet, and the user's follower count at the time they issued the tweet. What can you infer from the following <i>explain</i> output?
-
-<pre>
-db.tweets.find({"user.followers_count":{$gt:1000}}).sort({"created_at" : 1 }).limit(10).skip(5000).explain()
-{
-        "cursor" : "BtreeCursor created_at_-1 reverse",
-        "isMultiKey" : false,
-        "n" : 10,
-        "nscannedObjects" : 46462,
-        "nscanned" : 46462,
-        "nscannedObjectsAllPlans" : 49763,
-        "nscannedAllPlans" : 49763,
-        "scanAndOrder" : false,
-        "indexOnly" : false,
-        "nYields" : 0,
-        "nChunkSkips" : 0,
-        "millis" : 205,
-        "indexBounds" : {
-                "created_at" : [
-                        [
-                                {
-                                        "$minElement" : 1
-                                },
-                                {
-                                        "$maxElement" : 1
-                                }
-                        ]
-                ]
-        },
-        "server" : "localhost.localdomain:27017"
-}
-</pre><choiceresponse direction='vertical'>
-<checkboxgroup type='MultipleChoice'>
-<choice correct='false'>
-<startouttext/>This query performs a table scan.<endouttext/>
-</choice>
-<choice correct='true'>
-<startouttext/>The query uses an index to determine the order in which to return result documents.<endouttext/>
-</choice>
-<choice correct='false'>
-<startouttext/>The query uses an index to determine which documents match.<endouttext/>
-</choice>
-<choice correct='false'>
-<startouttext/>The query returns 46462 documents.<endouttext/>
-</choice>
-<choice correct='true'>
-<startouttext/>The query visits 46462 documents.<endouttext/>
-</choice>
-<choice correct='false'>
-<startouttext/>The query is a "covered index query".<endouttext/>
-</choice>
-</checkboxgroup>
-</choiceresponse>
-</problem>
-</sequential>
-<sequential graded='false' display_name='HW 4.3' format='Quiz'>
-<problem showanswer='attempted' url_name='HW_4_3_problem' rerandomize='never' display_name='Quiz: HW 4.3'>
-<multiplechoiceresponse direction='vertical'>
-<choicegroup type='MultipleChoice'>
-</choicegroup>
-</multiplechoiceresponse>
-</problem>
-</sequential>
-<sequential graded='false' display_name='HW 4.4' format='Quiz'>
-<problem showanswer='attempted' url_name='HW_4_4_problem' rerandomize='never' display_name='Quiz: HW 4.4'>
-<choiceresponse direction='vertical'>
-<checkboxgroup type='MultipleChoice'>
-</checkboxgroup>
-</choiceresponse>
-</problem>
 </sequential>
 </chapter>
 </course>
