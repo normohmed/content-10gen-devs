@@ -3350,6 +3350,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:iODR0m6m25c'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 3.2' format='Homework' due='Nov 19 23:00 EST 2012'>
 <vertical>
@@ -3410,6 +3413,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:ENSoJLkZnkY'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 3.3' format='Homework' due='Nov 19 23:00 EST 2012'>
 <vertical>
@@ -3486,6 +3492,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:po_TAFU4_3k'/>
+</vertical>
 </sequential>
 </chapter>
 <chapter start='2012-11-19T00:00' display_name='Week 4 - Performance'>
