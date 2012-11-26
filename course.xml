@@ -890,7 +890,7 @@ if not(response == quiz_answer):
 </vertical>
 </sequential>
 </chapter>
-<chapter start='Oct 29 2012' display_name='Week 2 - CRUD'>
+<chapter start='2012-10-29T00:00' display_name='Week 2 - CRUD'>
 <sequential graded='false' display_name='Introduction to Week 2' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:kB_9lXE-EbY'/>
@@ -3838,6 +3838,9 @@ Which things are true about creating an index in the background in MongoDB. Chec
 <sequential graded='false' display_name='Using Explain' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:inmABt5RKf0'/>
+<html>
+<h2>Lecture Notes</h2>
+At 7 minutes into this lecture, there is a mistake. I used $or versus $and and the results was that the query returned all 10,000 documents. Either way, it would have scanned 10,000 documents, because the query could not use the index, but the n value would have been lower had the query been correct. In the lecture, I explain away the wrong n value as having to do with the match phase of the query not using an index, but this is wrong. The n value is the number of documents returned by the query and had I formed the query correctly, it would have been approximately 250.</html>
 </vertical>
 <problem showanswer='attempted' url_name='Using_Explain_problem' rerandomize='never' display_name='Quiz: Using Explain'>
 Given the following output from explain, what is the best description of what happened during the query?
@@ -4468,6 +4471,815 @@ Now query the profile data, looking for all queries to the <i>students</i> colle
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+</sequential>
+</chapter>
+<chapter start='2012-11-26T00:00' display_name='Week 5 - Aggregation'>
+<sequential graded='false' display_name='Introduction to Aggregation'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:EaEIHm3CMQM'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Simple Aggregation Example' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:T2BX-LZOYsY'/>
+</vertical>
+<problem showanswer='attempted' url_name='Simple_Aggregation_Example_problem' rerandomize='never' display_name='Quiz: Simple Aggregation Example'>
+Write the aggregation query that will find the number of products by category of a collection that has the form:
+<pre>
+{
+	"_id" : ObjectId("50b1aa983b3d0043b51b2c52"),
+	"name" : "Nexus 7",
+	"category" : "Tablets",
+	"manufacturer" : "Google",
+	"price" : 199
+}
+
+</pre>
+Have the resulting key be called "num_products," as in the video lesson. 
+Hint, you just need to change which key you are aggregating on relative to the examples shown in the lesson.
+<p>
+Please double quote all keys to make it easier to check your result.
+</p>
+<customresponse>
+<textbox rows='4' cols='50' correct_answer='db.products.aggregate([{$group:{"_id":"$category", "num_products":{"$sum":1}}}])&#10;'> </textbox>
+
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  response = '0'
+answer = '''db.products.aggregate([{$group:{"_id":"$category", "num_products":{"$sum":1}}}])
+'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:Nt0cQI86G40'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='The Aggregation Pipeline' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:WazN2DS8s8c'/>
+</vertical>
+<problem showanswer='attempted' url_name='The_Aggregation_Pipeline_problem' rerandomize='never' display_name='Quiz: The Aggregation Pipeline'>
+Which of the following are stages in the aggregation pipeline. Check all that apply.<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='true'>
+<startouttext/>Match<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>Transpose<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Group<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Skip<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Limit<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Sort<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Project<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>unwind<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:mcnGfI69rRc'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Simple Example Expanded' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:3lEpnMcfpCs'/>
+<html>
+<h2>Lecture Notes</h2>
+
+</html>
+</vertical>
+<problem showanswer='attempted' url_name='Simple_Example_Expanded_problem' rerandomize='never' display_name='Quiz: Simple Example Expanded'>
+If you have the following collection of stuff:
+<pre>
+> db.stuff.find()
+{ "_id" : ObjectId("50b26f9d80a78af03b5163c8"), "a" : 1, "b" : 1, "c" : 1 }
+{ "_id" : ObjectId("50b26fb480a78af03b5163c9"), "a" : 2, "b" : 2, "c" : 1 }
+{ "_id" : ObjectId("50b26fbf80a78af03b5163ca"), "a" : 3, "b" : 3, "c" : 1 }
+{ "_id" : ObjectId("50b26fcd80a78af03b5163cb"), "a" : 3, "b" : 3, "c" : 2 }
+{ "_id" : ObjectId("50b26fd380a78af03b5163cc"), "a" : 3, "b" : 5, "c" : 3 }
+</pre>
+and you perform the following aggregation:
+<pre>
+db.stuff.aggregate([{$group:{_id:'$c'}}])
+</pre>
+How many documents will be in the result set from aggregate?
+<p>
+</p><multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>1</text></choice>
+<choice location='bottom' correct='false'><text>2</text></choice>
+<choice location='bottom' correct='true'><text>3</text></choice>
+<choice location='bottom' correct='false'><text>4</text></choice>
+<choice location='bottom' correct='false'><text>5</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:nr1E1qTyIHU'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Compound Grouping' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:LPFVRrag2Zg'/>
+</vertical>
+<problem showanswer='attempted' url_name='Compound_Grouping_problem' rerandomize='never' display_name='Quiz: Compound Grouping'>
+Given the following collection:
+<pre>
+> db.stuff.find()
+{ "_id" : ObjectId("50b26f9d80a78af03b5163c8"), "a" : 1, "b" : 1, "c" : 1 }
+{ "_id" : ObjectId("50b26fb480a78af03b5163c9"), "a" : 2, "b" : 2, "c" : 1 }
+{ "_id" : ObjectId("50b26fbf80a78af03b5163ca"), "a" : 3, "b" : 3, "c" : 1 }
+{ "_id" : ObjectId("50b26fcd80a78af03b5163cb"), "a" : 3, "b" : 3, "c" : 2 }
+{ "_id" : ObjectId("50b26fd380a78af03b5163cc"), "a" : 3, "b" : 5, "c" : 3 }
+{ "_id" : ObjectId("50b27f7080a78af03b5163cd"), "a" : 3, "b" : 3, "c" : 2 }
+</pre>
+And the following aggregation query:
+<pre>
+db.stuff.aggregate([{$group:
+		     {_id:
+		      {'moe':'$a', 
+		       'larry':'$b',
+		       'curly':'$c'
+		      }
+		     }
+		    }])
+</pre>
+How many documents will be in the result set?
+
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>2</text></choice>
+<choice location='bottom' correct='false'><text>3</text></choice>
+<choice location='bottom' correct='false'><text>4</text></choice>
+<choice location='bottom' correct='true'><text>5</text></choice>
+<choice location='bottom' correct='false'><text>6</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:bIlwnlYBRA0'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Using a document for _id'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:zoN4cj_XQzY'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Aggregation Expressions' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:L4G14MTfTgQ'/>
+</vertical>
+<problem showanswer='attempted' url_name='Aggregation_Expressions_problem' rerandomize='never' display_name='Quiz: Aggregation Expressions'>
+Which of the following aggregation expressions must be used in conjunction with a sort to make any sense?<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='false'>
+<startouttext/>$addToSet<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>$first<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>$last<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>$max<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>$min<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>$avg<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>$push<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>$sum<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:kJ0k2na4ukU'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Using $sum' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:oAV9tC0R8xk'/>
+<html>
+<h2>Lecture Notes</h2>
+Write an aggregation expression that adds up</html>
+</vertical>
+<problem showanswer='attempted' url_name='Using_sum_problem' rerandomize='never' display_name='Quiz: Using $sum'>
+<i>This problem, and some after it, use the zips collection from <a href="http://media.mongodb.org/zips.json">media.mongodb.org/zips.json</a>. You don't need to download it, but you can if you want, allowing you to test your queries within MongoDB. You can import, once downloaded, using mongoimport</i>
+<p>
+Suppose we have a collection of populations by postal code. The postal codes in are in the _id field, and are therefore unique. Documents look like this:</p>
+<pre>
+{
+	"city" : "CLANTON",
+	"loc" : [
+		-86.642472,
+		32.835532
+	],
+	"pop" : 13990,
+	"state" : "AL",
+	"_id" : "35045"
+}
+</pre>
+<i>For students outside the United States, there are 50 non-overlapping states in the US with two letter abbreviations such as NY and CA.  We call postal codes "zip codes." A city may overlap several zip codes.</i>
+<p>
+Write an aggregation query to sum up the population (pop) by state and put the result in a field called population. Don't use a compound _id key (you don't need one and the quiz checker is not expecting one). The collection name is zips. so something along the lines of db.zips.aggegrate...
+</p><customresponse>
+<textbox rows='4' cols='50' correct_answer='db.zips.aggregate([{"$group":{"_id":"$state", "population":{$sum:"$pop"}}}])'> </textbox>
+
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  response = '0'
+answer = '''db.zips.aggregate([{"$group":{"_id":"$state", "population":{$sum:"$pop"}}}])'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:ATO_s_Ah08o'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Using $avg' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:7UWOK8rWf1w'/>
+</vertical>
+<problem showanswer='attempted' url_name='Using_avg_problem' rerandomize='never' display_name='Quiz: Using $avg'>
+<i>This problem uses the same dataset as we described in using $sum quiz and you should review that quiz if you did not complete it.</i><p>
+Given population data by zip code (postal code) that looks like this:</p>
+<pre>
+{
+	"city" : "FISHERS ISLAND",
+	"loc" : [
+		-72.017834,
+		41.263934
+	],
+	"pop" : 329,
+	"state" : "NY",
+	"_id" : "06390"
+}
+</pre>
+Write an aggregation expression to calculate the average population of a zip code (postal code) by state. As before, the postal code is in the _id field and is unique.  The collection is assumed to be called "zips" and you should name the key in the result set "average_pop".
+<customresponse>
+<textbox rows='4' cols='50' correct_answer='db.zips.aggregate([{"$group":{"_id":"$state", "average_pop":{"$avg":"$pop"}}}])'> </textbox>
+
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  response = '0'
+answer = '''db.zips.aggregate([{"$group":{"_id":"$state", "average_pop":{"$avg":"$pop"}}}])'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:tT6Jx8s9dTc'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Using $addToSet' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:y2FD4R3in5U'/>
+</vertical>
+<problem showanswer='attempted' url_name='Using_addToSet_problem' rerandomize='never' display_name='Quiz: Using $addToSet'>
+<i>This problem uses the same zip code data as the $using sum quiz. See that quiz for a longer explanation.</i>
+<p>
+Suppose we population by zip code (postal code) data that looks like this (putting in a query for the zip codes in Palo Alto)
+</p>
+<pre>
+> db.zips.find({state:"CA",city:"PALO ALTO"})
+{ "city" : "PALO ALTO", "loc" : [ -122.149685, 37.444324 ], "pop" : 15965, "state" : "CA", "_id" : "94301" }
+{ "city" : "PALO ALTO", "loc" : [ -122.184234, 37.433424 ], "pop" : 1835, "state" : "CA", "_id" : "94304" }
+{ "city" : "PALO ALTO", "loc" : [ -122.127375, 37.418009 ], "pop" : 24309, "state" : "CA", "_id" : "94306" }
+</pre>
+Write an aggregation query that will return the postal codes that cover each city. The results should look like this:
+<pre>
+		{
+			"_id" : "CENTREVILLE",
+			"postal_codes" : [
+				"22020",
+				"49032",
+				"39631",
+				"21617",
+				"35042"
+			]
+		},
+</pre>
+Again the collection will be called zips. You can deduce what your result column names should be from the above output. (ignore the issue that a city may have the same name in two different states and is in fact two different cities in that case - for eg Springfield, MO and Springfield, MA)<customresponse>
+<textbox rows='4' cols='50' correct_answer='db.zips.aggregate([{"$group":{"_id":"$city", "postal_codes":{"$addToSet":"$_id"}}}])'> </textbox>
+
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  response = '0'
+answer = '''db.zips.aggregate([{"$group":{"_id":"$city", "postal_codes":{"$addToSet":"$_id"}}}])'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:zGcTxUQuLGE'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Using $push' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:gjIVUFufx3A'/>
+</vertical>
+<problem showanswer='attempted' url_name='Using_push_problem' rerandomize='never' display_name='Quiz: Using $push'>
+Given the zipcode dataset (explained more fully in the using $sum quiz) that has documents that look like this:
+<pre>
+> db.zips.findOne()
+{
+	"city" : "ACMAR",
+	"loc" : [
+		-86.51557,
+		33.584132
+	],
+	"pop" : 6055,
+	"state" : "AL",
+	"_id" : "35004"
+}
+
+</pre>
+would you expect the following two queries to produce the same result or different results? 
+<pre>
+db.zips.aggregate([{"$group":{"_id":"$city", "postal_codes":{"$push":"$_id"}}}])
+</pre>
+<pre>
+db.zips.aggregate([{"$group":{"_id":"$city", "postal_codes":{"$addToSet":"$_id"}}}])
+</pre><multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>Same result</text></choice>
+<choice location='bottom' correct='false'><text>Different Result</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:hFqDvVXtm6E'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Using $max and $min' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:BYoNX4trjOQ'/>
+</vertical>
+<problem showanswer='attempted' url_name='Using_max_and_min_problem' rerandomize='never' display_name='Quiz: Using $max and $min'>
+Again thinking about the zip code database, write an aggregation query that will return the population of the postal code in each state with the highest population. It should return output that looks like this:
+<pre>
+{
+			"_id" : "WI",
+			"pop" : 57187
+		},
+		{
+			"_id" : "WV",
+			"pop" : 70185
+		},
+..and so on
+</pre>
+Once again, the collection is named zips.<customresponse>
+<textbox rows='4' cols='50' correct_answer='db.zips.aggregate([{$group:{"_id":"$state", pop:{$max:"$pop"}}}])'> </textbox>
+
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  response = '0'
+answer = '''db.zips.aggregate([{$group:{"_id":"$state", pop:{$max:"$pop"}}}])'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:sHCdOiCispA'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Double $group stages' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:ET4ubwQTTos'/>
+</vertical>
+<problem showanswer='attempted' url_name='Double_group_stages_problem' rerandomize='never' display_name='Quiz: Double $group stages'>
+Given the following collection:
+<pre>
+> db.fun.find()
+{ "_id" : 0, "a" : 0, "b" : 0, "c" : 21 }
+{ "_id" : 1, "a" : 0, "b" : 0, "c" : 54 }
+{ "_id" : 2, "a" : 0, "b" : 1, "c" : 52 }
+{ "_id" : 3, "a" : 0, "b" : 1, "c" : 17 }
+{ "_id" : 4, "a" : 1, "b" : 0, "c" : 22 }
+{ "_id" : 5, "a" : 1, "b" : 0, "c" : 5 }
+{ "_id" : 6, "a" : 1, "b" : 1, "c" : 87 }
+{ "_id" : 7, "a" : 1, "b" : 1, "c" : 97 }
+
+</pre>
+And the following aggregation query
+<pre>
+db.fun.aggregate([{$group:{_id:{a:"$a", b:"$b"}, c:{$max:"$c"}}}, {$group:{_id:"$_id.a", c:{$min:"$c"}}}])
+</pre>
+What values are returned?
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>17 and 54</text></choice>
+<choice location='bottom' correct='false'><text>97 and 21</text></choice>
+<choice location='bottom' correct='false'><text>54 and 5</text></choice>
+<choice location='bottom' correct='true'><text>52 and 22</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:J-asAAEHJ0Q'/>
+</vertical>
 </sequential>
 </chapter>
 </course>
