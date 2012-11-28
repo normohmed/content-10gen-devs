@@ -5779,9 +5779,9 @@ Can you reverse the effects of a double unwind (2 unwinds in a row) in our inven
 <sequential graded='true' display_name='HW 5.1' chapter_name='Week 5 - Aggregation' format='Homework' due='Dec 5 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='HW_5_1_problem' rerandomize='never' display_name='Quiz: HW 5.1'>
 <b>Finding the most frequent author of comments on your blog</b><br/>
-In this assignment you will use the aggregation framework to find the most frequent author of comments on your blog. 
+In this assignment you will use the aggregation framework to find the most frequent author of comments on your blog. We will be using the same dataset as last week.
 <br/><br/>
-Start by downloading the posts.json dataset, found in <a href="/static/handouts/hw4-3.tar">hw4-3.tar</a> or <a href="/static/handouts/hw4-3.zip">hw4-3.zip</a>.  Then import into your blog database as follows:
+Start by downloading the posts.json dataset from last week's homework, found in <a href="/static/handouts/hw4-3.tar">hw4-3.tar</a> or <a href="/static/handouts/hw4-3.zip">hw4-3.zip</a>.  Then import into your blog database as follows:
 <pre>
 mongoimport -d blog -c posts --drop &lt; posts.json
 </pre>
