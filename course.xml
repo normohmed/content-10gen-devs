@@ -1,6 +1,6 @@
 <course url_name='2012_Fall' org='10gen' course='M101' start='2012-10-22T00:00' display_name='MongoDB for Developers'>
 <chapter start='2012-10-22T00:00' display_name='Week 1 - Introduction'>
-<sequential graded='false' display_name='Welcome to M101' format='Quiz'>
+<sequential graded='false' display_name='Welcome to M101' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:179MiZSibco'/>
 <html>
@@ -33,7 +33,7 @@ What counts toward your final grade in the class?<choiceresponse direction='vert
 <video display_name='Answer' youtube='1.0:xVfrAfEyfb0'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='What is MongoDB?' format='Quiz'>
+<sequential graded='false' display_name='What is MongoDB?' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Lfl8hdQOi6Y'/>
 </vertical>
@@ -59,7 +59,7 @@ Which of the following statements are true about MongoDB?<choiceresponse directi
 <video display_name='Answer' youtube='1.0:h80NwJJZM-g'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Mongo Relative to Relational' format='Quiz'>
+<sequential graded='false' display_name='Mongo Relative to Relational' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:-KIC1LXxcGM'/>
 </vertical>
@@ -85,12 +85,12 @@ Which features did MongoDB omit in order to retain scalability?<choiceresponse d
 <video display_name='Answer' youtube='1.0:IAvnMgvHuLw'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Overview of Building an app with Mongo'>
+<sequential graded='false' display_name='Overview of Building an app with Mongo' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:_e0J06elxb8'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Quick Introduction to the Mongo Shell' format='Quiz'>
+<sequential graded='false' display_name='Quick Introduction to the Mongo Shell' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:f-lyGAMnNY4'/>
 </vertical>
@@ -117,7 +117,7 @@ Which of the following expressions are valid JSON documents?
 <video display_name='Answer' youtube='1.0:YQTqdLe3W4M'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='JSON introduced' format='Quiz'>
+<sequential graded='false' display_name='JSON introduced' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:2jsJeH8q6YM'/>
 </vertical>
@@ -143,62 +143,62 @@ Which of the following are valid JSON documents?<choiceresponse direction='verti
 <video display_name='Answer' youtube='1.0:uWcOsdV4Iz4'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Installing MongoDB (mac)'>
+<sequential graded='false' display_name='Installing MongoDB (mac)' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:6VFukRETCTg'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Installing MongoDB (windows)'>
+<sequential graded='false' display_name='Installing MongoDB (windows)' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hX5louVryOQ'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Installing Bottle and Python (mac)'>
+<sequential graded='false' display_name='Installing Bottle and Python (mac)' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:vxTN6KFegLg'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Installing Python (windows)'>
+<sequential graded='false' display_name='Installing Python (windows)' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:njfPdZTmTrI'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Installing Bottle.py (windows)'>
+<sequential graded='false' display_name='Installing Bottle.py (windows)' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:OhEpXjL0vt8'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Installing PyMongo (mac)'>
+<sequential graded='false' display_name='Installing PyMongo (mac)' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:XRJawbpWxtg'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Installing PyMongo (windows)'>
+<sequential graded='false' display_name='Installing PyMongo (windows)' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:YwWc6HZ0LWo'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Hello World, Mongo Style'>
+<sequential graded='false' display_name='Hello World, Mongo Style' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:IG7PntLyv2E'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Hello World on a Web Server'>
+<sequential graded='false' display_name='Hello World on a Web Server' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:8_o6nyenZbk'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Mongo is Schemaless'>
+<sequential graded='false' display_name='Mongo is Schemaless' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:K6dlBbH_XHI'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='JSON Revisited'>
+<sequential graded='false' display_name='JSON Revisited' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:zbYCcMWJGNY'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='JSON Arrays' format='Quiz'>
+<sequential graded='false' display_name='JSON Arrays' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:JkK9n6_ahVk'/>
 </vertical>
@@ -234,7 +234,7 @@ if not(response_json == quiz_answer_json):
 <video display_name='Answer' youtube='1.0:ciuq7XPqHKI'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='JSON Subdocuments' format='Quiz'>
+<sequential graded='false' display_name='JSON Subdocuments' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:vrYAEH3g13M'/>
 </vertical>
@@ -271,17 +271,17 @@ if not(response_json == quiz_answer_json):
 <video display_name='Answer' youtube='1.0:NGp_y6BaEMw'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='JSON Spec'>
+<sequential graded='false' display_name='JSON Spec' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:kOrsT94-A28'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Introduction to our class project, the blog'>
+<sequential graded='false' display_name='Introduction to our class project, the blog' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ePi3kDoexoM'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Blog in Relational Tables' format='Quiz'>
+<sequential graded='false' display_name='Blog in Relational Tables' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:boR2y9MHCa0'/>
 </vertical>
@@ -335,7 +335,7 @@ In order to display a blog post with its comments and tags, how many tables will
 <video display_name='Answer' youtube='1.0:vB-4AbbLKeg'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Blog in Documents' format='Quiz'>
+<sequential graded='false' display_name='Blog in Documents' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ZjwCzyqKVdY'/>
 </vertical>
@@ -353,7 +353,7 @@ Given the document schema that we proposed for the blog, how many collections wo
 <video display_name='Answer' youtube='1.0:WJblHPsp1p4'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Intro to Schema Design' format='Quiz'>
+<sequential graded='false' display_name='Intro to Schema Design' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:6XE3wZCPiZ8'/>
 </vertical>
@@ -379,7 +379,7 @@ In which scenario is it impossible to embed data within a document (you must put
 <video display_name='Answer' youtube='1.0:wiwOEG_6ojs'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Intro to Python' format='Quiz'>
+<sequential graded='false' display_name='Intro to Python' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:-cAtffa59FM'/>
 </vertical>
@@ -411,7 +411,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:PuyAdxxzSk0'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Python Lists' format='Quiz'>
+<sequential graded='false' display_name='Python Lists' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:H1BOYfbnPq8'/>
 </vertical>
@@ -443,7 +443,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:8WdnrhlfSLE'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Python Lists, Manipulating' format='Quiz'>
+<sequential graded='false' display_name='Python Lists, Manipulating' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:PHii2QYNyB8'/>
 </vertical>
@@ -477,7 +477,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:ZSraFzkEDzs'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Python Lists, Slice Operator' format='Quiz'>
+<sequential graded='false' display_name='Python Lists, Slice Operator' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:vNyIZNWK0rw'/>
 </vertical>
@@ -510,7 +510,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:vE498xAFoGc'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Python Lists, Inclusion' format='Quiz'>
+<sequential graded='false' display_name='Python Lists, Inclusion' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:QXUMUvHB2Ws'/>
 </vertical>
@@ -545,7 +545,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:LdA0__D4zLI'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Python, Working with Dicts' format='Quiz'>
+<sequential graded='false' display_name='Python, Working with Dicts' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:_AbCyE0uKmE'/>
 </vertical>
@@ -579,7 +579,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:edEYrBoa7Ao'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Python: Dicts and Lists together' format='Quiz'>
+<sequential graded='false' display_name='Python: Dicts and Lists together' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:9k1XvuoGdrk'/>
 </vertical>
@@ -611,7 +611,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:Gqb-OUFcQas'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Python: for loops, with Lists' format='Quiz'>
+<sequential graded='false' display_name='Python: for loops, with Lists' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:zMqLCtf3ML4'/>
 </vertical>
@@ -649,7 +649,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:ohA78_D5Rn8'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Python: for loops with dicts' format='Quiz'>
+<sequential graded='false' display_name='Python: for loops with dicts' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:HHTICY6rUGI'/>
 </vertical>
@@ -686,7 +686,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:OnkPdMP1fVc'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Python: Combining Dicts and Lists' format='Quiz'>
+<sequential graded='false' display_name='Python: Combining Dicts and Lists' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ome7jDN_lH0'/>
 </vertical>
@@ -727,52 +727,52 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:Y6NKd6xUC6M'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Python: while loops'>
+<sequential graded='false' display_name='Python: while loops' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:TEdFAheS5UE'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Python: function calls'>
+<sequential graded='false' display_name='Python: function calls' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:PizwcirYuGY'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Python: exception handling'>
+<sequential graded='false' display_name='Python: exception handling' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:nrZYqF9KwaU'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Bottle framework: Url Handlers'>
+<sequential graded='false' display_name='Bottle framework: Url Handlers' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:x5TlvbWxjL0'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Bottle framework: using views'>
+<sequential graded='false' display_name='Bottle framework: using views' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:GUFDtACjFcc'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Bottle framework: handling form content'>
+<sequential graded='false' display_name='Bottle framework: handling form content' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:sUUT-gIS5ik'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Bottle framework: using cookies'>
+<sequential graded='false' display_name='Bottle framework: using cookies' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Wk_1Lz_-gk4'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='The Pymongo driver'>
+<sequential graded='false' display_name='The Pymongo driver' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:u2kRRt861bU'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Pymongo driver, safe mode, exception processing'>
+<sequential graded='false' display_name='Pymongo driver, safe mode, exception processing' chapter_name='Week 1 - Introduction'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:GR6W-gHffXw'/>
 </vertical>
 </sequential>
-<sequential graded='true' display_name='Homework 1.1' format='Homework' due='Oct 30 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 1.1' chapter_name='Week 1 - Introduction' format='Homework' due='Oct 30 23:00 EST 2012'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:r48N7GcDqVI'/>
 </vertical>
@@ -822,7 +822,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:memPfvehjGo'/>
 </vertical>
 </sequential>
-<sequential graded='true' display_name='Homework 1.2' format='Homework' due='Oct 30 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 1.2' chapter_name='Week 1 - Introduction' format='Homework' due='Oct 30 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_1_2_problem' rerandomize='never' display_name='Quiz: Homework 1.2'>
 Get Pymongo installed on your computer. To prove its installed, run the program:
 
@@ -855,7 +855,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:ZeF4fdLDoMY'/>
 </vertical>
 </sequential>
-<sequential graded='true' display_name='Homework 1.3' format='Homework' due='Oct 30 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 1.3' chapter_name='Week 1 - Introduction' format='Homework' due='Oct 30 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_1_3_problem' rerandomize='never' display_name='Quiz: Homework 1.3'>
 We are now going to test that you have bottle installed correctly and can run a bottle-based project. Run the hw1-3.py download as follows:
 <pre>
@@ -891,7 +891,7 @@ if not(response == quiz_answer):
 </sequential>
 </chapter>
 <chapter start='2012-10-29T00:00' display_name='Week 2 - CRUD'>
-<sequential graded='false' display_name='Introduction to Week 2' format='Quiz'>
+<sequential graded='false' display_name='Introduction to Week 2' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:kB_9lXE-EbY'/>
 </vertical>
@@ -920,7 +920,7 @@ By the end of this week, you'll know which of the following?<choiceresponse dire
 <video display_name='Answer' youtube='1.0:osal1NuP4UA'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Secrets of the Mongo Shell' format='Quiz'>
+<sequential graded='false' display_name='Secrets of the Mongo Shell' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hJy10xgZXzc'/>
 </vertical>
@@ -958,7 +958,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:a6TFwpCoLoY'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='BSON Introduced' format='Quiz'>
+<sequential graded='false' display_name='BSON Introduced' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:K3J6WvDW-Hc'/>
 </vertical>
@@ -990,7 +990,7 @@ Which of the following are types available in BSON?<choiceresponse direction='ve
 <video display_name='Answer' youtube='1.0:4hsTQrMs-xY'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Mongo shell, inserting docs' format='Quiz'>
+<sequential graded='false' display_name='Mongo shell, inserting docs' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:RbRRvBLl7Qo'/>
 </vertical>
@@ -1086,7 +1086,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:4eqpL7ETQZQ'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Mongo shell, introdution to findOne' format='Quiz'>
+<sequential graded='false' display_name='Mongo shell, introdution to findOne' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:w9V0fJsDwbQ'/>
 </vertical>
@@ -1182,12 +1182,12 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:uN_wf5a3BE4'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Mongo shell, introduction to find'>
+<sequential graded='false' display_name='Mongo shell, introduction to find' chapter_name='Week 2 - CRUD'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:8kKfFK6a0Ak'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Mongo shell, querying using field selection' format='Quiz'>
+<sequential graded='false' display_name='Mongo shell, querying using field selection' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:UIg86QjSoyY'/>
 </vertical>
@@ -1283,7 +1283,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:ouHFZgtEAuU'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Querying using $gt and $lt' format='Quiz'>
+<sequential graded='false' display_name='Querying using $gt and $lt' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:FHLrz4VGzkg'/>
 </vertical>
@@ -1302,7 +1302,7 @@ Which of these finds documents with a score between 50 and 60, inclusive?<multip
 <video display_name='Answer' youtube='1.0:tY7I1l8JdDI'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Inequalities on strings' format='Quiz'>
+<sequential graded='false' display_name='Inequalities on strings' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:imCCKOevU3c'/>
 </vertical>
@@ -1328,7 +1328,7 @@ Which of the following will find all users with <em>name</em> between "F" and "Q
 <video display_name='Answer' youtube='1.0:ZRWT0lcHsoU'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using regexes, $exists, $type' format='Quiz'>
+<sequential graded='false' display_name='Using regexes, $exists, $type' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:lI-jhqYf1JY'/>
 </vertical>
@@ -1424,7 +1424,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:yMi7PwOoqXY'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using $or' format='Quiz'>
+<sequential graded='false' display_name='Using $or' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:BW5ElNCRZps'/>
 </vertical>
@@ -1520,7 +1520,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:diimYkvr374'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using $and' format='Quiz'>
+<sequential graded='false' display_name='Using $and' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hYk7pjgjjzc'/>
 </vertical>
@@ -1551,7 +1551,7 @@ What will the following query do?
 <video display_name='Answer' youtube='1.0:oIkSajy8NLw'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Querying inside arrays' format='Quiz'>
+<sequential graded='false' display_name='Querying inside arrays' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:jvEqwW75Bus'/>
 </vertical>
@@ -1579,7 +1579,7 @@ Which of the following documents would be returned by this query?
 <video display_name='Answer' youtube='1.0:gwECaa4N9Xc'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using $in and $all' format='Quiz'>
+<sequential graded='false' display_name='Using $in and $all' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Lv-tYcQfuZg'/>
 </vertical>
@@ -1599,7 +1599,7 @@ Which of the following documents matches this query?
 <video display_name='Answer' youtube='1.0:O8YQRq4vXig'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Queries with dot notation' format='Quiz'>
+<sequential graded='false' display_name='Queries with dot notation' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:NrjFECIfwqk'/>
 </vertical>
@@ -1705,7 +1705,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:yiEjK_V008s'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Querying, cursors' format='Quiz'>
+<sequential graded='false' display_name='Querying, cursors' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:3jA6iFSEJOI'/>
 </vertical>
@@ -1812,7 +1812,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:djzpK7UIO94'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Counting results' format='Quiz'>
+<sequential graded='false' display_name='Counting results' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:eKD5bVmNQMI'/>
 </vertical>
@@ -1908,7 +1908,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:Uozp0diXOc8'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Wholesale Updating of a Document' format='Quiz'>
+<sequential graded='false' display_name='Wholesale Updating of a Document' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:EBCk6W7x-OY'/>
 </vertical>
@@ -1936,7 +1936,7 @@ What would be the state of the collection after the update?<multiplechoicerespon
 <video display_name='Answer' youtube='1.0:pwnRUdtI8lY'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using the $set command' format='Quiz'>
+<sequential graded='false' display_name='Using the $set command' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:9iMX2KxYAd8'/>
 </vertical>
@@ -2036,7 +2036,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:F6ZY_VVAXZ8'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using the $unset command' format='Quiz'>
+<sequential graded='false' display_name='Using the $unset command' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Kxd4MXBEx-I'/>
 </vertical>
@@ -2135,7 +2135,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:edqDAKMQTv4'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using $push, $pop, $pull, $pushAll, $pullAll, $addToSet' format='Quiz'>
+<sequential graded='false' display_name='Using $push, $pop, $pull, $pushAll, $pullAll, $addToSet' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:iHSwyr7bfQs'/>
 </vertical>
@@ -2244,7 +2244,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:bGbiIGEM0FY'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Upserts' format='Quiz'>
+<sequential graded='false' display_name='Upserts' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:dfvwrlVODGc'/>
 </vertical>
@@ -2274,7 +2274,7 @@ What could be the state of the collection.<choiceresponse direction='vertical'>
 <video display_name='Answer' youtube='1.0:Loo5XKQAryM'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Multi-update' format='Quiz'>
+<sequential graded='false' display_name='Multi-update' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:8uNNDduO09w'/>
 </vertical>
@@ -2381,7 +2381,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:B1DqIls06Tc'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Removing data' format='Quiz'>
+<sequential graded='false' display_name='Removing data' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:PMhGgc3HCn4'/>
 </vertical>
@@ -2488,12 +2488,12 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:T3wcuZHm6Ac'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='getLastError'>
+<sequential graded='false' display_name='getLastError' chapter_name='Week 2 - CRUD'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:kUulkJQvH_A'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Pymongo, find, find_one and cursors' format='Quiz'>
+<sequential graded='false' display_name='Pymongo, find, find_one and cursors' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:kXu5V3MlFI0'/>
 </vertical>
@@ -2547,7 +2547,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:d-EOPb3_YVI'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Pymongo, using field selection' format='Quiz'>
+<sequential graded='false' display_name='Pymongo, using field selection' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:pCRMWfF_SC8'/>
 </vertical>
@@ -2565,7 +2565,7 @@ Which of the following could work using pymongo, depending on variable names, to
 <video display_name='Answer' youtube='1.0:vMNLxyQ47BM'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Pymongo, using $gt and $lt' format='Quiz'>
+<sequential graded='false' display_name='Pymongo, using $gt and $lt' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:p5ltB0g3lUo'/>
 </vertical>
@@ -2614,17 +2614,17 @@ find()
 <video display_name='Answer' youtube='1.0:2kzdSZmJ8jM'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Importing from Reddit'>
+<sequential graded='false' display_name='Importing from Reddit' chapter_name='Week 2 - CRUD'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:dd49ULz7y6Q'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Pymongo, using a regex'>
+<sequential graded='false' display_name='Pymongo, using a regex' chapter_name='Week 2 - CRUD'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:UIes2_2rBWE'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Pymongo, using dot notation' format='Quiz'>
+<sequential graded='false' display_name='Pymongo, using dot notation' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:kiJRqBbCSGk'/>
 </vertical>
@@ -2680,7 +2680,7 @@ find()
 <video display_name='Answer' youtube='1.0:5mpm64vncL0'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Pymongo, sort, skip and limit' format='Quiz'>
+<sequential graded='false' display_name='Pymongo, sort, skip and limit' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:F1bSsbt5Qfk'/>
 </vertical>
@@ -2709,12 +2709,12 @@ which document would be returned?<multiplechoiceresponse direction='vertical'>
 <video display_name='Answer' youtube='1.0:cUNoJN6Ii-I'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Pymongo, Sort, final thoughts'>
+<sequential graded='false' display_name='Pymongo, Sort, final thoughts' chapter_name='Week 2 - CRUD'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hwUg8r7a-d8'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Pymongo, Inserting' format='Quiz'>
+<sequential graded='false' display_name='Pymongo, Inserting' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:1buD4Ern9rA'/>
 </vertical>
@@ -2750,7 +2750,7 @@ except:
 <video display_name='Answer' youtube='1.0:pEMyrKDzgFg'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Pymongo, Updating' format='Quiz'>
+<sequential graded='false' display_name='Pymongo, Updating' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:u6iRURy8rY0'/>
 </vertical>
@@ -2813,7 +2813,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:Cyk5uzO-65w'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Pymongo, upserts' format='Quiz'>
+<sequential graded='false' display_name='Pymongo, upserts' chapter_name='Week 2 - CRUD' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hcGo9lV9HwI'/>
 </vertical>
@@ -2843,27 +2843,27 @@ Which of the following python statements work. Check all that apply.<choicerespo
 <video display_name='Answer' youtube='1.0:tMEohyZX0cI'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Pymongo, find_and_modify'>
+<sequential graded='false' display_name='Pymongo, find_and_modify' chapter_name='Week 2 - CRUD'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:rQ8Oml5e6PI'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Blog, User Interface'>
+<sequential graded='false' display_name='Blog, User Interface' chapter_name='Week 2 - CRUD'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:QA80WBg0hLg'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Blog, Session Management'>
+<sequential graded='false' display_name='Blog, Session Management' chapter_name='Week 2 - CRUD'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:sNigml3JoY0'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Blog, Internals'>
+<sequential graded='false' display_name='Blog, Internals' chapter_name='Week 2 - CRUD'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:tTqQZvBGhyU'/>
 </vertical>
 </sequential>
-<sequential graded='true' display_name='Homework 2.1' format='Homework' due='Nov 9 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 2.1' chapter_name='Week 2 - CRUD' format='Homework' due='Nov 9 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_1_problem' rerandomize='never' display_name='Quiz: Homework 2.1'>
 In this problem, you will be using a collection of student scores that is similar to what we used in the lessons. Please download the <a href="/static/handouts/grades.js">grades.js</a> file and import it into your local mongo database as follows:
 <pre>
@@ -2907,7 +2907,7 @@ Now it’s your turn to analyze the data set. Find all exam scores greater than 
 <video display_name='Answer' youtube='1.0:RUy50I3mrnU'/>
 </vertical>
 </sequential>
-<sequential graded='true' display_name='Homework 2.2' format='Homework' due='Nov 9 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 2.2' chapter_name='Week 2 - CRUD' format='Homework' due='Nov 9 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_2_problem' rerandomize='never' display_name='Quiz: Homework 2.2'>
 <p>
 Write a program in the language of your choice that will remove the grade of type "homework" with the lowest score for each student from the <a href="/static/handouts/grades.js">dataset</a> that you imported in HW 2.1.  Since each document is one grade, it should remove one document per student.
@@ -2974,7 +2974,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:xS0njlIkClY'/>
 </vertical>
 </sequential>
-<sequential graded='true' display_name='Homework 2.3' format='Homework' due='Nov 9 23:00 EST 2012'>
+<sequential graded='true' display_name='Homework 2.3' chapter_name='Week 2 - CRUD' format='Homework' due='Nov 9 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='Homework_2_3_problem' rerandomize='never' display_name='Quiz: Homework 2.3'>
 <em>Blog User Sign-up and Login</em>
 <p>
@@ -3086,7 +3086,7 @@ if not(response == quiz_answer):
 </sequential>
 </chapter>
 <chapter start='2012-11-09T00:00' display_name='Week 3 - Schema Design'>
-<sequential graded='false' display_name='Introduction to Week 3' format='Quiz'>
+<sequential graded='false' display_name='Introduction to Week 3' chapter_name='Week 3 - Schema Design' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:itnfWjMnQ4A'/>
 </vertical>
@@ -3104,12 +3104,12 @@ What's the single most important factor in designing your application schema wit
 <video display_name='Answer' youtube='1.0:OVDnLJXpqNE'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Relational Normalization'>
+<sequential graded='false' display_name='Relational Normalization' chapter_name='Week 3 - Schema Design'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:GX__f2s4hd8'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Mongo Design for Blog' format='Quiz'>
+<sequential graded='false' display_name='Mongo Design for Blog' chapter_name='Week 3 - Schema Design' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:PRylEHH5t84'/>
 </vertical>
@@ -3127,12 +3127,12 @@ Which data access pattern is not well supported by the blog schema?<multiplechoi
 <video display_name='Answer' youtube='1.0:s5E0T4caqj4'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Alternative Schema for Blog'>
+<sequential graded='false' display_name='Alternative Schema for Blog' chapter_name='Week 3 - Schema Design'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ZvqNWVWB2-o'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Living Without Constraints' format='Quiz'>
+<sequential graded='false' display_name='Living Without Constraints' chapter_name='Week 3 - Schema Design' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:YFRMkDPaams'/>
 </vertical>
@@ -3150,7 +3150,7 @@ What does Living Without Constraints refer to?<multiplechoiceresponse direction=
 <video display_name='Answer' youtube='1.0:3VckBMGInic'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Living without Transactions' format='Quiz'>
+<sequential graded='false' display_name='Living without Transactions' chapter_name='Week 3 - Schema Design' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:FfRr3qjRfww'/>
 </vertical>
@@ -3176,7 +3176,7 @@ Which of the following operations operate atomically within a single document? C
 <video display_name='Answer' youtube='1.0:189zABW3HHk'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='One to One Relations' format='Quiz'>
+<sequential graded='false' display_name='One to One Relations' chapter_name='Week 3 - Schema Design' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:cCsfon0vUlQ'/>
 </vertical>
@@ -3202,7 +3202,7 @@ What's a good reason you might want to keep two documents that are related to ea
 <video display_name='Answer' youtube='1.0:BjW64RkzlGg'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='One To Many Relations' format='Quiz'>
+<sequential graded='false' display_name='One To Many Relations' chapter_name='Week 3 - Schema Design' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:EIaP1KbVkUc'/>
 </vertical>
@@ -3220,22 +3220,22 @@ When is it recommended to represent a one to many relationship in multiple colle
 <video display_name='Answer' youtube='1.0:KQcspnr-Y2M'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Many to Many Relations'>
+<sequential graded='false' display_name='Many to Many Relations' chapter_name='Week 3 - Schema Design'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:fEYYjZ7zEHc'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Multikeys'>
+<sequential graded='false' display_name='Multikeys' chapter_name='Week 3 - Schema Design'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ocU9WNUL9YQ'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Benefits of Embedding'>
+<sequential graded='false' display_name='Benefits of Embedding' chapter_name='Week 3 - Schema Design'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:XIN0Dqht08Q'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Trees' format='Quiz'>
+<sequential graded='false' display_name='Trees' chapter_name='Week 3 - Schema Design' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:lIjXyQklGWY'/>
 </vertical>
@@ -3262,17 +3262,17 @@ Which query will find all descendants of  the snorkeling category?<multiplechoic
 <video display_name='Answer' youtube='1.0:80P6yVSkKQY'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='When to Denormalize'>
+<sequential graded='false' display_name='When to Denormalize' chapter_name='Week 3 - Schema Design'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:jDZ-HFoJ0vg'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Handling Blobs'>
+<sequential graded='false' display_name='Handling Blobs' chapter_name='Week 3 - Schema Design'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:AsL5p1Z0Ss8'/>
 </vertical>
 </sequential>
-<sequential graded='true' display_name='HW 3.1' format='Homework' due='Nov 19 23:00 EST 2012'>
+<sequential graded='true' display_name='HW 3.1' chapter_name='Week 3 - Schema Design' format='Homework' due='Nov 19 23:00 EST 2012'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:lpSMbphEl7c'/>
 </vertical>
@@ -3354,7 +3354,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:iODR0m6m25c'/>
 </vertical>
 </sequential>
-<sequential graded='true' display_name='HW 3.2' format='Homework' due='Nov 19 23:00 EST 2012'>
+<sequential graded='true' display_name='HW 3.2' chapter_name='Week 3 - Schema Design' format='Homework' due='Nov 19 23:00 EST 2012'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:SEh6Y4lHkWQ'/>
 </vertical>
@@ -3417,7 +3417,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:ENSoJLkZnkY'/>
 </vertical>
 </sequential>
-<sequential graded='true' display_name='HW 3.3' format='Homework' due='Nov 19 23:00 EST 2012'>
+<sequential graded='true' display_name='HW 3.3' chapter_name='Week 3 - Schema Design' format='Homework' due='Nov 19 23:00 EST 2012'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:HPSgVT2BEYQ'/>
 </vertical>
@@ -3498,12 +3498,12 @@ if not(response == quiz_answer):
 </sequential>
 </chapter>
 <chapter start='2012-11-19T00:00' display_name='Week 4 - Performance'>
-<sequential graded='false' display_name='Introduction'>
+<sequential graded='false' display_name='Introduction' chapter_name='Week 4 - Performance'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:MA0QpaGggY8'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Indexes' format='Quiz'>
+<sequential graded='false' display_name='Indexes' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:pPnRWpL5zl4'/>
 </vertical>
@@ -3525,7 +3525,7 @@ Which optimization will typically have the greatest impact on the performance of
 <video display_name='Answer' youtube='1.0:5Z6V8mJ8eS4'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Creating Indexes' format='Quiz'>
+<sequential graded='false' display_name='Creating Indexes' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:tRqenx45UAM'/>
 </vertical>
@@ -3621,12 +3621,12 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:h1VdrcOjFm8'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Discovering indexes'>
+<sequential graded='false' display_name='Discovering indexes' chapter_name='Week 4 - Performance'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:hH7kYu_-FXg'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Multikey Indexes' format='Quiz'>
+<sequential graded='false' display_name='Multikey Indexes' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:JO_puGONaLc'/>
 </vertical>
@@ -3656,12 +3656,12 @@ Which of the following inserts are valid to this collection?<choiceresponse dire
 <video display_name='Answer' youtube='1.0:CeE6hZ90Uzk'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Multikey Continued'>
+<sequential graded='false' display_name='Multikey Continued' chapter_name='Week 4 - Performance'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:mPSGG2p33RQ'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Index Creation option, Unique' format='Quiz'>
+<sequential graded='false' display_name='Index Creation option, Unique' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:764mQG1iL8E'/>
 </vertical>
@@ -3757,7 +3757,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:cCO7b-fcj0I'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Index Creation, Removing Dups' format='Quiz'>
+<sequential graded='false' display_name='Index Creation, Removing Dups' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:YJaWPXNGvoU'/>
 </vertical>
@@ -3775,7 +3775,7 @@ If you choose the dropDups option when creating a unique index, what will the Mo
 <video display_name='Answer' youtube='1.0:s46y1rJAvVs'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Index Creation, Sparse' format='Quiz'>
+<sequential graded='false' display_name='Index Creation, Sparse' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:s4sYwLndtTI'/>
 </vertical>
@@ -3809,7 +3809,7 @@ db.people.find({title:null})
 <video display_name='Answer' youtube='1.0:_MJYRlianas'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Index Creation, Background' format='Quiz'>
+<sequential graded='false' display_name='Index Creation, Background' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:28wCvoXmY7A'/>
 </vertical>
@@ -3835,7 +3835,7 @@ Which things are true about creating an index in the background in MongoDB. Chec
 <video display_name='Answer' youtube='1.0:aNSHjG_LnSc'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using Explain' format='Quiz'>
+<sequential graded='false' display_name='Using Explain' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:inmABt5RKf0'/>
 <html>
@@ -3878,7 +3878,7 @@ Given the following output from explain, what is the best description of what ha
 <video display_name='Answer' youtube='1.0:Gpj_s49H_rQ'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='When is an index used?' format='Quiz'>
+<sequential graded='false' display_name='When is an index used?' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Lwms58Y_3Jc'/>
 </vertical>
@@ -3908,7 +3908,7 @@ Which of the following queries will use the index?<choiceresponse direction='ver
 <video display_name='Answer' youtube='1.0:imHqsvqx-GA'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='How large is your index?' format='Quiz'>
+<sequential graded='false' display_name='How large is your index?' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:oywrqWNY46s'/>
 </vertical>
@@ -3924,7 +3924,7 @@ Is it more important that your index or your data fit into memory?<multiplechoic
 <video display_name='Answer' youtube='1.0:mXHUIghDkFw'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Index Cardinality' format='Quiz'>
+<sequential graded='false' display_name='Index Cardinality' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:xiujksUfzUA'/>
 </vertical>
@@ -3954,7 +3954,7 @@ if not(response == quiz_answer):
 <video display_name='Answer' youtube='1.0:4UW_oMSswTo'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Index Selectivity' format='Quiz'>
+<sequential graded='false' display_name='Index Selectivity' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:On8HHR1agsI'/>
 </vertical>
@@ -3972,7 +3972,7 @@ Given the following attributes of automobiles: color, weight, manufacturer, odom
 <video display_name='Answer' youtube='1.0:BT95omWR2nw'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Hinting an Index' format='Quiz'>
+<sequential graded='false' display_name='Hinting an Index' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ksOn-SkaIcg'/>
 </vertical>
@@ -4021,17 +4021,17 @@ Which query below will return the most documents.<multiplechoiceresponse directi
 <video display_name='Answer' youtube='1.0:WHc_qRSxGM0'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Hinting in Pymongo'>
+<sequential graded='false' display_name='Hinting in Pymongo' chapter_name='Week 4 - Performance'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:dlKcfo7WtGU'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Efficiency of Index Use'>
+<sequential graded='false' display_name='Efficiency of Index Use' chapter_name='Week 4 - Performance'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:1sADN-NKwhY'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Geospatial Indexes' format='Quiz'>
+<sequential graded='false' display_name='Geospatial Indexes' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:UKUDYqNVL6I'/>
 </vertical>
@@ -4128,17 +4128,17 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:hVLa0H7Oe98'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Geospacial Spherical'>
+<sequential graded='false' display_name='Geospacial Spherical' chapter_name='Week 4 - Performance'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:vY3_H4MzkIY'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Logging Slow Queries'>
+<sequential graded='false' display_name='Logging Slow Queries' chapter_name='Week 4 - Performance'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:aWuvC-O7Qkk'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Profiling' format='Quiz'>
+<sequential graded='false' display_name='Profiling' chapter_name='Week 4 - Performance' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:pN1Yhrup9-I'/>
 </vertical>
@@ -4234,22 +4234,22 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:A4x4kE02pSc'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Mongotop'>
+<sequential graded='false' display_name='Mongotop' chapter_name='Week 4 - Performance'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:D9YLXgy7NYo'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Mongostat'>
+<sequential graded='false' display_name='Mongostat' chapter_name='Week 4 - Performance'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:eLWQO_AJmrI'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Sharding Overview'>
+<sequential graded='false' display_name='Sharding Overview' chapter_name='Week 4 - Performance'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:BDxT-VZdYqc'/>
 </vertical>
 </sequential>
-<sequential graded='true' display_name='HW 4.1' format='Homework' due='Nov 26 23:00 EST 2012'>
+<sequential graded='true' display_name='HW 4.1' chapter_name='Week 4 - Performance' format='Homework' due='Nov 26 23:00 EST 2012'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:0tpXSPgYk4I'/>
 </vertical>
@@ -4328,7 +4328,7 @@ Which of the following queries can utilize an index. Check all that apply.<choic
 </choiceresponse>
 </problem>
 </sequential>
-<sequential graded='true' display_name='HW 4.2' format='Homework' due='Nov 26 23:00 EST 2012'>
+<sequential graded='true' display_name='HW 4.2' chapter_name='Week 4 - Performance' format='Homework' due='Nov 26 23:00 EST 2012'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:Zz8TerE95Ss'/>
 </vertical>
@@ -4388,7 +4388,7 @@ db.tweets.find({"user.followers_count":{$gt:1000}}).sort({"created_at" : 1 }).li
 </choiceresponse>
 </problem>
 </sequential>
-<sequential graded='true' display_name='HW 4.3' format='Homework' due='Nov 26 23:00 EST 2012'>
+<sequential graded='true' display_name='HW 4.3' chapter_name='Week 4 - Performance' format='Homework' due='Nov 26 23:00 EST 2012'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:K-oXNC7voR8'/>
 </vertical>
@@ -4452,7 +4452,7 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
-<sequential graded='true' display_name='HW 4.4' format='Homework' due='Nov 26 23:00 EST 2012'>
+<sequential graded='true' display_name='HW 4.4' chapter_name='Week 4 - Performance' format='Homework' due='Nov 26 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='HW_4_4_problem' rerandomize='never' display_name='Quiz: HW 4.4'>
 In this problem you will analyze a profile log taken from a mongoDB instance. To start, please download <a href="/static/handouts/sysprofile.json"> sysprofile.json</a> and import it with the following command:
 
@@ -4474,12 +4474,12 @@ Now query the profile data, looking for all queries to the <i>students</i> colle
 </sequential>
 </chapter>
 <chapter start='2012-11-26T00:00' display_name='Week 5 - Aggregation'>
-<sequential graded='false' display_name='Introduction to Aggregation'>
+<sequential graded='false' display_name='Introduction to Aggregation' chapter_name='Week 5 - Aggregation'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:EaEIHm3CMQM'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Simple Aggregation Example' format='Quiz'>
+<sequential graded='false' display_name='Simple Aggregation Example' chapter_name='Week 5 - Aggregation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:T2BX-LZOYsY'/>
 </vertical>
@@ -4592,7 +4592,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:Nt0cQI86G40'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='The Aggregation Pipeline' format='Quiz'>
+<sequential graded='false' display_name='The Aggregation Pipeline' chapter_name='Week 5 - Aggregation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:WazN2DS8s8c'/>
 </vertical>
@@ -4630,7 +4630,7 @@ Which of the following are stages in the aggregation pipeline. Check all that ap
 <video display_name='Answer' youtube='1.0:mcnGfI69rRc'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Simple Example Expanded' format='Quiz'>
+<sequential graded='false' display_name='Simple Example Expanded' chapter_name='Week 5 - Aggregation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:3lEpnMcfpCs'/>
 <html>
@@ -4668,7 +4668,7 @@ How many documents will be in the result set from aggregate?
 <video display_name='Answer' youtube='1.0:nr1E1qTyIHU'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Compound Grouping' format='Quiz'>
+<sequential graded='false' display_name='Compound Grouping' chapter_name='Week 5 - Aggregation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:LPFVRrag2Zg'/>
 </vertical>
@@ -4710,12 +4710,12 @@ How many documents will be in the result set?
 <video display_name='Answer' youtube='1.0:bIlwnlYBRA0'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using a document for _id'>
+<sequential graded='false' display_name='Using a document for _id' chapter_name='Week 5 - Aggregation'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:zoN4cj_XQzY'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Aggregation Expressions' format='Quiz'>
+<sequential graded='false' display_name='Aggregation Expressions' chapter_name='Week 5 - Aggregation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:L4G14MTfTgQ'/>
 </vertical>
@@ -4753,7 +4753,7 @@ Which of the following aggregation expressions must be used in conjunction with 
 <video display_name='Answer' youtube='1.0:kJ0k2na4ukU'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using $sum' format='Quiz'>
+<sequential graded='false' display_name='Using $sum' chapter_name='Week 5 - Aggregation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:oAV9tC0R8xk'/>
 <html>
@@ -4776,9 +4776,9 @@ Suppose we have a collection of populations by postal code. The postal codes in 
 	"_id" : "35045"
 }
 </pre>
-<i>For students outside the United States, there are 50 non-overlapping states in the US with two letter abbreviations such as NY and CA.  We call postal codes "zip codes." A city may overlap several zip codes.</i>
+<i>For students outside the United States, there are 50 non-overlapping states in the US with two letter abbreviations such as NY and CA.  In addition, the capital of Washington is within an area designated the District of Columbia, and carries the abbreviation DC. For purposes of the mail, the postal service considers DC to be a "state." So in this dataset, there are 51 states. We call postal codes "zip codes." A city may overlap several zip codes.</i>
 <p>
-Write an aggregation query to sum up the population (pop) by state and put the result in a field called population. Don't use a compound _id key (you don't need one and the quiz checker is not expecting one). The collection name is zips. so something along the lines of db.zips.aggegrate...
+Write an aggregation query to sum up the population (pop) by state and put the result in a field called population. Don't use a compound _id key (you don't need one and the quiz checker is not expecting one). The collection name is zips. so something along the lines of db.zips.aggregrate...
 </p><customresponse>
 <textbox rows='4' cols='50' correct_answer='db.zips.aggregate([{"$group":{"_id":"$state", "population":{$sum:"$pop"}}}])'> </textbox>
 
@@ -4870,7 +4870,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:ATO_s_Ah08o'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using $avg' format='Quiz'>
+<sequential graded='false' display_name='Using $avg' chapter_name='Week 5 - Aggregation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:7UWOK8rWf1w'/>
 </vertical>
@@ -4981,7 +4981,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:tT6Jx8s9dTc'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using $addToSet' format='Quiz'>
+<sequential graded='false' display_name='Using $addToSet' chapter_name='Week 5 - Aggregation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:y2FD4R3in5U'/>
 </vertical>
@@ -5100,7 +5100,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:zGcTxUQuLGE'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using $push' format='Quiz'>
+<sequential graded='false' display_name='Using $push' chapter_name='Week 5 - Aggregation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:gjIVUFufx3A'/>
 </vertical>
@@ -5137,7 +5137,7 @@ db.zips.aggregate([{"$group":{"_id":"$city", "postal_codes":{"$addToSet":"$_id"}
 <video display_name='Answer' youtube='1.0:hFqDvVXtm6E'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Using $max and $min' format='Quiz'>
+<sequential graded='false' display_name='Using $max and $min' chapter_name='Week 5 - Aggregation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:BYoNX4trjOQ'/>
 </vertical>
@@ -5245,7 +5245,7 @@ except demjson.JSONDecodeError as err:
 <video display_name='Answer' youtube='1.0:sHCdOiCispA'/>
 </vertical>
 </sequential>
-<sequential graded='false' display_name='Double $group stages' format='Quiz'>
+<sequential graded='false' display_name='Double $group stages' chapter_name='Week 5 - Aggregation' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:ET4ubwQTTos'/>
 </vertical>
@@ -5279,6 +5279,501 @@ What values are returned?
 </problem>
 <vertical>
 <video display_name='Answer' youtube='1.0:J-asAAEHJ0Q'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='$project' chapter_name='Week 5 - Aggregation' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:yi-ySSNO8Ao'/>
+</vertical>
+<problem showanswer='attempted' url_name='_project_problem' rerandomize='never' display_name='Quiz: $project'>
+Write an aggregation query with a single projection stage that will transform the documents in the zips collection from this:
+<pre>
+{
+	"city" : "ACMAR",
+	"loc" : [
+		-86.51557,
+		33.584132
+	],
+	"pop" : 6055,
+	"state" : "AL",
+	"_id" : "35004"
+}
+
+</pre>
+
+to documents in the result set that look like this:
+<pre>
+{
+	"city" : "acmar",
+	"pop" : 6055,
+	"state" : "AL",
+	"zip" : "35004"
+}
+</pre>
+So that the checker works properly, please specify what you want to do with the _id key as the first item. The other items should be ordered as above. As before, assume the collection is called zips. You are running only the projection part of the pipeline for this quiz.
+<br/>
+<br/>
+<i>A few facts not mentioned in the lesson that you will need to know to get this right: If you don't mention a key, it is not included, except for _id, which must be explicitly suppressed. If you want to include  a key exactly as it is named in the source document, you just write key:1, where key is the name of the key. You will probably get more out of this quiz is you download the zips.json file and practice in the shell. zips.json link is in the using $sum quiz</i>
+<customresponse>
+<textbox rows='4' cols='50' correct_answer='db.zips.aggregate([{$project:{_id:0, city:{$toLower:"$city"}, pop:1, state:1, zip:"$_id"}}])'> </textbox>
+
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  response = '0'
+answer = '''db.zips.aggregate([{$project:{_id:0, city:{$toLower:"$city"}, pop:1, state:1, zip:"$_id"}}])'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:IGN0lXg-kJ0'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='$match' chapter_name='Week 5 - Aggregation' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:qohLRL8k0So'/>
+</vertical>
+<problem showanswer='attempted' url_name='_match_problem' rerandomize='never' display_name='Quiz: $match'>
+Again, thinking about the zipcode collection, write an aggregation query with a single match phase that filters for zipcodes with greater than 100,000 people.  You may need to look up the use of the <a href="http://docs.mongodb.org/manual/reference/operators/">$gt operator in the MongoDB docs</a>.
+<br/>
+<br/>
+Assume the collection is called zips.<customresponse>
+<textbox rows='4' cols='50' correct_answer="db.zips.aggregate([{$match:{pop:{$gt:100000}}}])"> </textbox>
+
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  response = '0'
+answer = '''db.zips.aggregate([{$match:{pop:{$gt:100000}}}])'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:CHGiumXE-pU'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='$sort' chapter_name='Week 5 - Aggregation' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:TW1KByIuns4'/>
+</vertical>
+<problem showanswer='attempted' url_name='_sort_problem' rerandomize='never' display_name='Quiz: $sort'>
+Again, considering the zipcode collection, which has documents that look like this, 
+<pre>
+{
+	"city" : "ACMAR",
+	"loc" : [
+		-86.51557,
+		33.584132
+	],
+	"pop" : 6055,
+	"state" : "AL",
+	"_id" : "35004"
+}
+
+</pre>
+Write an aggregation query with just a sort stage to sort by (state, city), both ascending. Assume the collection is called zips.<customresponse>
+<textbox rows='4' cols='50' correct_answer="db.zips.aggregate([{$sort:{state:1, city:1}}])"> </textbox>
+
+<answer type='loncapa/python'><![CDATA[
+try:
+  response = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  response = '0'
+answer = '''db.zips.aggregate([{$sort:{state:1, city:1}}])'''
+
+# Filter out newlines, carriage returns, and semicolons.
+import demjson
+import re
+response = re.sub(r'[\s;]+', '', response)
+answer = re.sub(r'[\s;]+', '', answer)
+
+# Create a JSON string representation of the input string.
+def json_encode(text):
+  import demjson
+  import re
+
+  # The global scope is not carried here, so we must internally define functions.
+  class Match(object):
+    start = 0
+    end = 0
+    def __init__(self, start, end):
+      self.start = start
+      self.end = end
+
+  # Extract embedded JSON.
+  def capture(text, start):
+    pos = start
+    match = Match(-1, -1)
+    brace_count = 0
+    while pos < len(text):
+      if text[pos] == '{':
+        # Start checking for a JSON object.
+        if brace_count == 0:
+          match.start = pos
+        brace_count = brace_count + 1
+      elif text[pos] == '}':
+        # Check for a complete JSON object.
+        brace_count = brace_count - 1
+        if brace_count == 0:
+          match.end = pos + 1
+          match.str = text[match.start : match.end]
+          break
+      pos = pos + 1
+    if match.start == -1 or match.end == -1:
+      return None
+    return match
+
+  # Now perform actual answer-to-json conversion.
+  text_out = '{'
+  key_index_out = 0
+  # Start parsing and splitting the string.
+  pos = 0
+  match = capture(text, pos)
+  while match != None:
+    # There was some text between matches, capture it.
+    if pos != match.start:
+      text_out += '"s' + str(key_index_out) + '" : "' +         re.sub('"', '', text[pos:match.start]) + '", '
+      key_index_out = key_index_out + 1
+    text_out += '"s' + str(key_index_out) + '" : ' + match.str + ', '
+    key_index_out = key_index_out + 1
+    pos = match.end
+    match = capture(text, pos)
+  # Get any text after the last match.
+  text_out += '"s' + str(key_index_out) + '" : "' +     re.sub('"', '', text[pos:]) + '", '
+  text_out += '}'
+  return str(text_out)
+
+correct = ['incorrect']
+messages = ['']
+
+try:
+  response_json = demjson.decode(json_encode(response))
+  answer_json = demjson.decode(json_encode(answer))
+  if response_json == answer_json:
+    correct[0] = 'correct'
+except demjson.JSONDecodeError as err:
+  messages[0] = "Response failed to parse " + str(err)
+]]>
+</answer>
+</customresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:-cghyd6AHHA'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='$limit and $skip' chapter_name='Week 5 - Aggregation' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:AdxoEzVqdtc'/>
+</vertical>
+<problem showanswer='attempted' url_name='_limit_and_skip_problem' rerandomize='never' display_name='Quiz: $limit and $skip'>
+Suppose you change the order of skip and limit in the query shown in the lesson, to look like this:
+<pre>
+db.zips.aggregate([
+    {$match:
+     {
+	 state:"NY"
+     }
+    },
+    {$group:
+     {
+	 _id: "$city",
+	 population: {$sum:"$pop"},
+     }
+    },
+    {$project:
+     {
+	 _id: 0,
+	 city: "$_id",
+	 population: 1,
+     }
+    },
+    {$sort:
+     {
+	 population:-1
+     }
+    },
+    {$limit: 5},
+    {$skip: 10} 
+])
+
+</pre>
+
+How many documents do you think will be in the result set?
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>10</text></choice>
+<choice location='bottom' correct='false'><text>5</text></choice>
+<choice location='bottom' correct='true'><text>0</text></choice>
+<choice location='bottom' correct='false'><text>100</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:joRw-fqCIWA'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Revisiting $first and $last' chapter_name='Week 5 - Aggregation' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:O1zeqAxdUgk'/>
+</vertical>
+<problem showanswer='attempted' url_name='Revisiting_first_and_last_problem' rerandomize='never' display_name='Quiz: Revisiting $first and $last'>
+Given the following collection:
+<pre>
+> db.fun.find()
+{ "_id" : 0, "a" : 0, "b" : 0, "c" : 21 }
+{ "_id" : 1, "a" : 0, "b" : 0, "c" : 54 }
+{ "_id" : 2, "a" : 0, "b" : 1, "c" : 52 }
+{ "_id" : 3, "a" : 0, "b" : 1, "c" : 17 }
+{ "_id" : 4, "a" : 1, "b" : 0, "c" : 22 }
+{ "_id" : 5, "a" : 1, "b" : 0, "c" : 5 }
+{ "_id" : 6, "a" : 1, "b" : 1, "c" : 87 }
+{ "_id" : 7, "a" : 1, "b" : 1, "c" : 97 }
+</pre>
+What would be the value of c in the result from this aggregation query
+<pre>
+db.fun.aggregate([
+    {$match:{a:0}},
+    {$sort:{c:-1}}, 
+    {$group:{_id:"$a", c:{$first:"$c"}}}
+])
+</pre>
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>21</text></choice>
+<choice location='bottom' correct='true'><text>54</text></choice>
+<choice location='bottom' correct='false'><text>97</text></choice>
+<choice location='bottom' correct='false'><text>5</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:WBWb0ssDVeY'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='$unwind' chapter_name='Week 5 - Aggregation' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:E4aYOQPeQvI'/>
+</vertical>
+<problem showanswer='attempted' url_name='_unwind_problem' rerandomize='never' display_name='Quiz: $unwind'>
+Suppose you have the following collection:
+<pre>
+db.people.find()
+{ "_id" : "Barack Obama", "likes" : [ "social justice", "health care", "taxes" ] }
+{ "_id" : "Mitt Romney", "likes" : [ "a balanced budget", "corporations", "binders full of women" ] }
+</pre>
+And you unwind the "likes" array of each document. How many documents will you wind up with?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>2</text></choice>
+<choice location='bottom' correct='false'><text>4</text></choice>
+<choice location='bottom' correct='true'><text>6</text></choice>
+<choice location='bottom' correct='false'><text>9</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:Xfl3m7wz8ts'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='$unwind example' chapter_name='Week 5 - Aggregation' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:XiWCJr4Lqag'/>
+</vertical>
+<problem showanswer='attempted' url_name='_unwind_example_problem' rerandomize='never' display_name='Quiz: $unwind example'>
+Which grouping operator will enable to you to reverse the effects of an unwind?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>$sum</text></choice>
+<choice location='bottom' correct='false'><text>$addToSet</text></choice>
+<choice location='bottom' correct='true'><text>$push</text></choice>
+<choice location='bottom' correct='false'><text>$first</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:jAWL-BJD0tI'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Double $unwind' chapter_name='Week 5 - Aggregation' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:sgnidsHyFeU'/>
+</vertical>
+<problem showanswer='attempted' url_name='Double_unwind_problem' rerandomize='never' display_name='Quiz: Double $unwind'>
+Can you reverse the effects of a double unwind (2 unwinds in a row) in our inventory collection (shown in the lesson ) with the $push operator?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>Yes</text></choice>
+<choice location='bottom' correct='false'><text>No</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:pziFq1oVRI4'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Mapping between SQL and Aggregation' chapter_name='Week 5 - Aggregation'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:auL2R0XKlyM'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Some Common SQL examples' chapter_name='Week 5 - Aggregation'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:ep2gLSR6C0U'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Limitations of the Aggregation Framwork' chapter_name='Week 5 - Aggregation'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:8BQzKXI-_wE'/>
 </vertical>
 </sequential>
 </chapter>
