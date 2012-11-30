@@ -4327,6 +4327,9 @@ Which of the following queries can utilize an index. Check all that apply.<choic
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:ecMrwMMBqIg'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 4.2' chapter_name='Week 4 - Performance' format='Homework' due='Nov 26 23:00 EST 2012'>
 <vertical>
@@ -4387,6 +4390,9 @@ db.tweets.find({"user.followers_count":{$gt:1000}}).sort({"created_at" : 1 }).li
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:LrsbQkNztMY'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 4.3' chapter_name='Week 4 - Performance' format='Homework' due='Nov 26 23:00 EST 2012'>
 <vertical>
@@ -4451,6 +4457,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:pDtSL7gbQa4'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 4.4' chapter_name='Week 4 - Performance' format='Homework' due='Nov 26 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='HW_4_4_problem' rerandomize='never' display_name='Quiz: HW 4.4'>
