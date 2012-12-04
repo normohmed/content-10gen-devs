@@ -1,15 +1,8 @@
-<course url_name='2012_Fall' org='10gen' course='M101' start='2012-10-22T00:00' display_name='MongoDB for Developers'>
+<course url_name='2012_Fall' org='10gen' course='M101' display_name='MongoDB for Developers' start='2012-10-22T00:00' enrollment_start='2012-10-01T00:00' enrollment_end='2012-12-01T00:00'>
 <chapter start='2012-10-22T00:00' display_name='Week 1 - Introduction'>
 <sequential graded='false' display_name='Welcome to M101' chapter_name='Week 1 - Introduction' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:179MiZSibco'/>
-<html>
-<h2>Lecture Notes</h2>
-<h4>Sample Lecture Notes</h4>
-<ul>
-<li>Note 1</li>
-<li>Note 2</li>
-</ul></html>
 </vertical>
 <problem showanswer='attempted' url_name='Welcome_to_M101_problem' rerandomize='never' display_name='Quiz: Welcome to M101'>
 What counts toward your final grade in the class?<choiceresponse direction='vertical'>
@@ -5929,6 +5922,302 @@ Using the aggregation framework, calculate the sum total of people who are livin
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+</sequential>
+</chapter>
+<chapter start='2012-12-03T00:00' display_name='Week 6 - Application Engineering'>
+<sequential graded='false' display_name='Introduction' chapter_name='Week 6 - Application Engineering'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:3zcbhNHebAc'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Write Concern' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:EtEPEkX3koo'/>
+</vertical>
+<problem showanswer='attempted' url_name='Write_Concern_problem' rerandomize='never' display_name='Quiz: Write Concern'>
+Provided you assume that the disk is persistent, what are the w and j settings required to guarantee that an insert or update has been written all the way to disk. <multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>w=0, j=0</text></choice>
+<choice location='bottom' correct='true'><text>w=1, j=1</text></choice>
+<choice location='bottom' correct='false'><text>w=2, j=0</text></choice>
+<choice location='bottom' correct='false'><text>w=1, j=0</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:2-UO105PDrk'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Network Errors' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:BycNYXFpqhM'/>
+</vertical>
+<problem showanswer='attempted' url_name='Network_Errors_problem' rerandomize='never' display_name='Quiz: Network Errors'>
+What are the reasons why an application may receive an error back even if the write was successful. Check all that apply.<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='true'>
+<startouttext/>The network TCP network connection between the application and the server was reset between the time of the write and the time of the getLastError call.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>The MongoDB server terminates between the write and the getLastError call.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>The network fails between the time of the write and the time of the getLastError call<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>The write violates a primary key constraint on the collection and must be rolled back.<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:64mAA3SEnkg'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='The Pymongo Driver' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:H1zGLx8ggXk'/>
+</vertical>
+<problem showanswer='attempted' url_name='The_Pymongo_Driver_problem' rerandomize='never' display_name='Quiz: The Pymongo Driver'>
+In the 2.4 release of Pymongo, a new connection class is introduced that automatically sets w=1, j=0. It essentially defaults to what used to be called safe mode and replaces the old Connection class. What is the name of that class?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>MongoSafe</text></choice>
+<choice location='bottom' correct='false'><text>SafeConnection</text></choice>
+<choice location='bottom' correct='true'><text>MongoClient</text></choice>
+<choice location='bottom' correct='false'><text>FireAndRemember</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:ghbQtF5YfHw'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Introduction to Replication' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:f1WTYGORU3w'/>
+</vertical>
+<problem showanswer='attempted' url_name='Introduction_to_Replication_problem' rerandomize='never' display_name='Quiz: Introduction to Replication'>
+What is the minimum original number of nodes needed to assure the election of a new Primary if a node goes down? <multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>1</text></choice>
+<choice location='bottom' correct='false'><text>2</text></choice>
+<choice location='bottom' correct='true'><text>3</text></choice>
+<choice location='bottom' correct='false'><text>5</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:XCssKzhlnZU'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Replica Set Elections' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:WFXSVHO78bQ'/>
+</vertical>
+<problem showanswer='attempted' url_name='Replica_Set_Elections_problem' rerandomize='never' display_name='Quiz: Replica Set Elections'>
+Which types of nodes can participate in elections of a new primary?<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='true'>
+<startouttext/>Regular replica set members<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Hidden Members<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Arbiters<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>Lawyers<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:vrUxTTD-XwA'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Write Consistency' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:Oqf_Eza-s1M'/>
+</vertical>
+<problem showanswer='attempted' url_name='Write_Consistency_problem' rerandomize='never' display_name='Quiz: Write Consistency'>
+During the time when failover is occurring, can writes successfully complete?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>Yes</text></choice>
+<choice location='bottom' correct='true'><text>No</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:SjaJEYK1u3E'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Creating a Replica Set' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:flCFVFBRsKI'/>
+</vertical>
+<problem showanswer='attempted' url_name='Creating_a_Replica_Set_problem' rerandomize='never' display_name='Quiz: Creating a Replica Set'>
+Which command, when issued from the mongo shell, will allow you to read from a secondary?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>db.isMaster()</text></choice>
+<choice location='bottom' correct='false'><text>db.adminCommand({'readPreference':'Secondary"})</text></choice>
+<choice location='bottom' correct='false'><text>rs.setStatus("Primary")</text></choice>
+<choice location='bottom' correct='true'><text>rs.slaveOk()</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:ibZVf59aUj8'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Replica Set Internals' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:lx0Kj4n4EWM'/>
+</vertical>
+<problem showanswer='attempted' url_name='Replica_Set_Internals_problem' rerandomize='never' display_name='Quiz: Replica Set Internals'>
+In the video how long did it take to elect a new primary?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>About three seconds</text></choice>
+<choice location='bottom' correct='false'><text>Above 10 seconds</text></choice>
+<choice location='bottom' correct='false'><text>About 30 seconds</text></choice>
+<choice location='bottom' correct='false'><text>About a minute</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:_am2mdVF1uk'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Failover and Rollback' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:IW1oW_Adlt0'/>
+</vertical>
+<problem showanswer='attempted' url_name='Failover_and_Rollback_problem' rerandomize='never' display_name='Quiz: Failover and Rollback'>
+What happens if a node comes back up as a secondary after a period of being offline and the oplog has looped on the primary?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>The entire dataset will be copied from the primary</text></choice>
+<choice location='bottom' correct='false'><text>A rollback will occur</text></choice>
+<choice location='bottom' correct='false'><text>The new node stays offline (does not re-join the replica set)</text></choice>
+<choice location='bottom' correct='false'><text>The new node begins to calculate Pi to a large number of decimal places</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:t3rNxRg6WZE'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Connecting to a Replica Set from Pymongo' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:qjxOq5RFWlc'/>
+</vertical>
+<problem showanswer='attempted' url_name='Connecting_to_a_Replica_Set_from_Pymongo_problem' rerandomize='never' display_name='Quiz: Connecting to a Replica Set from Pymongo'>
+If you leave a replica set node out of the seedlist within the driver, what will happen?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>The missing node will not be used by the application.</text></choice>
+<choice location='bottom' correct='true'><text>The missing node will be discovered as long as you list at least one valid node.</text></choice>
+<choice location='bottom' correct='false'><text>This missing node will be used for reads, but not for writes.</text></choice>
+<choice location='bottom' correct='false'><text>The missing node will be used for writes, but not for reads.</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:rODKm1GvUpY'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Bad Things Happen to Good Nodes' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:ccWbkVVE5gE'/>
+</vertical>
+<problem showanswer='attempted' url_name='Bad_Things_Happen_to_Good_Nodes_problem' rerandomize='never' display_name='Quiz: Bad Things Happen to Good Nodes'>
+If you use the special MongoReplicaSetClient, are you guaranteed to avoid a network error due an intervening failover?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>Yes</text></choice>
+<choice location='bottom' correct='true'><text>No</text></choice>
+<choice location='bottom' correct='false'><text></text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:nHsd9EJsKDc'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Write Concern Revisited' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:dN8YUVyfNTQ'/>
+</vertical>
+<problem showanswer='attempted' url_name='Write_Concern_Revisited_problem' rerandomize='never' display_name='Quiz: Write Concern Revisited'>
+If you set w=1 and j=1, is it possible to wind up rolling back a committed write to the primary on failover?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>Yes</text></choice>
+<choice location='bottom' correct='false'><text>No</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:hQrCwRplszo'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Read Preferences' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:_c8_YYln5WU'/>
+</vertical>
+<problem showanswer='attempted' url_name='Read_Preferences_problem' rerandomize='never' display_name='Quiz: Read Preferences'>
+You can configure your applications via the drivers to read from secondary nodes within a replica set. What are the reasons that you might not want to do that? Check all that apply.<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='true'>
+<startouttext/>If your write traffic is significantly greater than your read traffic,  you may overwhelm the secondary, which must process all the writes as well as the reads. Replication lag can result.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>You may not read what you previously wrote to MongoDB.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>If the secondary hardware has insufficient memory to keep the read working set in memory, directing reads to it will likely slow it down.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>Reading from a secondary prevents it from being promoted to primary.<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:tp17iqGdw-k'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Review Implications of Replication' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:K5ISnvYKQFQ'/>
+</vertical>
+<problem showanswer='attempted' url_name='Review_Implications_of_Replication_problem' rerandomize='never' display_name='Quiz: Review Implications of Replication'>
+If you set w=4  on a connection and there are only three nodes in the replica set, how long will you wait in PyMongo for a response from an insert if you don't set a timeout?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>Comes back immediately</text></choice>
+<choice location='bottom' correct='false'><text>About a minute</text></choice>
+<choice location='bottom' correct='false'><text>About 10 seconds</text></choice>
+<choice location='bottom' correct='true'><text>More than five minutes</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:8wuWShep8Qs'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Introduction to Sharding' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:_GfDqa1qRl0'/>
+</vertical>
+<problem showanswer='attempted' url_name='Introduction_to_Sharding_problem' rerandomize='never' display_name='Quiz: Introduction to Sharding'>
+If the shard key is not include in a find operation and there are 3 shards, each one a replica set with 3 nodes, how many nodes will see the find operation?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>1</text></choice>
+<choice location='bottom' correct='true'><text>3</text></choice>
+<choice location='bottom' correct='false'><text>9</text></choice>
+<choice location='bottom' correct='false'><text>6</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:4Z0D2bX5Cg4'/>
+</vertical>
 </sequential>
 </chapter>
 </course>
