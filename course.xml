@@ -6143,7 +6143,7 @@ If you use the special MongoReplicaSetClient, are you guaranteed to avoid a netw
 </sequential>
 <sequential graded='false' display_name='Write Concern Revisited' chapter_name='Week 6 - Application Engineering' format='Quiz'>
 <vertical>
-<video display_name='Lecture' youtube='1.0:dN8YUVyfNTQ'/>
+<video display_name='Lecture' youtube='1.0:5VyXyccjS3k'/>
 <html>
 <h2>Lecture Notes</h2>
 To be clear, it is best practice to set w:majority to avoid having data rolled back in the case of a single node failure. Take the three node example. If you set w:majority, then at least one other node will have the date at the time of failover. That node will be preferred to take over as primary.  At 2:42 I suggested this would be the case, but said I was not certain. I investigated it further and confirmed that the node that is furthest ahead will be preferred in the election of a new primary.</html>
