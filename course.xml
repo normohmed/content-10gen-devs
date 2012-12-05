@@ -6144,6 +6144,9 @@ If you use the special MongoReplicaSetClient, are you guaranteed to avoid a netw
 <sequential graded='false' display_name='Write Concern Revisited' chapter_name='Week 6 - Application Engineering' format='Quiz'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:dN8YUVyfNTQ'/>
+<html>
+<h2>Lecture Notes</h2>
+To be clear, it is best practice to set w:majority to avoid having data rolled back in the case of a single node failure. Take the three node example. If you set w:majority, then at least one other node will have the date at the time of failover. That node will be preferred to take over as primary.  At 2:42 I suggested this would be the case, but said I was not certain. I investigated it further and confirmed that the node that is furthest ahead will be preferred in the election of a new primary.</html>
 </vertical>
 <problem showanswer='attempted' url_name='Write_Concern_Revisited_problem' rerandomize='never' display_name='Quiz: Write Concern Revisited'>
 If you set w=1 and j=1, is it possible to wind up rolling back a committed write to the primary on failover?<multiplechoiceresponse direction='vertical'>
@@ -6218,6 +6221,263 @@ If the shard key is not include in a find operation and there are 3 shards, each
 <vertical>
 <video display_name='Answer' youtube='1.0:4Z0D2bX5Cg4'/>
 </vertical>
+</sequential>
+<sequential graded='false' display_name='Building a Sharded Environment' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:aaYc2W4keF4'/>
+</vertical>
+<problem showanswer='attempted' url_name='Building_a_Sharded_Environment_problem' rerandomize='never' display_name='Quiz: Building a Sharded Environment'>
+If you want to build a production system with two shards, each one a replica set with three nodes, how may mongod processes must you start?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>2</text></choice>
+<choice location='bottom' correct='false'><text>6</text></choice>
+<choice location='bottom' correct='false'><text>7</text></choice>
+<choice location='bottom' correct='true'><text>9</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:5tPjnJrY0rU'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Implications of Sharding' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:ig278F60gRA'/>
+</vertical>
+<problem showanswer='attempted' url_name='Implications_of_Sharding_problem' rerandomize='never' display_name='Quiz: Implications of Sharding'>
+Suppose you wanted to shard the zip code collection after importing it.  You want to shard on zip code. What index would be required to allow MongoDB to shard on zip code? <multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>An index on zip or a non-multi-key index that starts with zip.</text></choice>
+<choice location='bottom' correct='false'><text>No index is required to use zip as the shard key.</text></choice>
+<choice location='bottom' correct='false'><text>A unique index on the zip code.</text></choice>
+<choice location='bottom' correct='false'><text>Any index that that includes the zip code.</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:vfl0hqdgB3Q'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Sharding + Replication' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:gkUCUbM0oEg'/>
+</vertical>
+<problem showanswer='attempted' url_name='Sharding_Replication_problem' rerandomize='never' display_name='Quiz: Sharding + Replication'>
+Suppose you want to run multiple mongos routers for redundancy. What level of the stack will assure that you can failover to a different mongos from within your application?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>mongod</text></choice>
+<choice location='bottom' correct='false'><text>mongos</text></choice>
+<choice location='bottom' correct='true'><text>drivers</text></choice>
+<choice location='bottom' correct='false'><text>sharding config servers</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:hnuiYokdO7g'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Choosing a Shard Key' chapter_name='Week 6 - Application Engineering' format='Quiz'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:8q2GB3QSBSI'/>
+</vertical>
+<problem showanswer='attempted' url_name='Choosing_a_Shard_Key_problem' rerandomize='never' display_name='Quiz: Choosing a Shard Key'>
+You are building a facebook competitor called footbook that will be a mobile social network of feet.  You have decided that your primary data structure for posts to the wall will look like this:
+<pre>
+{'username':'toeguy',
+     'posttime':ISODate("2012-12-02T23:12:23Z"),
+     "randomthought": "I am looking at my feet right now",
+     'visible_to':['friends','family', 'walkers']}
+</pre>
+Thinking about the tradeoffs of shard key selection, select the true statements below.<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='true'>
+<startouttext/>Choosing posttime as the shard key  will cause hotspotting as time progresses.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Choosing username as the shard key will distribute posts to the wall well across the shards.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Choosing visible_to as a shard key is illegal.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>Choosing posttime as the shard key suffers from low cardinality.<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:91tO_iGga5w'/>
+</vertical>
+</sequential>
+<sequential graded='true' display_name='HW 6.1' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='HW_6_1_problem' rerandomize='never' display_name='Quiz: HW 6.1'>
+Which of the following statements are true about MongoDB replication.  Check all that apply.<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='true'>
+<startouttext/>The minimum sensible number of voting nodes to a replica set is three.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>MongoDB replication is synchronous.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>The Mongo shell is capable of attaching to a replica set and automatically failing over.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>By default, using the new MongoClient connection class, w=1 and j=1.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>The oplog utilizes a capped collection.<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='HW 6.2' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='HW_6_2_problem' rerandomize='never' display_name='Quiz: HW 6.2'>
+Let's suppose you have a five member replica set and want to assure that writes are committed to the journal and are acknowledged by at least 3 nodes before you proceed forward. What would be the appropriate settings for w and j?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>w=1, j=1</text></choice>
+<choice location='bottom' correct='true'><text>w="majority", j=1</text></choice>
+<choice location='bottom' correct='false'><text>w=3, j=0</text></choice>
+<choice location='bottom' correct='false'><text>w=5, j=1</text></choice>
+<choice location='bottom' correct='false'><text>w=1,j=3</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='HW 6.3' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='HW_6_3_problem' rerandomize='never' display_name='Quiz: HW 6.3'>
+Which of the following statements are true about choosing and using a shard key: <choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='false'>
+<startouttext/>The shard key must be unique<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>There must be a index on the collection that starts with the shard key.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Mongo can not enforce unique indexes on a sharded collection other than the shard key itself.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Any update that does not contain the shard key will be sent to all shards.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>You can change the shard key on a collection if you desire.<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='HW 6.4' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='HW_6_4_problem' rerandomize='never' display_name='Quiz: HW 6.4'>
+You have a sharded system with three shards and have sharded the collections "grades" in the "test" database across those shards. The output of sh.status() when connected to mongos looks like this:
+
+<pre>
+mongos> sh.status()
+--- Sharding Status --- 
+  sharding version: { "_id" : 1, "version" : 3 }
+  shards:
+	{  "_id" : "s0",  "host" : "s0/localhost:37017,localhost:37018,localhost:37019" }
+	{  "_id" : "s1",  "host" : "s1/localhost:47017,localhost:47018,localhost:47019" }
+	{  "_id" : "s2",  "host" : "s2/localhost:57017,localhost:57018,localhost:57019" }
+  databases:
+	{  "_id" : "admin",  "partitioned" : false,  "primary" : "config" }
+	{  "_id" : "test",  "partitioned" : true,  "primary" : "s0" }
+		test.grades chunks:
+				s1	4
+				s0	4
+				s2	4
+			{ "student_id" : { $minKey : 1 } } -->> { "student_id" : 0 } on : s1 Timestamp(12000, 0) 
+			{ "student_id" : 0 } -->> { "student_id" : 2640 } on : s0 Timestamp(11000, 1) 
+			{ "student_id" : 2640 } -->> { "student_id" : 91918 } on : s1 Timestamp(10000, 1) 
+			{ "student_id" : 91918 } -->> { "student_id" : 176201 } on : s0 Timestamp(4000, 2) 
+			{ "student_id" : 176201 } -->> { "student_id" : 256639 } on : s2 Timestamp(12000, 1) 
+			{ "student_id" : 256639 } -->> { "student_id" : 344351 } on : s2 Timestamp(6000, 2) 
+			{ "student_id" : 344351 } -->> { "student_id" : 424983 } on : s0 Timestamp(7000, 2) 
+			{ "student_id" : 424983 } -->> { "student_id" : 509266 } on : s1 Timestamp(8000, 2) 
+			{ "student_id" : 509266 } -->> { "student_id" : 596849 } on : s1 Timestamp(9000, 2) 
+			{ "student_id" : 596849 } -->> { "student_id" : 772260 } on : s0 Timestamp(10000, 2) 
+			{ "student_id" : 772260 } -->> { "student_id" : 945802 } on : s2 Timestamp(11000, 2) 
+			{ "student_id" : 945802 } -->> { "student_id" : { $maxKey : 1 } } on : s2 Timestamp(11000, 3) 
+</pre>
+
+If you ran the query 
+<pre>
+use test
+db.grades.find({'student_id':530289})
+</pre>
+Which shards would be involved in answering the query?<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>s0,s1 and s2</text></choice>
+<choice location='bottom' correct='false'><text>s0</text></choice>
+<choice location='bottom' correct='true'><text>s1</text></choice>
+<choice location='bottom' correct='false'><text>s2</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='HW 6.5' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='HW_6_5_problem' rerandomize='never' display_name='Quiz: HW 6.5'>
+In this homework you will build a small replica set on your own computer.  We will check that it works with <i>validate.py</i>, which you should download in <a href="/static/handouts/week6-lessons.tar">week6-lessons.tar</a>. 
+<br/><br/>
+Create three directories for the three mongod processes. On unix, this could be done as follows:
+<pre>
+mkdir -p /data/rs1 /data/rs2 /data/rs3
+</pre>
+Now start three mongo instances as follows. Note that are three commands.  The browser is probably wrapping them visually.
+<pre>
+./mongod --replSet m101 --logpath "1.log" --dbpath /data/rs1 --port 27017 --smallfiles --fork
+
+./mongod --replSet m101 --logpath "2.log" --dbpath /data/rs2 --port 27018 --smallfiles --fork
+
+./mongod --replSet m101 --logpath "3.log" --dbpath /data/rs3 --port 27019 --smallfiles --fork
+</pre>
+Now connect to a mongo shell and make sure it comes up
+<pre>
+./mongo --port 27017
+</pre>
+Now you will create the replica set. Type the following commands into the mongo shell:
+<pre>
+config = { _id: "m101", members:[
+          { _id : 0, host : "localhost:27017"},
+          { _id : 1, host : "localhost:27018"},
+          { _id : 2, host : "localhost:27019"} ]
+};
+rs.initiate(config);
+</pre>
+At this point, the replica set should be coming up. You can type 
+<pre>
+rs.status()
+</pre>
+to see the state of replication. 
+<br/>
+<br/>
+Now run validate.py  to confirm that it works.
+<pre>
+python validate.py
+</pre>
+Validate connects to your local replica set and checks that it has three nodes. It has been tested under Pymongo 2.3 and 2.4. Type the validation code below.
+<customresponse>
+<textbox rows='4' cols='50' correct_answer="CongratsYouRock2012"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''CongratsYouRock2012'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
 </sequential>
 </chapter>
 </course>
