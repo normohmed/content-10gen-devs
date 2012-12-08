@@ -6418,7 +6418,7 @@ Which shards would be involved in answering the query?<multiplechoiceresponse di
 </sequential>
 <sequential graded='true' display_name='HW 6.5' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='HW_6_5_problem' rerandomize='never' display_name='Quiz: HW 6.5'>
-In this homework you will build a small replica set on your own computer.  We will check that it works with <i>validate.py</i>, which you should download in <a href="/static/handouts/week6-lessons.tar">week6-lessons.tar</a>. 
+In this homework you will build a small replica set on your own computer.  We will check that it works with <i>validate.py</i>, which you should download in <a href="/static/handouts/week6-lessons.tar">week6-lessons.tar</a> or <a href="/static/handouts/week6-lessons.zip">week6-lessons.zip</a>. 
 <br/><br/>
 Create three directories for the three mongod processes. On unix, this could be done as follows:
 <pre>
@@ -6479,5 +6479,9 @@ if not(response == quiz_answer):
 </customresponse>
 </problem>
 </sequential>
+</chapter>
+<chapter start='2012-12-25T00:00' display_name='Week 7 - Case Studies'>
+</chapter>
+<chapter start='2012-12-25T00:00' display_name='Final Exam'>
 </chapter>
 </course>
