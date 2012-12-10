@@ -6480,8 +6480,406 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 </chapter>
-<chapter start='2012-12-25T00:00' display_name='Week 7 - Case Studies'>
+<chapter start='2012-10-25T00:00' display_name='Week 7 - Case Studies'>
+<sequential graded='false' display_name='Introduction' chapter_name='Week 7 - Case Studies'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:adRyiudsgv0'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Interview with Jon Hoffman, foursquare' chapter_name='Week 7 - Case Studies'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:GBauy0o-Wzs'/>
+</vertical>
+</sequential>
+<sequential graded='false' display_name='Interview with Ryan Bubinski, Codecademy' chapter_name='Week 7 - Case Studies'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:RkPmVQNesZA'/>
+</vertical>
+</sequential>
 </chapter>
 <chapter start='2012-12-25T00:00' display_name='Final Exam'>
+<sequential graded='true' display_name='Question 1' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Question_1_problem' rerandomize='never' display_name='Quiz: Question 1'>
+Please download the Enron email dataset from this link, untar or unzip it and then restore it using mongorestore. It should restore to a collection called "messages" in a database called "enron". Note that this is an abbreviated version of the full corpus. There should be 120,477 documents after restore.
+<br/>
+<br/>
+Inspect a few of the documents to get a basic understanding of the structure. <a href="http://en.wikipedia.org/wiki/Enron">Enron</a> was an American corporation that engaged in a widespread accounting fraud and subsequently failed.
+<br/>
+<br/>
+In this dataset, each document is an email message. Like all Email messages, there is one sender but there can be multiple recipients.
+<br/>
+<br/>
+Construct a query to calculate the number of messages sent by Andrew Fastow, CFO, to Jeff Skilling, the president. Andrew Fastow's email addess was andrew.fastow@enron.com. Jeff Skilling's email was jeff.skilling@enron.com. 
+<br/><br/>
+For reference, the number of email messages from Andrew Fastow to John Lavorato (john.lavorato@enron.com) was 1.
+<br/>
+
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>1</text></choice>
+<choice location='bottom' correct='true'><text>3</text></choice>
+<choice location='bottom' correct='false'><text>5</text></choice>
+<choice location='bottom' correct='false'><text>7</text></choice>
+<choice location='bottom' correct='false'><text>9</text></choice>
+<choice location='bottom' correct='false'><text>12</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Question 2' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Question_2_problem' rerandomize='never' display_name='Quiz: Question 2'>
+Please use the Enron dataset you imported for the previous problem. For this question you will use the aggregation framework to figure out pairs of people that tend to communicate a lot. 
+<br/><br/>
+Turns out that the top channel is veronica.espinoza@enron.com to recipient@enron.com, with 2181 messages. But that is not very interesting, so your task is to figure out the second most popular pair of sender and recipient and indicate it below.
+<br/><br/>
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>susan.mara@enron.com to jeff.dasovich@enron.com</text></choice>
+<choice location='bottom' correct='true'><text>susan.mara@enron.com to richard.shapiro@enron.com</text></choice>
+<choice location='bottom' correct='false'><text>soblander@carrfut.com to soblander@carrfut.com</text></choice>
+<choice location='bottom' correct='false'><text>susan.mara@enron.com to james.steffes@enron.com</text></choice>
+<choice location='bottom' correct='false'><text>evelyn.metoyer@enron.com to kate.symes@enron.com</text></choice>
+<choice location='bottom' correct='false'><text>susan.mara@enron.com to alan.comnes@enron.com</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Question 3' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Question_3_problem' rerandomize='never' display_name='Quiz: Question 3'>
+In this problem you will update a document in Enron dataset to illustrate your mastery of the updating documents from the shell.
+<br/><br/>
+Please add the email address "mrpotatohead@10gen.com" to the list of addresses in the headers.To array for the document with headers.Message-ID of "&lt;8147308.1075851042335.JavaMail.evans@thyme&gt;"
+<br/><br/>
+After you have completed that task, please run final3-validate.py to get the validation code and put it in the box below without any extra spaces. The validation script assumes that it is connecting to a simple mongo instance on the standard port on localhost.<customresponse>
+<textbox rows='4' cols='50' correct_answer="897h6723ghf25gd87gh28"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''897h6723ghf25gd87gh28'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Question 4' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Question_4_problem' rerandomize='never' display_name='Quiz: Question 4'>
+<b>Enhancing the Blog to support viewers liking certain comments</b>
+<br/>
+In this problem, you will be enhancing the blog project to support users liking certain comments and the like counts showing up the in the permalink page. 
+<br/>
+<br/>
+Start by downloading the code and loading up the blog dataset from last week. The user interface has already been implemented for you. It's not fancy. The /post URL shows the like counts next to each comment and displays a Like button that you can click on. That Like button fetches the /like URL on the blog, makes the necessary changes to the database state, and then redirects the browser back to the permalink page. 
+<br/><br/>
+This full round trip and redisplay of the entire web page is not how you would implement liking in a modern web app, but it makes it easier for us to reason about, so we will go with it.
+<br/><br/>
+Your job is to search the code for the string XXX work here and make the necessary changes. You can choose whatever schema you want, but you should note that the entry_template makes some assumptions about the how the like counter will be presented and if you go with a different convention than it assumes, you will need to make some adjustments. 
+<br/><br/>
+It is possible to solve this problem by putting NOTHING in one of the XXX spots and adding only a SINGLE LINE to the other spot to properly increment the like count.
+<br/>
+<br/>
+The validation script will fetch your blog, go to the first post's permalink page and attempt to increment the vote count. 
+<br/><br/>
+After you have gotten it working, enter the validation string below.<customresponse>
+<textbox rows='4' cols='50' correct_answer="89jlkfdsjflks34j0d"> </textbox>
+<answer type='loncapa/python'><![CDATA[
+import re
+correct = ['correct']
+try:
+  r = str(submission[0])
+except ValueError:
+  correct[0] = 'incorrect'
+  r = '0'
+response = re.sub(r'\s+', '', r)
+quiz_answer = '''89jlkfdsjflks34j0d'''
+quiz_answer = re.sub(r'\s+', '', quiz_answer)
+if not(response == quiz_answer):
+  correct[0] = 'incorrect'
+  print 'response = ', response
+  print 'quiz_answer = ', quiz_answer
+]]>
+</answer>
+</customresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Question 5' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Question_5_problem' rerandomize='never' display_name='Quiz: Question 5'>
+Suppose your have a collection <i>fubar</i> with the following indexes created:
+<pre>
+[
+	{
+		"v" : 1,
+		"key" : {
+			"_id" : 1
+		},
+		"ns" : "test.fubar",
+		"name" : "_id_"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"a" : 1,
+			"b" : 1
+		},
+		"ns" : "test.fubar",
+		"name" : "a_1_b_1"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"a" : 1,
+			"c" : 1
+		},
+		"ns" : "test.fubar",
+		"name" : "a_1_c_1"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"c" : 1
+		},
+		"ns" : "test.fubar",
+		"name" : "c_1"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"a" : 1,
+			"b" : 1,
+			"c" : -1
+		},
+		"ns" : "test.fubar",
+		"name" : "a_1_b_1_c_-1"
+	}
+]
+
+</pre>
+
+Now suppose you want to run the following query against the collection.
+<pre>
+db.fubar.find({'a':{'$lt':10000}, 'b':{'$gt': 5000}}, {'a':1, 'c':1}).sort({'c':-1})
+</pre>
+Which of the following indexes could be used by MongoDB to assist in answering the query. Check all that apply.
+<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='false'>
+<startouttext/>_id_<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>a_1_b_1<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>a_1_c_1<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>c_1<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>a_1_b_1_c_-1<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Question 6' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Question_6_problem' rerandomize='never' display_name='Quiz: Question 6'>
+Suppose you have a collection of students of the following form:
+
+<pre>
+{
+	"_id" : ObjectId("50c598f582094fb5f92efb96"),
+	"first_name" : "John",
+	"last_name" : "Doe",
+	"date_of_admission" : ISODate("2010-02-21T05:00:00Z"),
+	"residence_hall" : "Fairweather",
+	"has_car" : true,
+	"student_id" : "2348023902",
+	"current_classes" : [
+		"His343",
+		"Math234",
+		"Phy123",
+		"Art232"
+	]
+}
+
+</pre>
+
+
+Now suppose that basic inserts into the collection, which only include the last name, first name and student_id, are too slow. What could potentially improve the speed of inserts. Check all that apply.
+<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='false'>
+<startouttext/>Add an index on last_name, first_name if one does not already exist.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Set w=0, j=0 on writes<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>Remove all indexes from the collection<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>Provide a hint to MongoDB that it should not use an index for the inserts<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>Build a replica set and insert data into the secondary nodes to free up the primary nodes.<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Question 7' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Question_7_problem' rerandomize='never' display_name='Quiz: Question 7'>
+You have been tasked to cleanup a photosharing database. The database consists of two collections, albums, and images. Every image is supposed to be in an album, but there are orphan images that appear in no album.
+
+ Here are some example documents:
+<br/>
+<br/>
+<pre>
+> db.albums.findOne()
+{
+	"_id" : 67
+	"images" : [
+		4745,
+		7651,
+		15247,
+		17517,
+		17853,
+		20529,
+		22640,
+		27299,
+		27997,
+		32930,
+		35591,
+		48969,
+		52901,
+		57320,
+		96342,
+		99705
+	]
+}
+
+> db.images.findOne()
+{ "_id" : 99705, "height" : 480, "width" : 640 }
+> 
+</pre>
+From the above, you can conclude that the image with _id = 99705 is in album 67. It is not an orphan.
+<br/><br/>
+Your task is to write a program to remove every image from the images collection that appears in no album. Or put another way, if an image does not appear in at least one album, it's an orphan and should be removed from the images collection.
+<br/><br/>
+Start by using mongoimport to import your albums.js and images.js collections.
+<br/>
+When you are done removing the orphan images from the collection, there should be 90,038. To prove you did it correctly, what is the sum of the _id fields from the images collection (you can get this by writing an aggregation query).
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>5499664274</text></choice>
+<choice location='bottom' correct='false'><text>4499664874</text></choice>
+<choice location='bottom' correct='false'><text>4427664274</text></choice>
+<choice location='bottom' correct='false'><text>6499619274</text></choice>
+<choice location='bottom' correct='true'><text>4499664274</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='false' display_name='Question 8' chapter_name='Final Exam' format='Quiz'>
+<problem showanswer='attempted' url_name='Question_8_problem' rerandomize='never' display_name='Quiz: Question 8'>
+Suppose you have a three node replica set. Node 1 is the primary. Node 2 is a secondary,  Node 3 is a secondary running with a delay of 10 seconds.  All writes to the database are issued with w=majority and j=1 (by which we mean that the getLastError call has those values set).
+
+<br/><br/>A write operation (could be insert or update) is initiated from your application at time=0. At time=5 seconds, the primary, Node 1, goes down for an hour and another node is elected primary.
+<br/><br/>Will there be a rollback of data when Node 1 comes back up? Choose the best answer.<br/>
+
+<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='false'><text>Yes, always</text></choice>
+<choice location='bottom' correct='false'><text>No, never</text></choice>
+<choice location='bottom' correct='false'><text>Maybe, it depends on whether Node 3 has processed the write..</text></choice>
+<choice location='bottom' correct='true'><text>Maybe, it depends only on whether Node 2 has processed the write. </text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Question 9' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Question_9_problem' rerandomize='never' display_name='Quiz: Question 9'>
+Imagine an electronic medical record database designed to hold the medical records of every individual in the United States. Because each person has more than 16MB of medical history and records, it's not feasible to have a single document for every patient. Instead, there is a <i>patient</i> collection that contains basic information on each person and maps the person to a patient_id, and a <i>record</i> collection that contains one document for each test or procedure. One patient may have dozens or even hundreds of documents in the <i>record</i> collection. 
+<br/><br/>
+We need to decide on a shard key to shard the <i>record collection</i>. What's the best shard key for the <i>record</i> collection, provided that we are willing to run scatter gather operations to do research and run studies on various diseases and cohorts? That is, think mostly about the operational aspects of such a system.<multiplechoiceresponse direction='vertical'>
+<choicegroup type='MultipleChoice'>
+<choice location='bottom' correct='true'><text>patient_id</text></choice>
+<choice location='bottom' correct='false'><text>_id</text></choice>
+<choice location='bottom' correct='false'><text>primary care physican</text></choice>
+<choice location='bottom' correct='false'><text>date and time when medical record was created</text></choice>
+<choice location='bottom' correct='false'><text>patient first name</text></choice>
+<choice location='bottom' correct='false'><text>patient last name</text></choice>
+</choicegroup>
+</multiplechoiceresponse>
+</problem>
+</sequential>
+<sequential graded='true' display_name='Question 10' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
+<problem showanswer='due' attempts='3' url_name='Question_10_problem' rerandomize='never' display_name='Quiz: Question 10'>
+<b>Understanding the output of explain</b>
+We perform the following query on the enron dataset:
+<pre>
+db.messages.find({'headers.Date':{'$gt': new Date(2001,3,1)}},{'headers.From':1, _id:0}).sort({'headers.From':1}).explain()
+</pre>
+and get the following explain output. 
+<pre>
+
+{
+	"cursor" : "BtreeCursor headers.From_1",
+	"isMultiKey" : false,
+	"n" : 83057,
+	"nscannedObjects" : 120477,
+	"nscanned" : 120477,
+	"nscannedObjectsAllPlans" : 120581,
+	"nscannedAllPlans" : 120581,
+	"scanAndOrder" : false,
+	"indexOnly" : false,
+	"nYields" : 0,
+	"nChunkSkips" : 0,
+	"millis" : 250,
+	"indexBounds" : {
+		"headers.From" : [
+			[
+				{
+					"$minElement" : 1
+				},
+				{
+					"$maxElement" : 1
+				}
+			]
+		]
+	},
+	"server" : "Andrews-iMac.local:27017"
+}
+
+</pre>
+Check all the thing that are true about the way MongoDB handled this query.
+<choiceresponse direction='vertical'>
+<checkboxgroup type='MultipleChoice'>
+<choice correct='true'>
+<startouttext/>The query did not utilize an index to figure out which documents match the find criteria.<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>The query used an index for the sorting phase.<endouttext/>
+</choice>
+<choice correct='false'>
+<startouttext/>The query returned 120,477 documents<endouttext/>
+</choice>
+<choice correct='true'>
+<startouttext/>The query performed a collection scan<endouttext/>
+</choice>
+</checkboxgroup>
+</choiceresponse>
+</problem>
+</sequential>
 </chapter>
 </course>
