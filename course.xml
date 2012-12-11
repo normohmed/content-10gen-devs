@@ -769,7 +769,7 @@ if not(response == quiz_answer):
 <vertical>
 <video display_name='Lecture' youtube='1.0:r48N7GcDqVI'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='Homework_1_1_problem' rerandomize='never' display_name='Quiz: Homework 1.1'>
+<problem showanswer='due' attempts='3' url_name='Homework_1_1_problem' rerandomize='never' display_name='Homework: Homework 1.1'>
 Install MongoDB on your computer and run it on the standard port.
 
 <p>
@@ -816,7 +816,7 @@ if not(response == quiz_answer):
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 1.2' chapter_name='Week 1 - Introduction' format='Homework' due='Oct 30 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_1_2_problem' rerandomize='never' display_name='Quiz: Homework 1.2'>
+<problem showanswer='due' attempts='3' url_name='Homework_1_2_problem' rerandomize='never' display_name='Homework: Homework 1.2'>
 Get Pymongo installed on your computer. To prove its installed, run the program:
 
 <pre>
@@ -849,7 +849,7 @@ if not(response == quiz_answer):
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 1.3' chapter_name='Week 1 - Introduction' format='Homework' due='Oct 30 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_1_3_problem' rerandomize='never' display_name='Quiz: Homework 1.3'>
+<problem showanswer='due' attempts='3' url_name='Homework_1_3_problem' rerandomize='never' display_name='Homework: Homework 1.3'>
 We are now going to test that you have bottle installed correctly and can run a bottle-based project. Run the hw1-3.py download as follows:
 <pre>
 python hw1-3.py
@@ -2857,7 +2857,7 @@ Which of the following python statements work. Check all that apply.<choicerespo
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 2.1' chapter_name='Week 2 - CRUD' format='Homework' due='Nov 9 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_2_1_problem' rerandomize='never' display_name='Quiz: Homework 2.1'>
+<problem showanswer='due' attempts='3' url_name='Homework_2_1_problem' rerandomize='never' display_name='Homework: Homework 2.1'>
 In this problem, you will be using a collection of student scores that is similar to what we used in the lessons. Please download the <a href="/static/handouts/grades.js">grades.js</a> file and import it into your local mongo database as follows:
 <pre>
 mongoimport -d students -c grades &lt; grades.js
@@ -2901,7 +2901,7 @@ Now it’s your turn to analyze the data set. Find all exam scores greater than 
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 2.2' chapter_name='Week 2 - CRUD' format='Homework' due='Nov 9 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_2_2_problem' rerandomize='never' display_name='Quiz: Homework 2.2'>
+<problem showanswer='due' attempts='3' url_name='Homework_2_2_problem' rerandomize='never' display_name='Homework: Homework 2.2'>
 <p>
 Write a program in the language of your choice that will remove the grade of type "homework" with the lowest score for each student from the <a href="/static/handouts/grades.js">dataset</a> that you imported in HW 2.1.  Since each document is one grade, it should remove one document per student.
 </p>
@@ -2968,7 +2968,7 @@ if not(response == quiz_answer):
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 2.3' chapter_name='Week 2 - CRUD' format='Homework' due='Nov 9 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_2_3_problem' rerandomize='never' display_name='Quiz: Homework 2.3'>
+<problem showanswer='due' attempts='3' url_name='Homework_2_3_problem' rerandomize='never' display_name='Homework: Homework 2.3'>
 <em>Blog User Sign-up and Login</em>
 <p>
 Download <a href="/static/handouts/hw2.3.zip">hw2.3.zip</a> or <a href="/static/handouts/hw2.3.tar">hw2.3.tar</a> and unpack.
@@ -3269,7 +3269,7 @@ Which query will find all descendants of  the snorkeling category?<multiplechoic
 <vertical>
 <video display_name='Lecture' youtube='1.0:lpSMbphEl7c'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='HW_3_1_problem' rerandomize='never' display_name='Quiz: HW 3.1'>
+<problem showanswer='due' attempts='3' url_name='HW_3_1_problem' rerandomize='never' display_name='Homework: HW 3.1'>
 Download the <a href="/static/handouts/students.js">students.js</a> file to your computer and import it into your local Mongo instance with this command:
 <pre>
 $ mongoimport -d school -c students &lt; students.js
@@ -3351,7 +3351,7 @@ if not(response == quiz_answer):
 <vertical>
 <video display_name='Lecture' youtube='1.0:SEh6Y4lHkWQ'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='HW_3_2_problem' rerandomize='never' display_name='Quiz: HW 3.2'>
+<problem showanswer='due' attempts='3' url_name='HW_3_2_problem' rerandomize='never' display_name='Homework: HW 3.2'>
 <b>Making your blog accept posts</b>
 <p>In this homework you will be enhancing the blog project to insert entries into the posts collection. After this, the blog will work. It will allow you to add blog posts with a title, body and tags and have it be added to the posts collection properly.
 </p><p>We have provided the code that creates users and allows you to login (the assignment from last week). To get started, please download <a href="/static/handouts/hw3-blog.tar">hw3-blog.tar</a> or <a href="/static/handouts/hw3-blog.zip">hw3-blog.zip</a> and unpack. You will be using these file for this homework and the HW 3.3.
@@ -3414,7 +3414,7 @@ if not(response == quiz_answer):
 <vertical>
 <video display_name='Lecture' youtube='1.0:HPSgVT2BEYQ'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='HW_3_3_problem' rerandomize='never' display_name='Quiz: HW 3.3'>
+<problem showanswer='due' attempts='3' url_name='HW_3_3_problem' rerandomize='never' display_name='Homework: HW 3.3'>
 <b>Making your blog accept comments</b>
 <p>
 In this homework  you will add code to your blog so that it accepts comments. You will be using the same code as you downloaded for HW 3.2.
@@ -4246,7 +4246,7 @@ except demjson.JSONDecodeError as err:
 <vertical>
 <video display_name='Lecture' youtube='1.0:0tpXSPgYk4I'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='HW_4_1_problem' rerandomize='never' display_name='Quiz: HW 4.1'>
+<problem showanswer='due' attempts='3' url_name='HW_4_1_problem' rerandomize='never' display_name='Homework: HW 4.1'>
 Suppose you have a collection with the following indexes:
 <pre>
 > db.products.getIndexes()
@@ -4328,7 +4328,7 @@ Which of the following queries can utilize an index. Check all that apply.<choic
 <vertical>
 <video display_name='Lecture' youtube='1.0:Zz8TerE95Ss'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='HW_4_2_problem' rerandomize='never' display_name='Quiz: HW 4.2'>
+<problem showanswer='due' attempts='3' url_name='HW_4_2_problem' rerandomize='never' display_name='Homework: HW 4.2'>
 Suppose you have a collection called <i>tweets</i> whose documents contain information about the <i>created_at</i> time of the tweet and the user's <i>followers_count</i> at the time they issued the tweet. What can you infer from the following <i>explain</i> output?
 
 <pre>
@@ -4391,7 +4391,7 @@ db.tweets.find({"user.followers_count":{$gt:1000}}).sort({"created_at" : 1 }).li
 <vertical>
 <video display_name='Lecture' youtube='1.0:K-oXNC7voR8'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='HW_4_3_problem' rerandomize='never' display_name='Quiz: HW 4.3'>
+<problem showanswer='due' attempts='3' url_name='HW_4_3_problem' rerandomize='never' display_name='Homework: HW 4.3'>
 <b>Making the Blog fast</b>
 <p>Please download <a href="/static/handouts/hw4-3.tar">hw4-3.tar</a> (mac) or <a href="/static/handouts/hw4-3.zip">hw4-3.zip</a> (pc) to get started. This assignment requires Mongo 2.2 or above. </p>
 
@@ -4455,7 +4455,7 @@ if not(response == quiz_answer):
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 4.4' chapter_name='Week 4 - Performance' format='Homework' due='Nov 26 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_4_4_problem' rerandomize='never' display_name='Quiz: HW 4.4'>
+<problem showanswer='due' attempts='3' url_name='HW_4_4_problem' rerandomize='never' display_name='Homework: HW 4.4'>
 In this problem you will analyze a profile log taken from a mongoDB instance. To start, please download <a href="/static/handouts/sysprofile.json"> sysprofile.json</a> and import it with the following command:
 
 <pre>
@@ -5779,7 +5779,7 @@ Can you reverse the effects of a double unwind (2 unwinds in a row) in our inven
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 5.1' chapter_name='Week 5 - Aggregation' format='Homework' due='Dec 5 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_5_1_problem' rerandomize='never' display_name='Quiz: HW 5.1'>
+<problem showanswer='due' attempts='3' url_name='HW_5_1_problem' rerandomize='never' display_name='Homework: HW 5.1'>
 <b>Finding the most frequent author of comments on your blog</b><br/>
 In this assignment you will use the aggregation framework to find the most frequent author of comments on your blog. We will be using the same dataset as last week.
 <br/><br/>
@@ -5806,7 +5806,7 @@ Ok, please choose your answer below for the most prolific comment author:
 </problem>
 </sequential>
 <sequential graded='true' display_name='HW 5.2' chapter_name='Week 5 - Aggregation' format='Homework' due='Dec 5 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_5_2_problem' rerandomize='never' display_name='Quiz: HW 5.2'>
+<problem showanswer='due' attempts='3' url_name='HW_5_2_problem' rerandomize='never' display_name='Homework: HW 5.2'>
 <b>Crunching the Zipcode dataset</b><br/>
 Please download the <a href="http://media.mongodb.org/zips.json">zips.json</a> dataset and import it into a collection of your choice. 
 <br/>
@@ -5832,7 +5832,7 @@ Hint: The answer for CT and NJ is 49749.
 </problem>
 </sequential>
 <sequential graded='true' display_name='HW 5.3' chapter_name='Week 5 - Aggregation' format='Homework' due='Dec 5 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_5_3_problem' rerandomize='never' display_name='Quiz: HW 5.3'>
+<problem showanswer='due' attempts='3' url_name='HW_5_3_problem' rerandomize='never' display_name='Homework: HW 5.3'>
 <b>Who's the easiest grader on campus?</b>
 <br/>
 In this problem you will be analyzing a dataset of student grades. Please import <a href="/static/handouts/grades_5-3.js">grades_5-3.js</a> into a database and collection of your choice. 
@@ -5895,7 +5895,7 @@ Below, choose the class_id with the highest average student average.
 </problem>
 </sequential>
 <sequential graded='true' display_name='HW 5.4' chapter_name='Week 5 - Aggregation' format='Homework' due='Dec 5 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_5_4_problem' rerandomize='never' display_name='Quiz: HW 5.4'>
+<problem showanswer='due' attempts='3' url_name='HW_5_4_problem' rerandomize='never' display_name='Homework: HW 5.4'>
 <b>Removing Rural Residents</b>
 In this problem you will calculate the number of people who live in a zip code in the US where the city starts with a digit. We will take that to mean they don't really live in a city.  Once again, you will be using the zip code collection you imported earlier.
 <br/><br/>
@@ -6310,7 +6310,7 @@ Thinking about the tradeoffs of shard key selection, select the true statements 
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 6.1' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_6_1_problem' rerandomize='never' display_name='Quiz: HW 6.1'>
+<problem showanswer='due' attempts='3' url_name='HW_6_1_problem' rerandomize='never' display_name='Homework: HW 6.1'>
 Which of the following statements are true about MongoDB replication.  Check all that apply.<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
 <choice correct='true'>
@@ -6333,7 +6333,7 @@ Which of the following statements are true about MongoDB replication.  Check all
 </problem>
 </sequential>
 <sequential graded='true' display_name='HW 6.2' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_6_2_problem' rerandomize='never' display_name='Quiz: HW 6.2'>
+<problem showanswer='due' attempts='3' url_name='HW_6_2_problem' rerandomize='never' display_name='Homework: HW 6.2'>
 Let's suppose you have a five member replica set and want to assure that writes are committed to the journal and are acknowledged by at least 3 nodes before you proceed forward. What would be the appropriate settings for w and j?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='false'><text>w=1, j=1</text></choice>
@@ -6346,7 +6346,7 @@ Let's suppose you have a five member replica set and want to assure that writes 
 </problem>
 </sequential>
 <sequential graded='true' display_name='HW 6.3' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_6_3_problem' rerandomize='never' display_name='Quiz: HW 6.3'>
+<problem showanswer='due' attempts='3' url_name='HW_6_3_problem' rerandomize='never' display_name='Homework: HW 6.3'>
 Which of the following statements are true about choosing and using a shard key: <choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
 <choice correct='false'>
@@ -6369,7 +6369,7 @@ Which of the following statements are true about choosing and using a shard key:
 </problem>
 </sequential>
 <sequential graded='true' display_name='HW 6.4' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_6_4_problem' rerandomize='never' display_name='Quiz: HW 6.4'>
+<problem showanswer='due' attempts='3' url_name='HW_6_4_problem' rerandomize='never' display_name='Homework: HW 6.4'>
 You have a sharded system with three shards and have sharded the collections "grades" in the "test" database across those shards. The output of sh.status() when connected to mongos looks like this:
 
 <pre>
@@ -6417,7 +6417,7 @@ Which shards would be involved in answering the query?<multiplechoiceresponse di
 </problem>
 </sequential>
 <sequential graded='true' display_name='HW 6.5' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_6_5_problem' rerandomize='never' display_name='Quiz: HW 6.5'>
+<problem showanswer='due' attempts='3' url_name='HW_6_5_problem' rerandomize='never' display_name='Homework: HW 6.5'>
 In this homework you will build a small replica set on your own computer.  We will check that it works with <i>validate.py</i>, which you should download in <a href="/static/handouts/week6-lessons.tar">week6-lessons.tar</a> or <a href="/static/handouts/week6-lessons.zip">week6-lessons.zip</a>. 
 <br/><br/>
 Create three directories for the three mongod processes. On unix, this could be done as follows:
@@ -6497,10 +6497,10 @@ if not(response == quiz_answer):
 </vertical>
 </sequential>
 </chapter>
-<chapter start='2012-12-25T00:00' display_name='Final Exam'>
+<chapter start='2012-10-25T00:00' display_name='Final Exam'>
 <sequential graded='true' display_name='Question 1' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Question_1_problem' rerandomize='never' display_name='Quiz: Question 1'>
-Please download the Enron email dataset from this link, untar or unzip it and then restore it using mongorestore. It should restore to a collection called "messages" in a database called "enron". Note that this is an abbreviated version of the full corpus. There should be 120,477 documents after restore.
+<problem showanswer='due' showsuccess='false' url_name='Question_1_problem' rerandomize='never' display_name='Final: Question 1'>
+Please download the Enron email dataset <a href="/static/handouts/enron.tar">enron.tar</a> or <a href="/static/handouts/enron.zip">enron.zip</a>, untar or unzip it and then restore it using mongorestore. It should restore to a collection called "messages" in a database called "enron". Note that this is an abbreviated version of the full corpus. There should be 120,477 documents after restore.
 <br/>
 <br/>
 Inspect a few of the documents to get a basic understanding of the structure. <a href="http://en.wikipedia.org/wiki/Enron">Enron</a> was an American corporation that engaged in a widespread accounting fraud and subsequently failed.
@@ -6527,7 +6527,7 @@ For reference, the number of email messages from Andrew Fastow to John Lavorato 
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 2' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Question_2_problem' rerandomize='never' display_name='Quiz: Question 2'>
+<problem showanswer='due' showsuccess='false' url_name='Question_2_problem' rerandomize='never' display_name='Final: Question 2'>
 Please use the Enron dataset you imported for the previous problem. For this question you will use the aggregation framework to figure out pairs of people that tend to communicate a lot. 
 <br/><br/>
 Turns out that the top channel is veronica.espinoza@enron.com to recipient@enron.com, with 2181 messages. But that is not very interesting, so your task is to figure out the second most popular pair of sender and recipient and indicate it below.
@@ -6545,12 +6545,12 @@ Turns out that the top channel is veronica.espinoza@enron.com to recipient@enron
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 3' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Question_3_problem' rerandomize='never' display_name='Quiz: Question 3'>
-In this problem you will update a document in Enron dataset to illustrate your mastery of the updating documents from the shell.
+<problem showanswer='due' showsuccess='false' url_name='Question_3_problem' rerandomize='never' display_name='Final: Question 3'>
+In this problem you will update a document in the Enron dataset to illustrate your mastery of updating documents from the shell.
 <br/><br/>
 Please add the email address "mrpotatohead@10gen.com" to the list of addresses in the headers.To array for the document with headers.Message-ID of "&lt;8147308.1075851042335.JavaMail.evans@thyme&gt;"
 <br/><br/>
-After you have completed that task, please run final3-validate.py to get the validation code and put it in the box below without any extra spaces. The validation script assumes that it is connecting to a simple mongo instance on the standard port on localhost.<customresponse>
+After you have completed that task, please run <a href="/static/handouts/final3-validate.py">final3-validate.py</a> to get the validation code and put it in the box below without any extra spaces. The validation script assumes that it is connecting to a simple mongo instance on the standard port on localhost.<customresponse>
 <textbox rows='4' cols='50' correct_answer="897h6723ghf25gd87gh28"> </textbox>
 <answer type='loncapa/python'><![CDATA[
 import re
@@ -6573,22 +6573,29 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 4' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Question_4_problem' rerandomize='never' display_name='Quiz: Question 4'>
+<vertical>
+<video display_name='Lecture' youtube='1.0:E7-wlLWkP00'/>
+</vertical>
+<problem showanswer='due' showsuccess='false' url_name='Question_4_problem' rerandomize='never' display_name='Final: Question 4'>
 <b>Enhancing the Blog to support viewers liking certain comments</b>
 <br/>
 In this problem, you will be enhancing the blog project to support users liking certain comments and the like counts showing up the in the permalink page. 
 <br/>
 <br/>
-Start by downloading the code and loading up the blog dataset from last week. The user interface has already been implemented for you. It's not fancy. The /post URL shows the like counts next to each comment and displays a Like button that you can click on. That Like button fetches the /like URL on the blog, makes the necessary changes to the database state, and then redirects the browser back to the permalink page. 
+Start by downloading the code in <a href="/static/handouts/final-problem4.tar">final-problem4.tar</a> or <a href="/static/handouts/final-problem4.zip">final-problem4.zip</a> and loading up the blog dataset from last week. The user interface has already been implemented for you. It's not fancy. The /post URL shows the like counts next to each comment and displays a Like button that you can click on. That Like button POSTS to the /like URL on the blog, makes the necessary changes to the database state (you are implementing this), and then redirects the browser back to the permalink page. 
 <br/><br/>
 This full round trip and redisplay of the entire web page is not how you would implement liking in a modern web app, but it makes it easier for us to reason about, so we will go with it.
 <br/><br/>
-Your job is to search the code for the string XXX work here and make the necessary changes. You can choose whatever schema you want, but you should note that the entry_template makes some assumptions about the how the like counter will be presented and if you go with a different convention than it assumes, you will need to make some adjustments. 
+Your job is to search the code for the string "XXX work here" and make the necessary changes. You can choose whatever schema you want, but you should note that the entry_template makes some assumptions about the how the like value will be encoded and if you go with a different convention than it assumes, you will need to make some adjustments. 
 <br/><br/>
-It is possible to solve this problem by putting NOTHING in one of the XXX spots and adding only a SINGLE LINE to the other spot to properly increment the like count.
+It is possible to solve this problem by putting NOTHING in one of the XXX spots and adding only a SINGLE LINE to the other spot to properly increment the like count. If you decide to use a different schema than the entry_template is expecting, then you will likely to work in both spots. The validation script does not look at the database. It looks at the blog.
 <br/>
 <br/>
-The validation script will fetch your blog, go to the first post's permalink page and attempt to increment the vote count. 
+The validation script, final4-validate.py,  will fetch your blog, go to the first post's permalink page and attempt to increment the vote count. You run it as follows:
+<pre>
+python final4_validate.py
+</pre>
+Remember that the blog needs to be running as well as Mongo. The validation script takes some options if you want to run outside of localhost. 
 <br/><br/>
 After you have gotten it working, enter the validation string below.<customresponse>
 <textbox rows='4' cols='50' correct_answer="89jlkfdsjflks34j0d"> </textbox>
@@ -6613,7 +6620,7 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 5' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Question_5_problem' rerandomize='never' display_name='Quiz: Question 5'>
+<problem showanswer='due' showsuccess='false' url_name='Question_5_problem' rerandomize='never' display_name='Final: Question 5'>
 Suppose your have a collection <i>fubar</i> with the following indexes created:
 <pre>
 [
@@ -6692,7 +6699,7 @@ Which of the following indexes could be used by MongoDB to assist in answering t
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 6' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Question_6_problem' rerandomize='never' display_name='Quiz: Question 6'>
+<problem showanswer='due' showsuccess='false' url_name='Question_6_problem' rerandomize='never' display_name='Final: Question 6'>
 Suppose you have a collection of students of the following form:
 
 <pre>
@@ -6738,10 +6745,10 @@ Now suppose that basic inserts into the collection, which only include the last 
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 7' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Question_7_problem' rerandomize='never' display_name='Quiz: Question 7'>
+<problem showanswer='due' showsuccess='false' url_name='Question_7_problem' rerandomize='never' display_name='Final: Question 7'>
 You have been tasked to cleanup a photosharing database. The database consists of two collections, albums, and images. Every image is supposed to be in an album, but there are orphan images that appear in no album.
 
- Here are some example documents:
+ Here are some example documents (not from the collections you will be downloading).
 <br/>
 <br/>
 <pre>
@@ -6776,22 +6783,22 @@ From the above, you can conclude that the image with _id = 99705 is in album 67.
 <br/><br/>
 Your task is to write a program to remove every image from the images collection that appears in no album. Or put another way, if an image does not appear in at least one album, it's an orphan and should be removed from the images collection.
 <br/><br/>
-Start by using mongoimport to import your albums.js and images.js collections.
+Start by using mongoimport to import your <a href="/static/handouts/albums.json">albums.json</a> and <a href="/static/handouts/images.json">images.json</a> collections. (Did you notice the links in the previous sentence?)
 <br/>
-When you are done removing the orphan images from the collection, there should be 90,038. To prove you did it correctly, what is the sum of the _id fields from the images collection (you can get this by writing an aggregation query).
+When you are done removing the orphan images from the collection, there should be 90,038 documents in the images collection. To prove you did it correctly, what is the sum of the _id fields from the images collection (you can get this by writing an aggregation query).
 <multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
-<choice location='bottom' correct='false'><text>5499664274</text></choice>
+<choice location='bottom' correct='false'><text>4499664274</text></choice>
 <choice location='bottom' correct='false'><text>4499664874</text></choice>
 <choice location='bottom' correct='false'><text>4427664274</text></choice>
-<choice location='bottom' correct='false'><text>6499619274</text></choice>
+<choice location='bottom' correct='false'><text>3499619274</text></choice>
 <choice location='bottom' correct='true'><text>4499664274</text></choice>
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
 </sequential>
-<sequential graded='false' display_name='Question 8' chapter_name='Final Exam' format='Quiz'>
-<problem showanswer='attempted' url_name='Question_8_problem' rerandomize='never' display_name='Quiz: Question 8'>
+<sequential graded='true' display_name='Question 8' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
+<problem showanswer='due' showsuccess='false' url_name='Question_8_problem' rerandomize='never' display_name='Final: Question 8'>
 Suppose you have a three node replica set. Node 1 is the primary. Node 2 is a secondary,  Node 3 is a secondary running with a delay of 10 seconds.  All writes to the database are issued with w=majority and j=1 (by which we mean that the getLastError call has those values set).
 
 <br/><br/>A write operation (could be insert or update) is initiated from your application at time=0. At time=5 seconds, the primary, Node 1, goes down for an hour and another node is elected primary.
@@ -6801,17 +6808,17 @@ Suppose you have a three node replica set. Node 1 is the primary. Node 2 is a se
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='false'><text>Yes, always</text></choice>
 <choice location='bottom' correct='false'><text>No, never</text></choice>
-<choice location='bottom' correct='false'><text>Maybe, it depends on whether Node 3 has processed the write..</text></choice>
+<choice location='bottom' correct='false'><text>Maybe, it depends on whether Node 3 has processed the write.</text></choice>
 <choice location='bottom' correct='true'><text>Maybe, it depends only on whether Node 2 has processed the write. </text></choice>
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 9' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Question_9_problem' rerandomize='never' display_name='Quiz: Question 9'>
+<problem showanswer='due' showsuccess='false' url_name='Question_9_problem' rerandomize='never' display_name='Final: Question 9'>
 Imagine an electronic medical record database designed to hold the medical records of every individual in the United States. Because each person has more than 16MB of medical history and records, it's not feasible to have a single document for every patient. Instead, there is a <i>patient</i> collection that contains basic information on each person and maps the person to a patient_id, and a <i>record</i> collection that contains one document for each test or procedure. One patient may have dozens or even hundreds of documents in the <i>record</i> collection. 
 <br/><br/>
-We need to decide on a shard key to shard the <i>record collection</i>. What's the best shard key for the <i>record</i> collection, provided that we are willing to run scatter gather operations to do research and run studies on various diseases and cohorts? That is, think mostly about the operational aspects of such a system.<multiplechoiceresponse direction='vertical'>
+We need to decide on a shard key to shard the <i>record</i> collection. What's the best shard key for the <i>record</i> collection, provided that we are willing to run scatter gather operations to do research and run studies on various diseases and cohorts? That is, think mostly about the operational aspects of such a system.<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='true'><text>patient_id</text></choice>
 <choice location='bottom' correct='false'><text>_id</text></choice>
@@ -6824,7 +6831,7 @@ We need to decide on a shard key to shard the <i>record collection</i>. What's t
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 10' chapter_name='Final Exam' format='Final' due='Dec 31 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Question_10_problem' rerandomize='never' display_name='Quiz: Question 10'>
+<problem showanswer='due' showsuccess='false' url_name='Question_10_problem' rerandomize='never' display_name='Final: Question 10'>
 <b>Understanding the output of explain</b>
 We perform the following query on the enron dataset:
 <pre>
@@ -6862,7 +6869,7 @@ and get the following explain output.
 }
 
 </pre>
-Check all the thing that are true about the way MongoDB handled this query.
+Check below all the statements that are true about the way MongoDB handled this query.
 <choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
 <choice correct='true'>
