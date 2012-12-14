@@ -6497,7 +6497,7 @@ if not(response == quiz_answer):
 </vertical>
 </sequential>
 </chapter>
-<chapter start='2012-10-25T00:00' hide_from_progress='true' display_name='Final Exam'>
+<chapter start='2012-10-25T00:00' display_name='Final Exam' hide_from_progress='true'>
 <sequential graded='true' display_name='Question 1' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
 <problem showanswer='due' showsuccess='false' url_name='Question_1_problem' rerandomize='never' display_name='Final: Question 1'>
 Please download the Enron email dataset <a href="/static/handouts/enron.tar">enron.tar</a> or <a href="/static/handouts/enron.zip">enron.zip</a>, untar or unzip it and then restore it using mongorestore. It should restore to a collection called "messages" in a database called "enron". Note that this is an abbreviated version of the full corpus. There should be 120,477 documents after restore.
@@ -6530,9 +6530,10 @@ For reference, the number of email messages from Andrew Fastow to John Lavorato 
 <problem showanswer='due' showsuccess='false' url_name='Question_2_problem' rerandomize='never' display_name='Final: Question 2'>
 Please use the Enron dataset you imported for the previous problem. For this question you will use the aggregation framework to figure out pairs of people that tend to communicate a lot. 
 <br/><br/>
-Turns out that the top channel is veronica.espinoza@enron.com to recipient@enron.com, with 2181 messages. But that is not very interesting, so your task is to figure out the second most popular pair of sender and recipient and indicate it below.
+Turns out that the top channel is veronica.espinoza@enron.com to recipients@enron.com, with 2181 messages. But that is not very interesting, so your task is to figure out the second most popular pair of sender and recipient and indicate it below.
 <br/><br/>
-<multiplechoiceresponse direction='vertical'>
+Update: a few people have pointed out that a recipient sometimes appears more than once in the To header of a message. For our purposes, you can double count when that occurs. I did not consider it when designing the problem.
+<br/><br/><multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='false'><text>susan.mara@enron.com to jeff.dasovich@enron.com</text></choice>
 <choice location='bottom' correct='true'><text>susan.mara@enron.com to richard.shapiro@enron.com</text></choice>
@@ -6548,7 +6549,7 @@ Turns out that the top channel is veronica.espinoza@enron.com to recipient@enron
 <problem showanswer='due' showsuccess='false' url_name='Question_3_problem' rerandomize='never' display_name='Final: Question 3'>
 In this problem you will update a document in the Enron dataset to illustrate your mastery of updating documents from the shell.
 <br/><br/>
-Please add the email address "mrpotatohead@10gen.com" to the list of addresses in the headers.To array for the document with headers.Message-ID of "&lt;8147308.1075851042335.JavaMail.evans@thyme&gt;"
+Please add the email address "mrpotatohead@10gen.com" to the list of addresses in the "headers.To" array for the document with "headers.Message-ID" of "&lt;8147308.1075851042335.JavaMail.evans@thyme&gt;"
 <br/><br/>
 After you have completed that task, please run <a href="/static/handouts/final3-validate.py">final3-validate.py</a> to get the validation code and put it in the box below without any extra spaces. The validation script assumes that it is connecting to a simple mongo instance on the standard port on localhost.<customresponse>
 <textbox rows='4' cols='50' correct_answer="897h6723ghf25gd87gh28"> </textbox>
@@ -6822,7 +6823,7 @@ We need to decide on a shard key to shard the <i>record</i> collection. What's t
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='true'><text>patient_id</text></choice>
 <choice location='bottom' correct='false'><text>_id</text></choice>
-<choice location='bottom' correct='false'><text>primary care physican</text></choice>
+<choice location='bottom' correct='false'><text>primary care physican (your principal doctor)</text></choice>
 <choice location='bottom' correct='false'><text>date and time when medical record was created</text></choice>
 <choice location='bottom' correct='false'><text>patient first name</text></choice>
 <choice location='bottom' correct='false'><text>patient last name</text></choice>
@@ -6882,7 +6883,7 @@ Check below all the statements that are true about the way MongoDB handled this 
 <startouttext/>The query returned 120,477 documents<endouttext/>
 </choice>
 <choice correct='true'>
-<startouttext/>The query performed a collection scan<endouttext/>
+<startouttext/>The query performed a full collection scan<endouttext/>
 </choice>
 </checkboxgroup>
 </choiceresponse>
