@@ -6497,9 +6497,9 @@ if not(response == quiz_answer):
 </vertical>
 </sequential>
 </chapter>
-<chapter start='2012-10-25T00:00' display_name='Final Exam' hide_from_progress='true'>
+<chapter start='2012-10-25T00:00' display_name='Final Exam' hide_answer_status_until_due='True'>
 <sequential graded='true' display_name='Question 1' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Question_1_problem' rerandomize='never' display_name='Final: Question 1'>
+<problem showanswer='due' url_name='Question_1_problem' rerandomize='never' display_name='Final: Question 1'>
 Please download the Enron email dataset <a href="/static/handouts/enron.tar">enron.tar</a> or <a href="/static/handouts/enron.zip">enron.zip</a>, untar or unzip it and then restore it using mongorestore. It should restore to a collection called "messages" in a database called "enron". Note that this is an abbreviated version of the full corpus. There should be 120,477 documents after restore.
 <br/>
 <br/>
@@ -6527,7 +6527,7 @@ For reference, the number of email messages from Andrew Fastow to John Lavorato 
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 2' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Question_2_problem' rerandomize='never' display_name='Final: Question 2'>
+<problem showanswer='due' url_name='Question_2_problem' rerandomize='never' display_name='Final: Question 2'>
 Please use the Enron dataset you imported for the previous problem. For this question you will use the aggregation framework to figure out pairs of people that tend to communicate a lot. 
 <br/><br/>
 Turns out that the top channel is veronica.espinoza@enron.com to recipients@enron.com, with 2181 messages. But that is not very interesting, so your task is to figure out the second most popular pair of sender and recipient and indicate it below.
@@ -6546,7 +6546,7 @@ Update: a few people have pointed out that a recipient sometimes appears more th
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 3' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Question_3_problem' rerandomize='never' display_name='Final: Question 3'>
+<problem showanswer='due' url_name='Question_3_problem' rerandomize='never' display_name='Final: Question 3'>
 In this problem you will update a document in the Enron dataset to illustrate your mastery of updating documents from the shell.
 <br/><br/>
 Please add the email address "mrpotatohead@10gen.com" to the list of addresses in the "headers.To" array for the document with "headers.Message-ID" of "&lt;8147308.1075851042335.JavaMail.evans@thyme&gt;"
@@ -6577,7 +6577,7 @@ if not(response == quiz_answer):
 <vertical>
 <video display_name='Lecture' youtube='1.0:E7-wlLWkP00'/>
 </vertical>
-<problem showanswer='due' showsuccess='false' url_name='Question_4_problem' rerandomize='never' display_name='Final: Question 4'>
+<problem showanswer='due' url_name='Question_4_problem' rerandomize='never' display_name='Final: Question 4'>
 <b>Enhancing the Blog to support viewers liking certain comments</b>
 <br/>
 In this problem, you will be enhancing the blog project to support users liking certain comments and the like counts showing up the in the permalink page. 
@@ -6621,7 +6621,7 @@ if not(response == quiz_answer):
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 5' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Question_5_problem' rerandomize='never' display_name='Final: Question 5'>
+<problem showanswer='due' url_name='Question_5_problem' rerandomize='never' display_name='Final: Question 5'>
 Suppose your have a collection <i>fubar</i> with the following indexes created:
 <pre>
 [
@@ -6700,7 +6700,7 @@ Which of the following indexes could be used by MongoDB to assist in answering t
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 6' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Question_6_problem' rerandomize='never' display_name='Final: Question 6'>
+<problem showanswer='due' url_name='Question_6_problem' rerandomize='never' display_name='Final: Question 6'>
 Suppose you have a collection of students of the following form:
 
 <pre>
@@ -6746,7 +6746,7 @@ Now suppose that basic inserts into the collection, which only include the last 
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 7' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Question_7_problem' rerandomize='never' display_name='Final: Question 7'>
+<problem showanswer='due' url_name='Question_7_problem' rerandomize='never' display_name='Final: Question 7'>
 You have been tasked to cleanup a photosharing database. The database consists of two collections, albums, and images. Every image is supposed to be in an album, but there are orphan images that appear in no album.
 
  Here are some example documents (not from the collections you will be downloading).
@@ -6799,7 +6799,7 @@ When you are done removing the orphan images from the collection, there should b
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 8' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Question_8_problem' rerandomize='never' display_name='Final: Question 8'>
+<problem showanswer='due' url_name='Question_8_problem' rerandomize='never' display_name='Final: Question 8'>
 Suppose you have a three node replica set. Node 1 is the primary. Node 2 is a secondary,  Node 3 is a secondary running with a delay of 10 seconds.  All writes to the database are issued with w=majority and j=1 (by which we mean that the getLastError call has those values set).
 
 <br/><br/>A write operation (could be insert or update) is initiated from your application at time=0. At time=5 seconds, the primary, Node 1, goes down for an hour and another node is elected primary.
@@ -6816,7 +6816,7 @@ Suppose you have a three node replica set. Node 1 is the primary. Node 2 is a se
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 9' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Question_9_problem' rerandomize='never' display_name='Final: Question 9'>
+<problem showanswer='due' url_name='Question_9_problem' rerandomize='never' display_name='Final: Question 9'>
 Imagine an electronic medical record database designed to hold the medical records of every individual in the United States. Because each person has more than 16MB of medical history and records, it's not feasible to have a single document for every patient. Instead, there is a <i>patient</i> collection that contains basic information on each person and maps the person to a patient_id, and a <i>record</i> collection that contains one document for each test or procedure. One patient may have dozens or even hundreds of documents in the <i>record</i> collection. 
 <br/><br/>
 We need to decide on a shard key to shard the <i>record</i> collection. What's the best shard key for the <i>record</i> collection, provided that we are willing to run scatter gather operations to do research and run studies on various diseases and cohorts? That is, think mostly about the operational aspects of such a system.<multiplechoiceresponse direction='vertical'>
@@ -6832,7 +6832,7 @@ We need to decide on a shard key to shard the <i>record</i> collection. What's t
 </problem>
 </sequential>
 <sequential graded='true' display_name='Question 10' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' showsuccess='false' url_name='Question_10_problem' rerandomize='never' display_name='Final: Question 10'>
+<problem showanswer='due' url_name='Question_10_problem' rerandomize='never' display_name='Final: Question 10'>
 <b>Understanding the output of explain</b>
 We perform the following query on the enron dataset:
 <pre>
