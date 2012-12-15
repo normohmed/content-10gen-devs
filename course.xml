@@ -4475,7 +4475,7 @@ Now query the profile data, looking for all queries to the <i>students</i> colle
 </problem>
 </sequential>
 </chapter>
-<chapter start='2012-11-26T00:00' display_name='Week 5 - Aggregation'>
+<chapter start='2012-11-26T00:00' display_name='Week 5 - Aggregation' hide_answer_status_until_due='False'>
 <sequential graded='false' display_name='Introduction to Aggregation' chapter_name='Week 5 - Aggregation'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:EaEIHm3CMQM'/>
@@ -5804,6 +5804,9 @@ Ok, please choose your answer below for the most prolific comment author:
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:9wkTlkRZ8Z0'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 5.2' chapter_name='Week 5 - Aggregation' format='Homework' due='Dec 5 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='HW_5_2_problem' rerandomize='never' display_name='Homework: HW 5.2'>
@@ -5830,6 +5833,9 @@ Hint: The answer for CT and NJ is 49749.
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:VTSFb8m4vrs'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 5.3' chapter_name='Week 5 - Aggregation' format='Homework' due='Dec 5 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='HW_5_3_problem' rerandomize='never' display_name='Homework: HW 5.3'>
@@ -5893,6 +5899,9 @@ Below, choose the class_id with the highest average student average.
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:wqfqAzhOie8'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 5.4' chapter_name='Week 5 - Aggregation' format='Homework' due='Dec 5 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='HW_5_4_problem' rerandomize='never' display_name='Homework: HW 5.4'>
@@ -5922,9 +5931,12 @@ Using the aggregation framework, calculate the sum total of people who are livin
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:UpwIQjRO2vw'/>
+</vertical>
 </sequential>
 </chapter>
-<chapter start='2012-12-03T00:00' display_name='Week 6 - Application Engineering'>
+<chapter start='2012-12-03T00:00' display_name='Week 6 - Application Engineering' hide_answer_status_until_due='False'>
 <sequential graded='false' display_name='Introduction' chapter_name='Week 6 - Application Engineering'>
 <vertical>
 <video display_name='Lecture' youtube='1.0:3zcbhNHebAc'/>
@@ -6331,6 +6343,9 @@ Which of the following statements are true about MongoDB replication.  Check all
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:J4ZuF8UJD9s'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 6.2' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='HW_6_2_problem' rerandomize='never' display_name='Homework: HW 6.2'>
@@ -6344,6 +6359,9 @@ Let's suppose you have a five member replica set and want to assure that writes 
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:8K-6JPrvkEs'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 6.3' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='HW_6_3_problem' rerandomize='never' display_name='Homework: HW 6.3'>
@@ -6367,6 +6385,9 @@ Which of the following statements are true about choosing and using a shard key:
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:496QtQt4tX8'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 6.4' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='HW_6_4_problem' rerandomize='never' display_name='Homework: HW 6.4'>
@@ -6415,6 +6436,9 @@ Which shards would be involved in answering the query?<multiplechoiceresponse di
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:uEemjO9S7vQ'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='HW 6.5' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
 <problem showanswer='due' attempts='3' url_name='HW_6_5_problem' rerandomize='never' display_name='Homework: HW 6.5'>
@@ -6478,6 +6502,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:C0ZLyPfymR8'/>
+</vertical>
 </sequential>
 </chapter>
 <chapter start='2012-10-25T00:00' display_name='Week 7 - Case Studies'>
