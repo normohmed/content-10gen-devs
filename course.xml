@@ -6552,6 +6552,9 @@ For reference, the number of email messages from Andrew Fastow to John Lavorato 
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:Kv80ih9thK4'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Question 2' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
 <problem showanswer='due' url_name='Question_2_problem' rerandomize='never' display_name='Final: Question 2'>
@@ -6571,6 +6574,9 @@ Update: a few people have pointed out that a recipient sometimes appears more th
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:--s_vAlL_nU'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Question 3' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
 <problem showanswer='due' url_name='Question_3_problem' rerandomize='never' display_name='Final: Question 3'>
@@ -6599,6 +6605,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:tg-I-VuNWjk'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Question 4' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
 <vertical>
@@ -6646,6 +6655,9 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:VvKCUuqKdpg'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Question 5' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
 <problem showanswer='due' url_name='Question_5_problem' rerandomize='never' display_name='Final: Question 5'>
@@ -6725,6 +6737,9 @@ Which of the following indexes could be used by MongoDB to assist in answering t
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:tHMJa11iekg'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Question 6' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
 <problem showanswer='due' url_name='Question_6_problem' rerandomize='never' display_name='Final: Question 6'>
@@ -6771,6 +6786,9 @@ Now suppose that basic inserts into the collection, which only include the last 
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:7mZFnrA_ya8'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Question 7' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
 <problem showanswer='due' url_name='Question_7_problem' rerandomize='never' display_name='Final: Question 7'>
@@ -6824,6 +6842,9 @@ When you are done removing the orphan images from the collection, there should b
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:2CM3AQQT0n0'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Question 8' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
 <problem showanswer='due' url_name='Question_8_problem' rerandomize='never' display_name='Final: Question 8'>
@@ -6841,6 +6862,9 @@ Suppose you have a three node replica set. Node 1 is the primary. Node 2 is a se
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:vU8N7m1jHHw'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Question 9' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
 <problem showanswer='due' url_name='Question_9_problem' rerandomize='never' display_name='Final: Question 9'>
@@ -6857,6 +6881,9 @@ We need to decide on a shard key to shard the <i>record</i> collection. What's t
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:cqUxuNbGGGc'/>
+</vertical>
 </sequential>
 <sequential graded='true' display_name='Question 10' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
 <problem showanswer='due' url_name='Question_10_problem' rerandomize='never' display_name='Final: Question 10'>
@@ -6915,6 +6942,9 @@ Check below all the statements that are true about the way MongoDB handled this 
 </checkboxgroup>
 </choiceresponse>
 </problem>
+<vertical>
+<video display_name='Answer' youtube='1.0:MRf_YhKcEDA'/>
+</vertical>
 </sequential>
 </chapter>
 </course>
