@@ -22,7 +22,7 @@ What counts toward your final grade in the class?<choiceresponse direction='vert
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:xVfrAfEyfb0'/>
 </vertical>
 </sequential>
@@ -48,7 +48,7 @@ Which of the following statements are true about MongoDB?<choiceresponse directi
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:h80NwJJZM-g'/>
 </vertical>
 </sequential>
@@ -74,7 +74,7 @@ Which features did MongoDB omit in order to retain scalability?<choiceresponse d
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:IAvnMgvHuLw'/>
 </vertical>
 </sequential>
@@ -106,7 +106,7 @@ Which of the following expressions are valid JSON documents?
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:YQTqdLe3W4M'/>
 </vertical>
 </sequential>
@@ -132,7 +132,7 @@ Which of the following are valid JSON documents?<choiceresponse direction='verti
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:uWcOsdV4Iz4'/>
 </vertical>
 </sequential>
@@ -223,7 +223,7 @@ if not(response_json == quiz_answer_json):
 ]]></answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:ciuq7XPqHKI'/>
 </vertical>
 </sequential>
@@ -260,7 +260,7 @@ if not(response_json == quiz_answer_json):
 ]]></answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:NGp_y6BaEMw'/>
 </vertical>
 </sequential>
@@ -324,7 +324,7 @@ In order to display a blog post with its comments and tags, how many tables will
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:vB-4AbbLKeg'/>
 </vertical>
 </sequential>
@@ -342,7 +342,7 @@ Given the document schema that we proposed for the blog, how many collections wo
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:WJblHPsp1p4'/>
 </vertical>
 </sequential>
@@ -368,7 +368,7 @@ In which scenario is it impossible to embed data within a document (you must put
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:wiwOEG_6ojs'/>
 </vertical>
 </sequential>
@@ -400,7 +400,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:PuyAdxxzSk0'/>
 </vertical>
 </sequential>
@@ -432,7 +432,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:8WdnrhlfSLE'/>
 </vertical>
 </sequential>
@@ -466,7 +466,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:ZSraFzkEDzs'/>
 </vertical>
 </sequential>
@@ -499,7 +499,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:vE498xAFoGc'/>
 </vertical>
 </sequential>
@@ -534,7 +534,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:LdA0__D4zLI'/>
 </vertical>
 </sequential>
@@ -568,7 +568,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:edEYrBoa7Ao'/>
 </vertical>
 </sequential>
@@ -600,7 +600,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:Gqb-OUFcQas'/>
 </vertical>
 </sequential>
@@ -638,7 +638,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:ohA78_D5Rn8'/>
 </vertical>
 </sequential>
@@ -675,7 +675,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:OnkPdMP1fVc'/>
 </vertical>
 </sequential>
@@ -716,7 +716,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:Y6NKd6xUC6M'/>
 </vertical>
 </sequential>
@@ -769,7 +769,7 @@ if not(response == quiz_answer):
 <vertical>
 <video display_name='Lecture' youtube='1.0:r48N7GcDqVI'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='Homework_1_1_problem' rerandomize='never' display_name='Homework: Homework 1.1'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='Homework_1_1_problem' rerandomize='never' display_name='Homework: Homework 1.1'>
 Install MongoDB on your computer and run it on the standard port.
 
 <p>
@@ -811,12 +811,12 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:memPfvehjGo'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 1.2' chapter_name='Week 1 - Introduction' format='Homework' due='Oct 30 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_1_2_problem' rerandomize='never' display_name='Homework: Homework 1.2'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='Homework_1_2_problem' rerandomize='never' display_name='Homework: Homework 1.2'>
 Get Pymongo installed on your computer. To prove its installed, run the program:
 
 <pre>
@@ -844,12 +844,12 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:ZeF4fdLDoMY'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 1.3' chapter_name='Week 1 - Introduction' format='Homework' due='Oct 30 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_1_3_problem' rerandomize='never' display_name='Homework: Homework 1.3'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='Homework_1_3_problem' rerandomize='never' display_name='Homework: Homework 1.3'>
 We are now going to test that you have bottle installed correctly and can run a bottle-based project. Run the hw1-3.py download as follows:
 <pre>
 python hw1-3.py
@@ -878,7 +878,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Oct 30 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:cmSs92zp4aA'/>
 </vertical>
 </sequential>
@@ -909,7 +909,7 @@ By the end of this week, you'll know which of the following?<choiceresponse dire
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:osal1NuP4UA'/>
 </vertical>
 </sequential>
@@ -947,7 +947,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:a6TFwpCoLoY'/>
 </vertical>
 </sequential>
@@ -979,7 +979,7 @@ Which of the following are types available in BSON?<choiceresponse direction='ve
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:4hsTQrMs-xY'/>
 </vertical>
 </sequential>
@@ -1075,7 +1075,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:4eqpL7ETQZQ'/>
 </vertical>
 </sequential>
@@ -1171,7 +1171,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:uN_wf5a3BE4'/>
 </vertical>
 </sequential>
@@ -1272,7 +1272,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:ouHFZgtEAuU'/>
 </vertical>
 </sequential>
@@ -1291,7 +1291,7 @@ Which of these finds documents with a score between 50 and 60, inclusive?<multip
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:tY7I1l8JdDI'/>
 </vertical>
 </sequential>
@@ -1317,7 +1317,7 @@ Which of the following will find all users with <em>name</em> between "F" and "Q
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:ZRWT0lcHsoU'/>
 </vertical>
 </sequential>
@@ -1413,7 +1413,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:yMi7PwOoqXY'/>
 </vertical>
 </sequential>
@@ -1509,7 +1509,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:diimYkvr374'/>
 </vertical>
 </sequential>
@@ -1540,7 +1540,7 @@ What will the following query do?
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:oIkSajy8NLw'/>
 </vertical>
 </sequential>
@@ -1568,7 +1568,7 @@ Which of the following documents would be returned by this query?
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:gwECaa4N9Xc'/>
 </vertical>
 </sequential>
@@ -1588,7 +1588,7 @@ Which of the following documents matches this query?
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:O8YQRq4vXig'/>
 </vertical>
 </sequential>
@@ -1694,7 +1694,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:yiEjK_V008s'/>
 </vertical>
 </sequential>
@@ -1801,7 +1801,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:djzpK7UIO94'/>
 </vertical>
 </sequential>
@@ -1897,7 +1897,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:Uozp0diXOc8'/>
 </vertical>
 </sequential>
@@ -1925,7 +1925,7 @@ What would be the state of the collection after the update?<multiplechoicerespon
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:pwnRUdtI8lY'/>
 </vertical>
 </sequential>
@@ -2025,7 +2025,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:F6ZY_VVAXZ8'/>
 </vertical>
 </sequential>
@@ -2124,7 +2124,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:edqDAKMQTv4'/>
 </vertical>
 </sequential>
@@ -2233,7 +2233,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:bGbiIGEM0FY'/>
 </vertical>
 </sequential>
@@ -2263,7 +2263,7 @@ What could be the state of the collection.<choiceresponse direction='vertical'>
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:Loo5XKQAryM'/>
 </vertical>
 </sequential>
@@ -2370,7 +2370,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:B1DqIls06Tc'/>
 </vertical>
 </sequential>
@@ -2477,7 +2477,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:T3wcuZHm6Ac'/>
 </vertical>
 </sequential>
@@ -2536,7 +2536,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:d-EOPb3_YVI'/>
 </vertical>
 </sequential>
@@ -2554,7 +2554,7 @@ Which of the following could work using pymongo, depending on variable names, to
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:vMNLxyQ47BM'/>
 </vertical>
 </sequential>
@@ -2603,7 +2603,7 @@ find()
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:2kzdSZmJ8jM'/>
 </vertical>
 </sequential>
@@ -2669,7 +2669,7 @@ find()
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:5mpm64vncL0'/>
 </vertical>
 </sequential>
@@ -2698,7 +2698,7 @@ which document would be returned?<multiplechoiceresponse direction='vertical'>
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:cUNoJN6Ii-I'/>
 </vertical>
 </sequential>
@@ -2739,7 +2739,7 @@ except:
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:pEMyrKDzgFg'/>
 </vertical>
 </sequential>
@@ -2802,7 +2802,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:Cyk5uzO-65w'/>
 </vertical>
 </sequential>
@@ -2832,7 +2832,7 @@ Which of the following python statements work. Check all that apply.<choicerespo
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:tMEohyZX0cI'/>
 </vertical>
 </sequential>
@@ -2857,7 +2857,7 @@ Which of the following python statements work. Check all that apply.<choicerespo
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 2.1' chapter_name='Week 2 - CRUD' format='Homework' due='Nov 9 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_2_1_problem' rerandomize='never' display_name='Homework: Homework 2.1'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='Homework_2_1_problem' rerandomize='never' display_name='Homework: Homework 2.1'>
 In this problem, you will be using a collection of student scores that is similar to what we used in the lessons. Please download the <a href="/static/handouts/grades.js">grades.js</a> file and import it into your local mongo database as follows:
 <pre>
 mongoimport -d students -c grades &lt; grades.js
@@ -2896,12 +2896,12 @@ Now it’s your turn to analyze the data set. Find all exam scores greater than 
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:RUy50I3mrnU'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 2.2' chapter_name='Week 2 - CRUD' format='Homework' due='Nov 9 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_2_2_problem' rerandomize='never' display_name='Homework: Homework 2.2'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='Homework_2_2_problem' rerandomize='never' display_name='Homework: Homework 2.2'>
 <p>
 Write a program in the language of your choice that will remove the grade of type "homework" with the lowest score for each student from the <a href="/static/handouts/grades.js">dataset</a> that you imported in HW 2.1.  Since each document is one grade, it should remove one document per student.
 </p>
@@ -2963,12 +2963,12 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:xS0njlIkClY'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Homework 2.3' chapter_name='Week 2 - CRUD' format='Homework' due='Nov 9 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='Homework_2_3_problem' rerandomize='never' display_name='Homework: Homework 2.3'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='Homework_2_3_problem' rerandomize='never' display_name='Homework: Homework 2.3'>
 <em>Blog User Sign-up and Login</em>
 <p>
 Download <a href="/static/handouts/hw2.3.zip">hw2.3.zip</a> or <a href="/static/handouts/hw2.3.tar">hw2.3.tar</a> and unpack.
@@ -3073,7 +3073,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 9 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:94YWxpX3w-c'/>
 </vertical>
 </sequential>
@@ -3093,7 +3093,7 @@ What's the single most important factor in designing your application schema wit
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 19 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:OVDnLJXpqNE'/>
 </vertical>
 </sequential>
@@ -3116,7 +3116,7 @@ Which data access pattern is not well supported by the blog schema?<multiplechoi
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 19 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:s5E0T4caqj4'/>
 </vertical>
 </sequential>
@@ -3139,7 +3139,7 @@ What does Living Without Constraints refer to?<multiplechoiceresponse direction=
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 19 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:3VckBMGInic'/>
 </vertical>
 </sequential>
@@ -3165,7 +3165,7 @@ Which of the following operations operate atomically within a single document? C
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 19 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:189zABW3HHk'/>
 </vertical>
 </sequential>
@@ -3191,7 +3191,7 @@ What's a good reason you might want to keep two documents that are related to ea
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 19 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:BjW64RkzlGg'/>
 </vertical>
 </sequential>
@@ -3209,7 +3209,7 @@ When is it recommended to represent a one to many relationship in multiple colle
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 19 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:KQcspnr-Y2M'/>
 </vertical>
 </sequential>
@@ -3251,7 +3251,7 @@ Which query will find all descendants of  the snorkeling category?<multiplechoic
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 19 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:80P6yVSkKQY'/>
 </vertical>
 </sequential>
@@ -3269,7 +3269,7 @@ Which query will find all descendants of  the snorkeling category?<multiplechoic
 <vertical>
 <video display_name='Lecture' youtube='1.0:lpSMbphEl7c'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='HW_3_1_problem' rerandomize='never' display_name='Homework: HW 3.1'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_3_1_problem' rerandomize='never' display_name='Homework: HW 3.1'>
 Download the <a href="/static/handouts/students.js">students.js</a> file to your computer and import it into your local Mongo instance with this command:
 <pre>
 $ mongoimport -d school -c students &lt; students.js
@@ -3343,7 +3343,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 19 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:iODR0m6m25c'/>
 </vertical>
 </sequential>
@@ -3351,7 +3351,7 @@ if not(response == quiz_answer):
 <vertical>
 <video display_name='Lecture' youtube='1.0:SEh6Y4lHkWQ'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='HW_3_2_problem' rerandomize='never' display_name='Homework: HW 3.2'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_3_2_problem' rerandomize='never' display_name='Homework: HW 3.2'>
 <b>Making your blog accept posts</b>
 <p>In this homework you will be enhancing the blog project to insert entries into the posts collection. After this, the blog will work. It will allow you to add blog posts with a title, body and tags and have it be added to the posts collection properly.
 </p><p>We have provided the code that creates users and allows you to login (the assignment from last week). To get started, please download <a href="/static/handouts/hw3-blog.tar">hw3-blog.tar</a> or <a href="/static/handouts/hw3-blog.zip">hw3-blog.zip</a> and unpack. You will be using these file for this homework and the HW 3.3.
@@ -3406,7 +3406,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 19 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:ENSoJLkZnkY'/>
 </vertical>
 </sequential>
@@ -3414,7 +3414,7 @@ if not(response == quiz_answer):
 <vertical>
 <video display_name='Lecture' youtube='1.0:HPSgVT2BEYQ'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='HW_3_3_problem' rerandomize='never' display_name='Homework: HW 3.3'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_3_3_problem' rerandomize='never' display_name='Homework: HW 3.3'>
 <b>Making your blog accept comments</b>
 <p>
 In this homework  you will add code to your blog so that it accepts comments. You will be using the same code as you downloaded for HW 3.2.
@@ -3485,7 +3485,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 19 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:po_TAFU4_3k'/>
 </vertical>
 </sequential>
@@ -3514,7 +3514,7 @@ Which optimization will typically have the greatest impact on the performance of
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:5Z6V8mJ8eS4'/>
 </vertical>
 </sequential>
@@ -3610,7 +3610,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:h1VdrcOjFm8'/>
 </vertical>
 </sequential>
@@ -3645,7 +3645,7 @@ Which of the following inserts are valid to this collection?<choiceresponse dire
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:CeE6hZ90Uzk'/>
 </vertical>
 </sequential>
@@ -3746,7 +3746,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:cCO7b-fcj0I'/>
 </vertical>
 </sequential>
@@ -3764,7 +3764,7 @@ If you choose the dropDups option when creating a unique index, what will the Mo
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:s46y1rJAvVs'/>
 </vertical>
 </sequential>
@@ -3798,7 +3798,7 @@ db.people.find({title:null})
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:_MJYRlianas'/>
 </vertical>
 </sequential>
@@ -3824,7 +3824,7 @@ Which things are true about creating an index in the background in MongoDB. Chec
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:aNSHjG_LnSc'/>
 </vertical>
 </sequential>
@@ -3867,7 +3867,7 @@ Given the following output from explain, what is the best description of what ha
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:Gpj_s49H_rQ'/>
 </vertical>
 </sequential>
@@ -3897,7 +3897,7 @@ Which of the following queries will use the index?<choiceresponse direction='ver
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:imHqsvqx-GA'/>
 </vertical>
 </sequential>
@@ -3913,7 +3913,7 @@ Is it more important that your index or your data fit into memory?<multiplechoic
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:mXHUIghDkFw'/>
 </vertical>
 </sequential>
@@ -3943,7 +3943,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:4UW_oMSswTo'/>
 </vertical>
 </sequential>
@@ -3961,7 +3961,7 @@ Given the following attributes of automobiles: color, weight, manufacturer, odom
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:BT95omWR2nw'/>
 </vertical>
 </sequential>
@@ -4010,7 +4010,7 @@ Which query below will return the most documents.<multiplechoiceresponse directi
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:WHc_qRSxGM0'/>
 </vertical>
 </sequential>
@@ -4117,7 +4117,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:hVLa0H7Oe98'/>
 </vertical>
 </sequential>
@@ -4223,7 +4223,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:A4x4kE02pSc'/>
 </vertical>
 </sequential>
@@ -4246,7 +4246,7 @@ except demjson.JSONDecodeError as err:
 <vertical>
 <video display_name='Lecture' youtube='1.0:0tpXSPgYk4I'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='HW_4_1_problem' rerandomize='never' display_name='Homework: HW 4.1'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_4_1_problem' rerandomize='never' display_name='Homework: HW 4.1'>
 Suppose you have a collection with the following indexes:
 <pre>
 > db.products.getIndexes()
@@ -4320,7 +4320,7 @@ Which of the following queries can utilize an index. Check all that apply.<choic
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:ecMrwMMBqIg'/>
 </vertical>
 </sequential>
@@ -4328,7 +4328,7 @@ Which of the following queries can utilize an index. Check all that apply.<choic
 <vertical>
 <video display_name='Lecture' youtube='1.0:Zz8TerE95Ss'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='HW_4_2_problem' rerandomize='never' display_name='Homework: HW 4.2'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_4_2_problem' rerandomize='never' display_name='Homework: HW 4.2'>
 Suppose you have a collection called <i>tweets</i> whose documents contain information about the <i>created_at</i> time of the tweet and the user's <i>followers_count</i> at the time they issued the tweet. What can you infer from the following <i>explain</i> output?
 
 <pre>
@@ -4383,7 +4383,7 @@ db.tweets.find({"user.followers_count":{$gt:1000}}).sort({"created_at" : 1 }).li
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:LrsbQkNztMY'/>
 </vertical>
 </sequential>
@@ -4391,7 +4391,7 @@ db.tweets.find({"user.followers_count":{$gt:1000}}).sort({"created_at" : 1 }).li
 <vertical>
 <video display_name='Lecture' youtube='1.0:K-oXNC7voR8'/>
 </vertical>
-<problem showanswer='due' attempts='3' url_name='HW_4_3_problem' rerandomize='never' display_name='Homework: HW 4.3'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_4_3_problem' rerandomize='never' display_name='Homework: HW 4.3'>
 <b>Making the Blog fast</b>
 <p>Please download <a href="/static/handouts/hw4-3.tar">hw4-3.tar</a> (mac) or <a href="/static/handouts/hw4-3.zip">hw4-3.zip</a> (pc) to get started. This assignment requires Mongo 2.2 or above. </p>
 
@@ -4450,12 +4450,12 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Nov 26 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:pDtSL7gbQa4'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 4.4' chapter_name='Week 4 - Performance' format='Homework' due='Nov 26 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_4_4_problem' rerandomize='never' display_name='Homework: HW 4.4'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_4_4_problem' rerandomize='never' display_name='Homework: HW 4.4'>
 In this problem you will analyze a profile log taken from a mongoDB instance. To start, please download <a href="/static/handouts/sysprofile.json"> sysprofile.json</a> and import it with the following command:
 
 <pre>
@@ -4590,7 +4590,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:Nt0cQI86G40'/>
 </vertical>
 </sequential>
@@ -4628,7 +4628,7 @@ Which of the following are stages in the aggregation pipeline. Check all that ap
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:mcnGfI69rRc'/>
 </vertical>
 </sequential>
@@ -4666,7 +4666,7 @@ How many documents will be in the result set from aggregate?
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:nr1E1qTyIHU'/>
 </vertical>
 </sequential>
@@ -4708,7 +4708,7 @@ How many documents will be in the result set?
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:bIlwnlYBRA0'/>
 </vertical>
 </sequential>
@@ -4751,7 +4751,7 @@ Which of the following aggregation expressions must be used in conjunction with 
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:kJ0k2na4ukU'/>
 </vertical>
 </sequential>
@@ -4868,7 +4868,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:ATO_s_Ah08o'/>
 </vertical>
 </sequential>
@@ -4979,7 +4979,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:tT6Jx8s9dTc'/>
 </vertical>
 </sequential>
@@ -5098,7 +5098,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:zGcTxUQuLGE'/>
 </vertical>
 </sequential>
@@ -5135,7 +5135,7 @@ db.zips.aggregate([{"$group":{"_id":"$city", "postal_codes":{"$addToSet":"$_id"}
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:hFqDvVXtm6E'/>
 </vertical>
 </sequential>
@@ -5243,7 +5243,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:sHCdOiCispA'/>
 </vertical>
 </sequential>
@@ -5279,7 +5279,7 @@ What values are returned?
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:J-asAAEHJ0Q'/>
 </vertical>
 </sequential>
@@ -5403,7 +5403,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:IGN0lXg-kJ0'/>
 </vertical>
 </sequential>
@@ -5502,7 +5502,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:CHGiumXE-pU'/>
 </vertical>
 </sequential>
@@ -5612,7 +5612,7 @@ except demjson.JSONDecodeError as err:
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:-cghyd6AHHA'/>
 </vertical>
 </sequential>
@@ -5663,7 +5663,7 @@ How many documents do you think will be in the result set?
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:joRw-fqCIWA'/>
 </vertical>
 </sequential>
@@ -5701,7 +5701,7 @@ db.fun.aggregate([
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:WBWb0ssDVeY'/>
 </vertical>
 </sequential>
@@ -5725,7 +5725,7 @@ And you unwind the "likes" array of each document. How many documents will you w
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:Xfl3m7wz8ts'/>
 </vertical>
 </sequential>
@@ -5743,7 +5743,7 @@ Which grouping operator will enable to you to reverse the effects of an unwind?<
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:jAWL-BJD0tI'/>
 </vertical>
 </sequential>
@@ -5759,7 +5759,7 @@ Can you reverse the effects of a double unwind (2 unwinds in a row) in our inven
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:pziFq1oVRI4'/>
 </vertical>
 </sequential>
@@ -5779,7 +5779,7 @@ Can you reverse the effects of a double unwind (2 unwinds in a row) in our inven
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 5.1' chapter_name='Week 5 - Aggregation' format='Homework' due='Dec 5 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_5_1_problem' rerandomize='never' display_name='Homework: HW 5.1'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_5_1_problem' rerandomize='never' display_name='Homework: HW 5.1'>
 <b>Finding the most frequent author of comments on your blog</b><br/>
 In this assignment you will use the aggregation framework to find the most frequent author of comments on your blog. We will be using the same dataset as last week.
 <br/><br/>
@@ -5804,12 +5804,12 @@ Ok, please choose your answer below for the most prolific comment author:
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:9wkTlkRZ8Z0'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 5.2' chapter_name='Week 5 - Aggregation' format='Homework' due='Dec 5 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_5_2_problem' rerandomize='never' display_name='Homework: HW 5.2'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_5_2_problem' rerandomize='never' display_name='Homework: HW 5.2'>
 <b>Crunching the Zipcode dataset</b><br/>
 Please download the <a href="http://media.mongodb.org/zips.json">zips.json</a> dataset and import it into a collection of your choice. 
 <br/>
@@ -5833,12 +5833,12 @@ Hint: The answer for CT and NJ is 49749.
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:VTSFb8m4vrs'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 5.3' chapter_name='Week 5 - Aggregation' format='Homework' due='Dec 5 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_5_3_problem' rerandomize='never' display_name='Homework: HW 5.3'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_5_3_problem' rerandomize='never' display_name='Homework: HW 5.3'>
 <b>Who's the easiest grader on campus?</b>
 <br/>
 In this problem you will be analyzing a dataset of student grades. Please import <a href="/static/handouts/grades_5-3.js">grades_5-3.js</a> into a database and collection of your choice. 
@@ -5899,12 +5899,12 @@ Below, choose the class_id with the highest average student average.
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:wqfqAzhOie8'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 5.4' chapter_name='Week 5 - Aggregation' format='Homework' due='Dec 5 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_5_4_problem' rerandomize='never' display_name='Homework: HW 5.4'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_5_4_problem' rerandomize='never' display_name='Homework: HW 5.4'>
 <b>Removing Rural Residents</b>
 In this problem you will calculate the number of people who live in a zip code in the US where the city starts with a digit. We will take that to mean they don't really live in a city.  Once again, you will be using the zip code collection you imported earlier.
 <br/><br/>
@@ -5931,7 +5931,7 @@ Using the aggregation framework, calculate the sum total of people who are livin
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 5 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:UpwIQjRO2vw'/>
 </vertical>
 </sequential>
@@ -5956,7 +5956,7 @@ Provided you assume that the disk is persistent, what are the w and j settings r
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:2-UO105PDrk'/>
 </vertical>
 </sequential>
@@ -5982,7 +5982,7 @@ What are the reasons why an application may receive an error back even if the wr
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:64mAA3SEnkg'/>
 </vertical>
 </sequential>
@@ -6000,7 +6000,7 @@ In the 2.4 release of Pymongo, a new connection class is introduced that automat
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:ghbQtF5YfHw'/>
 </vertical>
 </sequential>
@@ -6018,7 +6018,7 @@ What is the minimum original number of nodes needed to assure the election of a 
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:XCssKzhlnZU'/>
 </vertical>
 </sequential>
@@ -6044,7 +6044,7 @@ Which types of nodes can participate in elections of a new primary?<choicerespon
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:vrUxTTD-XwA'/>
 </vertical>
 </sequential>
@@ -6060,7 +6060,7 @@ During the time when failover is occurring, can writes successfully complete?<mu
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:SjaJEYK1u3E'/>
 </vertical>
 </sequential>
@@ -6078,7 +6078,7 @@ Which command, when issued from the mongo shell, will allow you to read from a s
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:ibZVf59aUj8'/>
 </vertical>
 </sequential>
@@ -6096,7 +6096,7 @@ In the video how long did it take to elect a new primary?<multiplechoiceresponse
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:_am2mdVF1uk'/>
 </vertical>
 </sequential>
@@ -6114,7 +6114,7 @@ What happens if a node comes back up as a secondary after a period of being offl
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:t3rNxRg6WZE'/>
 </vertical>
 </sequential>
@@ -6132,7 +6132,7 @@ If you leave a replica set node out of the seedlist within the driver, what will
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:rODKm1GvUpY'/>
 </vertical>
 </sequential>
@@ -6149,7 +6149,7 @@ If you use the special MongoReplicaSetClient, are you guaranteed to avoid a netw
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:nHsd9EJsKDc'/>
 </vertical>
 </sequential>
@@ -6168,7 +6168,7 @@ If you set w=1 and j=1, is it possible to wind up rolling back a committed write
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:hQrCwRplszo'/>
 </vertical>
 </sequential>
@@ -6194,7 +6194,7 @@ You can configure your applications via the drivers to read from secondary nodes
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:tp17iqGdw-k'/>
 </vertical>
 </sequential>
@@ -6212,7 +6212,7 @@ If you set w=4  on a connection and there are only three nodes in the replica se
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:8wuWShep8Qs'/>
 </vertical>
 </sequential>
@@ -6230,7 +6230,7 @@ If the shard key is not include in a find operation and there are 3 shards, each
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:4Z0D2bX5Cg4'/>
 </vertical>
 </sequential>
@@ -6248,7 +6248,7 @@ If you want to build a production system with two shards, each one a replica set
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:5tPjnJrY0rU'/>
 </vertical>
 </sequential>
@@ -6266,7 +6266,7 @@ Suppose you wanted to shard the zip code collection after importing it.  You wan
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:vfl0hqdgB3Q'/>
 </vertical>
 </sequential>
@@ -6284,7 +6284,7 @@ Suppose you want to run multiple mongos routers for redundancy. What level of th
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:hnuiYokdO7g'/>
 </vertical>
 </sequential>
@@ -6317,12 +6317,12 @@ Thinking about the tradeoffs of shard key selection, select the true statements 
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012'>
 <video display_name='Answer' youtube='1.0:91tO_iGga5w'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 6.1' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_6_1_problem' rerandomize='never' display_name='Homework: HW 6.1'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_6_1_problem' rerandomize='never' display_name='Homework: HW 6.1'>
 Which of the following statements are true about MongoDB replication.  Check all that apply.<choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
 <choice correct='true'>
@@ -6343,12 +6343,12 @@ Which of the following statements are true about MongoDB replication.  Check all
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:J4ZuF8UJD9s'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 6.2' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_6_2_problem' rerandomize='never' display_name='Homework: HW 6.2'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_6_2_problem' rerandomize='never' display_name='Homework: HW 6.2'>
 Let's suppose you have a five member replica set and want to assure that writes are committed to the journal and are acknowledged by at least 3 nodes before you proceed forward. What would be the appropriate settings for w and j?<multiplechoiceresponse direction='vertical'>
 <choicegroup type='MultipleChoice'>
 <choice location='bottom' correct='false'><text>w=1, j=1</text></choice>
@@ -6359,12 +6359,12 @@ Let's suppose you have a five member replica set and want to assure that writes 
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:8K-6JPrvkEs'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 6.3' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_6_3_problem' rerandomize='never' display_name='Homework: HW 6.3'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_6_3_problem' rerandomize='never' display_name='Homework: HW 6.3'>
 Which of the following statements are true about choosing and using a shard key: <choiceresponse direction='vertical'>
 <checkboxgroup type='MultipleChoice'>
 <choice correct='false'>
@@ -6385,12 +6385,12 @@ Which of the following statements are true about choosing and using a shard key:
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:496QtQt4tX8'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 6.4' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_6_4_problem' rerandomize='never' display_name='Homework: HW 6.4'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_6_4_problem' rerandomize='never' display_name='Homework: HW 6.4'>
 You have a sharded system with three shards and have sharded the collections "grades" in the "test" database across those shards. The output of sh.status() when connected to mongos looks like this:
 
 <pre>
@@ -6436,12 +6436,12 @@ Which shards would be involved in answering the query?<multiplechoiceresponse di
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:uEemjO9S7vQ'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='HW 6.5' chapter_name='Week 6 - Application Engineering' format='Homework' due='Dec 11 23:00 EST 2012'>
-<problem showanswer='due' attempts='3' url_name='HW_6_5_problem' rerandomize='never' display_name='Homework: HW 6.5'>
+<problem showanswer='due' attempts='3' end='2012-12-25T00:00' url_name='HW_6_5_problem' rerandomize='never' display_name='Homework: HW 6.5'>
 In this homework you will build a small replica set on your own computer.  We will check that it works with <i>validate.py</i>, which you should download in <a href="/static/handouts/week6-lessons.tar">week6-lessons.tar</a> or <a href="/static/handouts/week6-lessons.zip">week6-lessons.zip</a>. 
 <br/><br/>
 Create three directories for the three mongod processes. On unix, this could be done as follows:
@@ -6502,7 +6502,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Dec 11 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:C0ZLyPfymR8'/>
 </vertical>
 </sequential>
@@ -6526,7 +6526,7 @@ if not(response == quiz_answer):
 </chapter>
 <chapter start='2012-10-25T00:00' display_name='Final Exam' hide_answer_status_until_due='True'>
 <sequential graded='true' display_name='Question 1' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' url_name='Question_1_problem' rerandomize='never' display_name='Final: Question 1'>
+<problem showanswer='due' end='2012-12-25T00:00' url_name='Question_1_problem' rerandomize='never' display_name='Final: Question 1'>
 Please download the Enron email dataset <a href="/static/handouts/enron.tar">enron.tar</a> or <a href="/static/handouts/enron.zip">enron.zip</a>, untar or unzip it and then restore it using mongorestore. It should restore to a collection called "messages" in a database called "enron". Note that this is an abbreviated version of the full corpus. There should be 120,477 documents after restore.
 <br/>
 <br/>
@@ -6552,12 +6552,12 @@ For reference, the number of email messages from Andrew Fastow to John Lavorato 
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 17 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:Kv80ih9thK4'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Question 2' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' url_name='Question_2_problem' rerandomize='never' display_name='Final: Question 2'>
+<problem showanswer='due' end='2012-12-25T00:00' url_name='Question_2_problem' rerandomize='never' display_name='Final: Question 2'>
 Please use the Enron dataset you imported for the previous problem. For this question you will use the aggregation framework to figure out pairs of people that tend to communicate a lot. 
 <br/><br/>
 Turns out that the top channel is veronica.espinoza@enron.com to recipients@enron.com, with 2181 messages. But that is not very interesting, so your task is to figure out the second most popular pair of sender and recipient and indicate it below.
@@ -6574,12 +6574,12 @@ Update: a few people have pointed out that a recipient sometimes appears more th
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 17 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:--s_vAlL_nU'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Question 3' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' url_name='Question_3_problem' rerandomize='never' display_name='Final: Question 3'>
+<problem showanswer='due' end='2012-12-25T00:00' url_name='Question_3_problem' rerandomize='never' display_name='Final: Question 3'>
 In this problem you will update a document in the Enron dataset to illustrate your mastery of updating documents from the shell.
 <br/><br/>
 Please add the email address "mrpotatohead@10gen.com" to the list of addresses in the "headers.To" array for the document with "headers.Message-ID" of "&lt;8147308.1075851042335.JavaMail.evans@thyme&gt;"
@@ -6605,7 +6605,7 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Dec 17 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:tg-I-VuNWjk'/>
 </vertical>
 </sequential>
@@ -6613,7 +6613,7 @@ if not(response == quiz_answer):
 <vertical>
 <video display_name='Lecture' youtube='1.0:E7-wlLWkP00'/>
 </vertical>
-<problem showanswer='due' url_name='Question_4_problem' rerandomize='never' display_name='Final: Question 4'>
+<problem showanswer='due' end='2012-12-25T00:00' url_name='Question_4_problem' rerandomize='never' display_name='Final: Question 4'>
 <b>Enhancing the Blog to support viewers liking certain comments</b>
 <br/>
 In this problem, you will be enhancing the blog project to support users liking certain comments and the like counts showing up the in the permalink page. 
@@ -6655,12 +6655,12 @@ if not(response == quiz_answer):
 </answer>
 </customresponse>
 </problem>
-<vertical>
+<vertical start='Dec 17 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:VvKCUuqKdpg'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Question 5' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' url_name='Question_5_problem' rerandomize='never' display_name='Final: Question 5'>
+<problem showanswer='due' end='2012-12-25T00:00' url_name='Question_5_problem' rerandomize='never' display_name='Final: Question 5'>
 Suppose your have a collection <i>fubar</i> with the following indexes created:
 <pre>
 [
@@ -6737,12 +6737,12 @@ Which of the following indexes could be used by MongoDB to assist in answering t
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 17 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:tHMJa11iekg'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Question 6' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' url_name='Question_6_problem' rerandomize='never' display_name='Final: Question 6'>
+<problem showanswer='due' end='2012-12-25T00:00' url_name='Question_6_problem' rerandomize='never' display_name='Final: Question 6'>
 Suppose you have a collection of students of the following form:
 
 <pre>
@@ -6786,12 +6786,12 @@ Now suppose that basic inserts into the collection, which only include the last 
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 17 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:7mZFnrA_ya8'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Question 7' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' url_name='Question_7_problem' rerandomize='never' display_name='Final: Question 7'>
+<problem showanswer='due' end='2012-12-25T00:00' url_name='Question_7_problem' rerandomize='never' display_name='Final: Question 7'>
 You have been tasked to cleanup a photosharing database. The database consists of two collections, albums, and images. Every image is supposed to be in an album, but there are orphan images that appear in no album.
 
  Here are some example documents (not from the collections you will be downloading).
@@ -6842,12 +6842,12 @@ When you are done removing the orphan images from the collection, there should b
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 17 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:2CM3AQQT0n0'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Question 8' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' url_name='Question_8_problem' rerandomize='never' display_name='Final: Question 8'>
+<problem showanswer='due' end='2012-12-25T00:00' url_name='Question_8_problem' rerandomize='never' display_name='Final: Question 8'>
 Suppose you have a three node replica set. Node 1 is the primary. Node 2 is a secondary,  Node 3 is a secondary running with a delay of 10 seconds.  All writes to the database are issued with w=majority and j=1 (by which we mean that the getLastError call has those values set).
 
 <br/><br/>A write operation (could be insert or update) is initiated from your application at time=0. At time=5 seconds, the primary, Node 1, goes down for an hour and another node is elected primary.
@@ -6862,12 +6862,12 @@ Suppose you have a three node replica set. Node 1 is the primary. Node 2 is a se
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 17 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:vU8N7m1jHHw'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Question 9' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' url_name='Question_9_problem' rerandomize='never' display_name='Final: Question 9'>
+<problem showanswer='due' end='2012-12-25T00:00' url_name='Question_9_problem' rerandomize='never' display_name='Final: Question 9'>
 Imagine an electronic medical record database designed to hold the medical records of every individual in the United States. Because each person has more than 16MB of medical history and records, it's not feasible to have a single document for every patient. Instead, there is a <i>patient</i> collection that contains basic information on each person and maps the person to a patient_id, and a <i>record</i> collection that contains one document for each test or procedure. One patient may have dozens or even hundreds of documents in the <i>record</i> collection. 
 <br/><br/>
 We need to decide on a shard key to shard the <i>record</i> collection. What's the best shard key for the <i>record</i> collection, provided that we are willing to run scatter gather operations to do research and run studies on various diseases and cohorts? That is, think mostly about the operational aspects of such a system.<multiplechoiceresponse direction='vertical'>
@@ -6881,12 +6881,12 @@ We need to decide on a shard key to shard the <i>record</i> collection. What's t
 </choicegroup>
 </multiplechoiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 17 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:cqUxuNbGGGc'/>
 </vertical>
 </sequential>
 <sequential graded='true' display_name='Question 10' chapter_name='Final Exam' format='Final' due='Dec 17 23:00 EST 2012'>
-<problem showanswer='due' url_name='Question_10_problem' rerandomize='never' display_name='Final: Question 10'>
+<problem showanswer='due' end='2012-12-25T00:00' url_name='Question_10_problem' rerandomize='never' display_name='Final: Question 10'>
 <b>Understanding the output of explain</b>
 We perform the following query on the enron dataset:
 <pre>
@@ -6942,7 +6942,7 @@ Check below all the statements that are true about the way MongoDB handled this 
 </checkboxgroup>
 </choiceresponse>
 </problem>
-<vertical>
+<vertical start='Dec 17 23:00 EST 2012' end='2012-12-25T00:00'>
 <video display_name='Answer' youtube='1.0:MRf_YhKcEDA'/>
 </vertical>
 </sequential>
